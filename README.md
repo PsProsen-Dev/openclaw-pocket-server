@@ -300,10 +300,10 @@ The compatibility patches also enable popular AI CLI tools:
 
 | Tool | Install |
 |---|---|
-| [Gemini CLI](https://github.com/google-gemini/gemini-cli) | `npm i -g @google/gemini-cli` |
-| [Claude Code](https://github.com/anthropics/claude-code) | `npm i -g @anthropic-ai/claude-code` |
-| [Qwen CLI](https://github.com/QwenLM/qwen-cli) | `npm i -g @anthropic-ai/qwen-cli` |
-| [Codex CLI](https://github.com/openai/codex) | `npm i -g @openai/codex` |
+| [Gemini CLI](https://github.com/google-gemini/gemini-cli) | `npm install -g @google/gemini-cli` |
+| [Claude Code](https://github.com/anthropics/claude-code) | `npm install -g @anthropic-ai/claude-code` |
+| [Qwen CLI](https://github.com/QwenLM/qwen-code) | `npm install -g @qwen-code/qwen-code@latest` |
+| [Codex CLI](https://github.com/openai/codex) | `npm install -g @openai/codex` |
 
 ## 🙏 Credits
 
