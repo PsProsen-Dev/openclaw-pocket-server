@@ -24,6 +24,7 @@
     <a href="#-quick-start">Quick Start</a> •
     <a href="#-features">Features</a> •
     <a href="#-documentation">Documentation</a> •
+    <a href="#-local-llm">Local LLM</a> •
     <a href="https://deepwiki.com/PsProsen-Dev/OpenClaw-On-Android">DeepWiki</a> •
     <a href="#-project-architecture">Architecture</a> •
     <a href="#-community">Community</a>
@@ -55,9 +56,31 @@ The installer dynamically patches the environment and prompts you for optional i
 - **📱 Natively executed AI Gateway**: OpenClaw runs bare-metal in Termux.
 - **☁️ Full Node.js v24 Environment**: A completely independent `glibc` patched binary setup (bypassing `/system/lib64`).
 - **🤖 Built-in AI CLIs**: Zero-config prompts for _Qwen Code_, _Claude Code_, _Gemini_, and _Codex_.
+- **🦙 Local LLM Support**: Run models locally via `node-llama-cpp` and Ollama (experimental).
 - **🌐 Remote Setup**: Out-of-the-box SSH Server integration (Port 8022).
 - **🛡️ Safe Root Support**: `oca-root` wrapper selectively executes root commands without compromising the Android system.
 - **🔄 Auto-Updates**: Keep the stack updated natively via `oca --update`.
+
+---
+
+## 🦙 Local LLM
+
+Run LLM models directly on your phone! OCA supports local inference via `node-llama-cpp` and Ollama.
+
+<Warning>
+  **Experimental**: Local LLM needs 2-4GB RAM, 4GB+ storage. CPU-only inference is slow. Best for testing with small models like TinyLlama 1.1B. For production, use cloud APIs.
+</Warning>
+
+**Quick Start**:
+```bash
+# node-llama-cpp (prebuilt binary)
+npm install -g node-llama-cpp --ignore-scripts
+
+# OR Ollama (full server)
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+👉 **[Read Full Local LLM Guide](docs/local-llm.mdx)** for model recommendations, setup, and troubleshooting.
 
 ---
 
