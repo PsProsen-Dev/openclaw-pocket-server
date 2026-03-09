@@ -98,6 +98,10 @@ Join the discussion! Ask questions, share your Android setup, or request feature
 
 ---
 
+## 🙏 Credits & License
+
+Built with extreme precision by **[PsProsen-Dev](https://github.com/PsProsen-Dev)** using _Jarvis (RTX⚡) / OpenClaw Authored Architecture_.  
+
 <div align="center">
   Released under the <a href="LICENSE">MIT License</a>.
 </div>
