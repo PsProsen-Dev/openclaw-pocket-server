@@ -1,0 +1,105 @@
+---
+title: "AI CLI Tools"
+description: "Claude Code, Qwen Code, Gemini CLI, and Codex — set up on your Android device."
+---
+
+## Overview
+
+OCA installs AI CLI tools via `npm install -g` during Step 7. All run through the glibc Node.js environment.
+
+<Warning>
+  AI CLIs need **API keys** from their respective providers. OCA installs the binaries — you configure the keys after install.
+</Warning>
+
+---
+
+## Qwen Code
+
+Best choice for Android — lightweight and uses `--ignore-scripts` which skips native builds that fail on Android.
+
+**Install**:
+```bash
+npm install -g @qwen-code/qwen-code@latest --ignore-scripts
+```
+
+**Setup**:
+```bash
+qwen config set api-key YOUR_DASHSCOPE_KEY
+qwen config set model qwen-coder-turbo
+```
+
+**Start**:
+```bash
+qwen
+```
+
+<Info>
+  `--ignore-scripts` skips `node-pty` and `@lvce-editor/ripgrep` native builds, which both fail on Android. Core CLI functionality is unaffected.
+</Info>
+
+---
+
+## Claude Code
+
+```bash
+npm install -g @anthropic-ai/claude-code
+claude config set apiKey YOUR_ANTHROPIC_KEY
+claude
+```
+
+Get your key at [console.anthropic.com](https://console.anthropic.com).
+
+---
+
+## Gemini CLI
+
+```bash
+npm install -g @google/gemini-cli
+gemini  # prompts for Google account login on first run
+```
+
+Or with API key:
+```bash
+export GEMINI_API_KEY=your_key
+gemini
+```
+
+Get your key at [aistudio.google.com](https://aistudio.google.com/apikey).
+
+---
+
+## Codex (OpenAI)
+
+```bash
+npm install -g @openai/codex
+export OPENAI_API_KEY=your_key
+codex
+```
+
+---
+
+## Using inside tmux
+
+Always run AI CLIs inside tmux for long sessions:
+
+```bash
+tmux new -s ai
+qwen
+# Detach: Ctrl+B, then D
+# Reattach: tmux attach -t ai
+```
+
+---
+
+## Managing CLIs
+
+```bash
+# Check installed
+npm list -g --depth=0
+
+# Update all
+npm update -g @qwen-code/qwen-code @anthropic-ai/claude-code @google/gemini-cli @openai/codex
+
+# Or via OCA
+oca --update
+```
