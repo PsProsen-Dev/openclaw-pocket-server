@@ -12,4 +12,11 @@ echo "=== Installing OpenCode CLI ==="
 echo "Fetching pi-coding-agent packages..."
 npm install -g @mariozechner/pi-coding-agent --ignore-scripts --no-audit --no-fund --loglevel=error
 
+# Fix opencode wrapper which points to a non-existent proot
+cat > "$PREFIX/bin/opencode" << 'EOF'
+#!/data/data/com.termux/files/usr/bin/bash
+exec "$HOME/.oca/node/bin/node" "$PREFIX/lib/node_modules/@mariozechner/pi-coding-agent/dist/index.js" "$@"
+EOF
+chmod +x "$PREFIX/bin/opencode"
+
 echo -e "${GREEN}[OK]${NC} OpenCode installed."

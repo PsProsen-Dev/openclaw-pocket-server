@@ -132,9 +132,28 @@ step 7 "Install Optional Tools & Features (L3)"
 npm install -g node-gyp node-gyp-build --silent || true
 
 [ "$INSTALL_CLAUDE_CODE" = true ] && npm install -g @anthropic-ai/claude-code --ignore-scripts --no-audit --no-fund --loglevel=error || true
-[ "$INSTALL_GEMINI_CLI" = true ] && npm install -g @google/gemini-cli --ignore-scripts --no-audit --no-fund --loglevel=error || true
+
+if [ "$INSTALL_GEMINI_CLI" = true ]; then
+    npm install -g @google/gemini-cli --ignore-scripts --no-audit --no-fund --loglevel=error || true
+    cat > "$PREFIX/bin/gemini" << 'EOF'
+#!/data/data/com.termux/files/usr/bin/bash
+exec "$HOME/.oca/node/bin/node" --no-warnings=DEP0040 "$PREFIX/lib/node_modules/@google/gemini-cli/bin/gemini" "$@"
+EOF
+    chmod +x "$PREFIX/bin/gemini"
+fi
+
 [ "$INSTALL_CODEX_CLI" = true ] && npm install -g @openai/codex --ignore-scripts --no-audit --no-fund --loglevel=error || true
-[ "$INSTALL_QWEN_CODE" = true ] && npm install -g @qwen-code/qwen-code@latest --ignore-scripts --no-audit --no-fund --loglevel=error || true
+
+if [ "$INSTALL_QWEN_CODE" = true ]; then
+    npm install -g @qwen-code/qwen-code@latest --ignore-scripts --no-audit --no-fund --loglevel=error || true
+    # qwen ships with a precompiled x86 binary which causes ELF format errors.
+    # We force it to run using our node instance
+    cat > "$PREFIX/bin/qwen" << 'EOF'
+#!/data/data/com.termux/files/usr/bin/bash
+exec "$HOME/.oca/node/bin/node" "$PREFIX/lib/node_modules/@qwen-code/qwen-code/dist/index.js" "$@"
+EOF
+    chmod +x "$PREFIX/bin/qwen"
+fi
 
 # ── SSH server ──
 [ "$INSTALL_SSH" = true ] && bash "$SCRIPT_DIR/scripts/setup-ssh.sh" || true
