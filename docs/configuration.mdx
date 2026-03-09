@@ -1,33 +1,91 @@
 ---
 title: "Configuration"
-description: "Manage and configure your OCA environment."
+description: "Customize your OCA installation — Node.js, OpenClaw config, and environment variables."
 ---
 
-The OCA environment is highly isolated inside Termux to prevent interference with your Android device.
+## OpenClaw Config
 
-## Core Directories
-- **`~/.oca`**: Main installation directory.
-- **`~/.oca/node`**: Target Node.js v24 environment patched with glibc-compat.
-- **`~/.oca/bin`**: Binaries and executable scripts for `oca`.
+Config lives at `~/.openclaw/openclaw.json`:
 
-## Managing the OCA Service
-OCA installs a CLI tool (`oca`) that allows you to manage the environment easily from anywhere inside Termux.
-
-### Check Status
-Checks whether Node.js, `npm`, glibc wrapper, and default applications are installed correctly.
-```bash
-oca --status
+```json
+{
+  "channels": {
+    "whatsapp": {
+      "allowFrom": ["+91XXXXXXXXXX"],
+      "groups": { "*": { "requireMention": true } }
+    }
+  },
+  "messages": {
+    "groupChat": {
+      "mentionPatterns": ["@openclaw"]
+    }
+  }
+}
 ```
 
-### Update the Setup
-If there is a new script or Node patch available upstream, run this to update your environment automatically.
+Edit with:
 ```bash
-oca --update
+nano ~/.openclaw/openclaw.json
 ```
 
-### Advanced: Custom Environment Variables
-OCA automatically manages its path priorities inside your `.bashrc`. It prepends the glibc-wrapper environment variables (`OCA_GLIBC=1`) so that standard node commands work natively. 
-If you need custom variables (e.g., API keys for OpenAI/Anthropic), you can add them at the bottom of:
-```bash 
-nano ~/.bashrc
+---
+
+## Environment Variables
+
+| Variable | Default | Description |
+|---|---|---|
+| `OCA_DIR` | `~/.oca` | Root directory for OCA files |
+| `GLIBC_NODE_DIR` | `~/.oca/node` | Node.js installation path |
+| `PATH` | Prepends `~/.oca/node/bin` | Ensures glibc Node.js takes priority |
+| `TMPDIR` | `$PREFIX/tmp` | Required for glibc compatibility |
+| `OCA_GLIBC` | `1` | Signals that glibc Node is active |
+| `NODE_OPTIONS` | `-r ~/.oca/patches/glibc-compat.js` | Loads the Android polyfill |
+
+To reload:
+```bash
+source ~/.bashrc
+```
+
+---
+
+## Node.js Version
+
+The installer defaults to **Node.js v24.14.0**. To change:
+
+```bash
+# Edit install script
+nano ~/.oca/scripts/install-nodejs.sh
+# Change: NODE_VERSION="24.14.0"
+
+# Reinstall
+bash ~/.oca/scripts/install-nodejs.sh
+```
+
+---
+
+## npm Config
+
+```bash
+# Disable audit prompts
+npm config set audit false
+
+# Disable fund messages
+npm config set fund false
+
+# Increase network timeout (slow connections)
+npm config set fetch-timeout 120000
+```
+
+---
+
+## glibc DNS Config
+
+```bash
+nano $PREFIX/glibc/etc/resolv.conf
+```
+
+Default:
+```
+nameserver 8.8.8.8
+nameserver 1.1.1.1
 ```
