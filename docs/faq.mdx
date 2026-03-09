@@ -1,0 +1,53 @@
+---
+title: "FAQ"
+description: "Frequently asked questions about OCA."
+---
+
+<AccordionGroup>
+
+<Accordion title="Do I need a rooted phone?" icon="shield">
+**No.** OCA works perfectly on non-rooted devices. Root is optional.
+</Accordion>
+
+<Accordion title="Which Android versions are supported?" icon="mobile">
+- **Android 10+**: Fully supported
+- **Android 12+**: Requires [Phantom Process Killer fix](/docs/phantom-process-killer)
+- **Android 14 (Samsung A23 5G)**: Fully tested ✅
+</Accordion>
+
+<Accordion title="Does it work on 32-bit ARM?" icon="microchip">
+**No.** Requires **aarch64 (ARM64)**. Verify: `uname -m` → should output `aarch64`
+</Accordion>
+
+<Accordion title="Why F-Droid Termux instead of Google Play?" icon="store">
+The Google Play version of Termux hasn't been updated since 2020. Always use [F-Droid](https://f-droid.org/packages/com.termux/).
+</Accordion>
+
+<Accordion title="Is this the official OpenClaw installer?" icon="certificate">
+No — OCA is an **unofficial community installer** by [PsProsen-Dev](https://github.com/PsProsen-Dev) for Android/Termux. It's compatible with the official [OpenClaw](https://openclaw.ai) ecosystem.
+</Accordion>
+
+<Accordion title="How much RAM does it need?" icon="memory">
+- Minimum: **4GB** (gateway only)
+- Recommended: **6GB+** (gateway + AI CLIs)
+- code-server: **6GB+** minimum
+</Accordion>
+
+<Accordion title="Which AI CLI is best for Android?" icon="brain">
+**Qwen Code** — most Android-friendly, uses `--ignore-scripts` to avoid broken native builds, has a free tier via DashScope.
+</Accordion>
+
+<Accordion title="How do I update OCA?" icon="arrow-up">
+```bash
+ocaupdate
+# or: oca --update
+```
+</Accordion>
+
+<Accordion title="How do I uninstall?" icon="trash">
+```bash
+oca --uninstall
+```
+</Accordion>
+
+</AccordionGroup>
