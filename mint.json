@@ -1,17 +1,26 @@
 {
-  "name": "OCA (OpenClaw on Android)",
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "OCA – OpenClaw on Android",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
+  "favicon": "/favicon.svg",
   "colors": {
     "primary": "#ff4d4f",
     "light": "#ff7875",
-    "dark": "#d9363e"
+    "dark": "#d9363e",
+    "background": {
+      "dark": "#0e0c0d"
+    },
+    "anchors": {
+      "from": "#ff4d4f",
+      "to": "#d9363e"
+    }
   },
   "topbarLinks": [
     {
-      "name": "Support",
+      "name": "GitHub Discussions",
       "url": "https://github.com/PsProsen-Dev/OpenClaw-On-Android/discussions"
     }
   ],
@@ -19,30 +28,76 @@
     "type": "github",
     "url": "https://github.com/PsProsen-Dev/OpenClaw-On-Android"
   },
+  "tabs": [
+    {
+      "name": "Guides",
+      "url": "docs"
+    },
+    {
+      "name": "CLI Reference",
+      "url": "reference"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/PsProsen-Dev/OpenClaw-On-Android"
+    },
+    {
+      "name": "Report an Issue",
+      "icon": "circle-exclamation",
+      "url": "https://github.com/PsProsen-Dev/OpenClaw-On-Android/issues"
+    },
+    {
+      "name": "Community",
+      "icon": "discord",
+      "url": "https://discord.gg/openclaw"
+    }
+  ],
   "navigation": [
     {
-      "group": "Getting Started",
+      "group": "Overview",
+      "pages": [
+        "docs/introduction",
+        "docs/quickstart",
+        "docs/architecture"
+      ]
+    },
+    {
+      "group": "Installation",
       "pages": [
         "docs/installation",
-        "docs/configuration"
+        "docs/configuration",
+        "docs/phantom-process-killer"
       ]
     },
     {
-      "group": "Core Features",
+      "group": "Features",
       "pages": [
+        "docs/ai-cli-tools",
         "docs/ssh-guide",
-        "docs/disable-phantom-process-killer"
+        "docs/termux-boot",
+        "docs/root-support"
       ]
     },
     {
-      "group": "Resources",
+      "group": "Help",
       "pages": [
-        "docs/troubleshooting"
+        "docs/troubleshooting",
+        "docs/faq"
+      ]
+    },
+    {
+      "group": "CLI Reference",
+      "pages": [
+        "reference/oca-cli"
       ]
     }
   ],
   "footerSocials": {
     "github": "https://github.com/PsProsen-Dev/OpenClaw-On-Android",
-    "discord": "https://discord.gg/openclaw"
+    "discord": "https://discord.gg/openclaw",
+    "x": "https://x.com/ProsenPs"
   }
 }
