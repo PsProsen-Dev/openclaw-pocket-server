@@ -1,37 +1,117 @@
 ---
 title: "Installation"
-description: "Setting up OpenClaw on Android in under 2 minutes."
+description: "Full step-by-step breakdown of the OCA installer — what each step does and why."
 ---
 
-Installing **OpenClaw on Android (OCA)** is designed to be a one-command process that handles all dependencies automatically.
+## Overview
 
-## Prerequisites
-- **Termux app** installed via [F-Droid](https://f-droid.org/en/packages/com.termux/). Do **NOT** download Termux from the Google Play Store (it is outdated and deprecated).
-- Minimum **Android 8.0+** (Android 10+ recommended).
-- At least **500MB** of free storage space.
+The OCA installer is an **8-step modular orchestrator** (`install.sh`):
 
-## Step 1: Run the Official Installer
-
-Open Termux and run the following command:
-
-```bash
-curl -sL https://raw.githubusercontent.com/PsProsen-Dev/OpenClaw-On-Android/master/bootstrap.sh | bash
+```
+bootstrap.sh
+    └── install.sh
+            ├── Step 1: Environment Check
+            ├── Step 2: Platform Selection (OpenClaw)
+            ├── Step 3: Tools & Features Selection
+            ├── Step 4: Core Infrastructure (L1)
+            ├── Step 5: Platform Runtime Dependencies (L2)
+            ├── Step 6: Platform Package Install (L2)
+            ├── [6.5]: Env vars + CLI + Marker
+            ├── Step 7: Optional Tools & Features (L3)
+            └── Step 8: Verification
 ```
 
-## Step 2: Follow Prompts
-The installer will prompt you for several optional but highly recommended features:
-- **Root Support:** Wraps root commands safely so OpenClaw can use them without full system access.
-- **SSH Server:** Sets up OpenSSH so you can remotely access your Termux environment from a PC.
-- **Termux:Boot:** Ensures OCA AI servers start automatically when your phone reboots.
-- **Termux:API:** Exposes device sensors (battery, location, camera) to AI agents.
-- **Qwen Code CLI:** A powerful CLI-first coding assistant tool optimized for OpenClaw.
+---
 
-## Step 3: Verify Installation
-Once the script finishes, type the following to activate changes and check the status:
+## Step 1 — Environment Check
+
+**Script**: `scripts/check-env.sh`
+
+Validates: Termux is active, CPU is `aarch64`, Android version is detectable, wake lock enabled.
+
+<Check>
+  You should see `[OK] Environment check passed (3 checks)` before proceeding.
+</Check>
+
+---
+
+## Step 2 — Platform Selection
+
+Auto-selects the `openclaw` platform, loading `platforms/openclaw/config.env`:
 
 ```bash
-source ~/.bashrc
-oca --status
+PLATFORM_NAME="OpenClaw"
+PLATFORM_NEEDS_GLIBC=true
+PLATFORM_NEEDS_NODEJS=true
+PLATFORM_NEEDS_BUILD_TOOLS=true
 ```
 
-If you see `Node.js v24.14.0` and the correct installation paths, you are good to go!
+---
+
+## Step 3 — Tools & Features Selection
+
+Interactive prompts. See [Quick Start](/docs/quickstart) for a recommendation guide.
+
+---
+
+## Steps 4 & 5 — Runtime Dependencies
+
+### L1: Core packages
+`git`, `curl`, `wget`, `python3`, `pip3`, `patchelf`, `binutils`
+
+### L2: glibc (`scripts/install-glibc.sh`)
+Installs `glibc-runner` — provides `ld-linux-aarch64.so.1` that Node.js linux-arm64 needs.
+
+### L2: Node.js v24 (`scripts/install-nodejs.sh`)
+Downloads official **Node.js v24.x linux-arm64 tarball** from nodejs.org. Creates a `grun`-based wrapper:
+
+```bash
+exec "$PREFIX/bin/grun" "$(dirname "$0")/node.real" "$@"
+```
+
+Also writes the **DNS fix** (`$PREFIX/glibc/etc/resolv.conf`) to prevent `EAI_AGAIN` on Android 12+.
+
+<Info>
+  **Why linux-arm64?** OpenClaw's native modules (like `sharp`, `koffi`) assume glibc. Using the official binary + glibc-runner bypasses Bionic libc limitations entirely.
+</Info>
+
+---
+
+## Step 6 — Platform Package Install
+
+**Script**: `platforms/openclaw/install.sh`
+
+1. Copies glibc-compat.js and argon2-stub.js patches
+2. Configures DNS resolver
+3. Runs `npm install -g openclaw@latest --ignore-scripts`
+4. Installs `clawdhub` + `undici` dependency
+5. Runs `openclaw update` (builds native modules — may take 5–10 mins)
+
+---
+
+## Step 7 — Optional Tools Install
+
+Installs selected tools: Termux packages via `pkg`, AI CLIs via `npm install -g`.
+
+---
+
+## Step 8 — Verification
+
+**Script**: `tests/verify-install.sh`
+
+Checks: `node --version`, `openclaw --version`, `oca` in PATH, platform marker file.
+
+---
+
+## Manual reinstall
+
+```bash
+# Reinstall Node.js only
+bash ~/.oca/scripts/install-nodejs.sh
+
+# Reinstall OpenClaw package only
+bash ~/.oca/platforms/openclaw/install.sh
+
+# Full reinstall
+oca --uninstall && curl -sL https://raw.githubusercontent.com/PsProsen-Dev/OpenClaw-On-Android/master/bootstrap.sh | bash
+```
