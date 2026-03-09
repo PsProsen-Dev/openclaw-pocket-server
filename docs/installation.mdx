@@ -1,0 +1,145 @@
+---
+title: "Installation"
+description: "Full step-by-step breakdown of the OCA installer — what each step does and why."
+---
+
+## Overview
+
+The OCA installer is an **8-step modular orchestrator** (`install.sh`):
+
+```
+bootstrap.sh
+    └── install.sh
+            ├── Step 1: Environment Check
+            ├── Step 2: Platform Selection (OpenClaw)
+            ├── Step 3: Tools & Features Selection
+            ├── Step 4: Core Infrastructure (RTX⚡1)
+            ├── Step 5: Platform Runtime Dependencies (RTX⚡2)
+            ├── Step 6: Platform Package Install (RTX⚡2)
+            ├── [6.5]: Env vars + CLI + Marker
+            ├── Step 7: Optional Tools & Features (RTX⚡3)
+            └── Step 8: Verification
+```
+
+---
+
+## Step 1 — Environment Check
+
+**Script**: `scripts/check-env.sh`
+
+Validates: Termux is active, CPU is `aarch64`, Android version is detectable, wake lock enabled.
+
+<Check>
+  You should see `[OK] Environment check passed (3 checks)` before proceeding.
+</Check>
+
+---
+
+## Step 2 — Platform Selection
+
+Auto-selects the `openclaw` platform, loading `platforms/openclaw/config.env`:
+
+```bash
+PLATFORM_NAME="OpenClaw"
+PLATFORM_NEEDS_GLIBC=true
+PLATFORM_NEEDS_NODEJS=true
+PLATFORM_NEEDS_BUILD_TOOLS=true
+```
+
+---
+
+## Step 3 — Tools & Features Selection
+
+Interactive prompts for optional tools. See [Quick Start](/docs/quickstart) for a recommendation guide.
+
+<Info>
+  If `PLATFORM_NEEDS_GLIBC=true`, OCA auto-enables **Homebrew (Linuxbrew)** and the **Go toolchain**. They are treated as part of the glibc-backed Linux userland rather than separate opt-in extras.
+</Info>
+
+---
+
+## Steps 4 & 5 — Runtime Dependencies
+
+### RTX⚡1: Core packages
+`git`, `curl`, `wget`, `python3`, `pip3`, `patchelf`, `binutils`
+
+### RTX⚡2: glibc (`scripts/install-glibc.sh`)
+Installs `glibc-runner` — provides `ld-linux-aarch64.so.1` that Node.js linux-arm64 needs.
+
+### RTX⚡2: Node.js v24 (`scripts/install-nodejs.sh`)
+Downloads official **Node.js v24.x linux-arm64 tarball** from nodejs.org. Creates a `grun`-based wrapper:
+
+```bash
+exec "$PREFIX/bin/grun" "$(dirname "$0")/node.real" "$@"
+```
+
+Also writes the **DNS fix** (`$PREFIX/glibc/etc/resolv.conf`) to prevent `EAI_AGAIN` on Android 12+.
+
+<Info>
+  **Why linux-arm64?** OpenClaw's native modules (like `sharp`, `koffi`) assume glibc. Using the official binary + glibc-runner bypasses Bionic libc limitations entirely.
+</Info>
+
+---
+
+## Step 6 — Platform Package Install
+
+**Script**: `platforms/openclaw/install.sh`
+
+1. Copies glibc-compat.js and argon2-stub.js patches
+2. Configures DNS resolver
+3. Runs `npm install -g openclaw@latest --ignore-scripts`
+4. Installs `clawdhub` + `undici` dependency
+5. Runs `openclaw update` (builds native modules — may take 5–10 mins)
+
+---
+
+## Step 7 — Optional Tools Install
+
+Installs selected tools: Termux packages via `pkg`, AI CLIs via `npm install -g`, and for glibc-based platforms automatically installs **Homebrew (Linuxbrew)** plus the **Go toolchain** for extra OpenClaw skill/helper workflows.
+
+### Homebrew (`scripts/install-homebrew.sh`)
+
+For glibc-based platforms, OCA automatically runs the official Homebrew installer into `~/.linuxbrew` after the glibc runtime is already in place, then appends:
+
+```bash
+eval "$($HOME/.linuxbrew/bin/brew shellenv)"
+```
+
+to `~/.bashrc`.
+
+This means `brew` commands execute inside the same Linux-compatible environment that OCA uses for:
+
+- the official `linux-arm64` Node.js build
+- OpenClaw native modules
+- extra helper binaries that assume glibc instead of Android's Bionic libc
+
+<Warning>
+  Homebrew on Android is still **experimental**. The OCA glibc runtime makes many Linux tools usable, but some formulae may still need manual tweaks.
+</Warning>
+
+### Go (`scripts/install-go.sh`)
+
+For glibc-based platforms, OCA automatically installs the Termux `golang` package so `go install ...` workflows are ready for OpenClaw skills, helper CLIs, and small utilities.
+
+---
+
+## Step 8 — Verification
+
+**Script**: `tests/verify-install.sh`
+
+Checks: `node --version`, `openclaw --version`, `oca` in PATH, platform marker file.
+
+---
+
+## Manual reinstall
+
+```bash
+# Reinstall Node.js only
+bash ~/.oca/scripts/install-nodejs.sh
+
+# Reinstall OpenClaw package only
+bash ~/.oca/platforms/openclaw/install.sh
+
+# Full reinstall
+oca --uninstall && curl -sL https://raw.githubusercontent.com/PsProsen-Dev/OpenClaw-On-Android/master/bootstrap.sh | bash
+```

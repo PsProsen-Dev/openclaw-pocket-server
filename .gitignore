@@ -1,0 +1,50 @@
+# Project specific
+.obsidian/
+.plan/
+docs/plan/
+.issues
+
+# Android
+*.apk
+*.aab
+*.dex
+*.class
+*.so
+/build/
+/app/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+local.properties
+
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+build/
+
+# IDE
+.idea/
+*.iml
+*.iws
+.project
+.classpath
+.settings/
+
+# Node
+node_modules/
+
+# Kotlin
+*.kotlin_module
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Secrets
+*.env
+*.keystore
+*.jks

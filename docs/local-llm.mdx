@@ -1,0 +1,301 @@
+---
+title: "Local LLM on Android"
+description: "Run local LLM inference via node-llama-cpp and Ollama on your Android device."
+---
+
+## Overview
+
+OpenClaw supports **local LLM inference** via [`node-llama-cpp`](https://github.com/withcatai/node-llama-cpp) and **Ollama integration**. The prebuilt native binary (`@node-llama-cpp/linux-arm64`) is included with the installation and loads successfully under the glibc environment — **local LLM is technically functional on the phone**.
+
+However, there are **practical constraints** to consider before running local models.
+
+<Info>
+  **☁️ Cloud Models Available**: Ollama now supports cloud-hosted models! Use `ollama launch openclaw --model kimi-k2.5:cloud` for superior performance without local resource usage. See [Cloud Models](#ollama-cloud-models) section below.
+</Info>
+
+---
+
+## ⚠️ Practical Constraints
+
+| Constraint | Details |
+|------------|---------|
+| **RAM** | GGUF models need at least **2-4GB of free memory** (7B model, Q4 quantization). Phone RAM is shared with Android and other apps |
+| **Storage** | Model files range from **4GB to 70GB+**. Phone storage fills up fast |
+| **Speed** | **CPU-only inference** on ARM is very slow. Android does not support GPU offloading for llama.cpp |
+| **Use Case** | OpenClaw primarily routes to **cloud LLM APIs** (OpenAI, Gemini, etc.) which respond at the same speed as on a PC. Local inference is a **supplementary feature** |
+
+<Info>
+  For **experimentation**, small models like **TinyLlama 1.1B (Q4, ~670MB)** can run on the phone. For **production use**, cloud LLM providers are recommended.
+</Info>
+
+---
+
+## ☁️ Ollama Cloud Models
+
+**Best of both worlds**: Run models in the cloud with Ollama's cloud integration — no local RAM/storage constraints!
+
+### Quick Start
+
+```bash
+# Pull and launch with cloud model
+ollama pull kimi-k2.5:cloud
+ollama launch openclaw --model kimi-k2.5:cloud
+```
+
+### Recommended Cloud Models
+
+| Model | Use Case | Context |
+|-------|----------|---------|
+| **`kimi-k2.5:cloud`** | Multimodal reasoning with subagents | 64k+ tokens |
+| **`minimax-m2.5:cloud`** | Fast, efficient coding | 64k+ tokens |
+| **`glm-5:cloud`** | Reasoning and code generation | 64k+ tokens |
+| **`gpt-oss:120b-cloud`** | High-performance tasks | 128k tokens |
+| **`gpt-oss:20b`** | Balanced performance | 64k tokens |
+
+### Commands
+
+| Command | Description |
+|---------|-------------|
+| `ollama launch openclaw` | Launch with model selector |
+| `ollama launch openclaw --model <model>` | Launch with specific cloud model |
+| `ollama launch openclaw --config` | Configure without launching |
+| `ollama pull <model>:cloud` | Pull cloud model to local registry |
+
+### Why Cloud Models?
+
+| Advantage | Details |
+|-----------|---------|
+| **No Local Resources** | Zero RAM/storage usage on phone |
+| **Superior Performance** | Full GPU acceleration on cloud servers |
+| **Large Context** | 64k-128k token windows available |
+| **Always Updated** | Latest model versions automatically |
+| **Privacy Option** | Local models still available for sensitive data |
+
+> 💡 **Recommendation**: Use **cloud models for production** workloads, **local models for testing/experimentation**.
+
+---
+
+## 🚀 Quick Start
+
+### Option 1: node-llama-cpp (Recommended for Android)
+
+**Why `--ignore-scripts`?** The installer uses `npm install -g openclaw@latest --ignore-scripts` because `node-llama-cpp`'s postinstall script attempts to compile `llama.cpp` from source via cmake — a process that takes **30+ minutes on a phone** and fails due to toolchain incompatibilities. The **prebuilt binaries work** without this compilation step, so the postinstall is safely skipped.
+
+**Install**:
+```bash
+npm install -g node-llama-cpp --ignore-scripts
+```
+
+**Download a model** (TinyLlama 1.1B Q4 - good for testing):
+```bash
+mkdir -p ~/models
+cd ~/models
+curl -L -o tinyllama-1.1b-q4.gguf "https://huggingface.co/TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf"
+```
+
+**Run inference**:
+```bash
+node -e "
+const { LlamaChatSession } = require('node-llama-cpp');
+const session = new LlamaChatSession({
+  modelPath: '/data/data/com.termux/files/home/models/tinyllama-1.1b-q4.gguf'
+});
+session.prompt('Hello, how are you?');
+"
+```
+
+---
+
+### Option 2: Ollama (Full Server)
+
+[Ollama](https://ollama.com) provides a complete local LLM server with model management.
+
+**Install Ollama**:
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+**Start the server**:
+```bash
+ollama serve &
+```
+
+**Pull a model**:
+```bash
+# Small model for testing
+ollama pull tinyllama
+
+# Or larger models if you have RAM
+ollama pull llama3.2:1b
+ollama pull phi3:mini
+```
+
+**Chat with a model**:
+```bash
+ollama run tinyllama "Hello, how are you?"
+```
+
+**API Endpoint**:
+```bash
+curl http://localhost:11434/api/generate -d '{
+  "model": "tinyllama",
+  "prompt": "Hello, how are you?"
+}'
+```
+
+<Warning>
+  Ollama needs more RAM and storage than node-llama-cpp. Recommended only for devices with **6GB+ RAM** and **32GB+ free storage**.
+</Warning>
+
+---
+
+## 🔗 Official Ollama OpenClaw Integration
+
+OpenClaw officially integrates with Ollama to provide a seamless local AI assistant experience.
+
+### Why it's powerful
+
+1. **Native API Integration**: OpenClaw connects directly to Ollama's native `/api/chat` endpoint. This ensures full support for streaming and **tool calling**. 
+   > ⚠️ **Important**: Do not use the `/v1` OpenAI-compatible URL with OpenClaw. It breaks tool calling and causes models to output raw JSON!
+2. **Automatic Model Discovery**: OpenClaw queries `/api/tags` and `/api/show` to automatically find your downloaded Ollama models, detect if they support tool calling, and configure their context windows appropriately.
+
+### Setup Methods
+
+**Method A: Ollama Launcher (Recommended)**
+The easiest way to connect OpenClaw to Ollama is using the official launcher command:
+```bash
+ollama launch openclaw
+```
+This setups the security profile, configures the provider, and sets your primary model. To launch a specific model directly:
+```bash
+# Example with cloud model
+ollama launch openclaw --model kimi-k2.5:cloud
+```
+
+**Method B: OpenClaw Onboarding**
+Run the onboarding wizard and select "Ollama" when asked for a provider:
+```bash
+openclaw onboard
+```
+It will ask for your Ollama base URL (default is `http://127.0.0.1:11434`).
+
+**Method C: Explicit Configuration**
+You can force OpenClaw to use Ollama by exporting the API key environment variable before starting the gateway:
+```bash
+export OLLAMA_API_KEY="ollama-local"
+openclaw gateway
+```
+
+---
+
+## 📊 Model Recommendations
+
+| Model | Size (Q4) | RAM Needed | Speed | Use Case |
+|-------|-----------|------------|-------|----------|
+| **TinyLlama 1.1B** | ~670MB | 2GB | Fast | Testing, experimentation |
+| **Phi-3 Mini (3.8B)** | ~2.3GB | 4GB | Medium | Light tasks |
+| **Llama 3.2 1B** | ~670MB | 2GB | Fast | Mobile-friendly |
+| **Llama 3.2 3B** | ~2GB | 4GB | Medium | Balanced |
+| **Mistral 7B** | ~4.1GB | 8GB | Slow | Advanced users only |
+| **Llama 3 8B** | ~4.7GB | 8GB+ | Very Slow | Not recommended |
+
+---
+
+## 🔧 Configuration
+
+### node-llama-cpp Context Length
+
+Reduce context length to save RAM:
+
+```javascript
+const session = new LlamaChatSession({
+  modelPath: 'path/to/model.gguf',
+  contextSize: 2048  // Default is 4096
+});
+```
+
+### Ollama Configuration
+
+Set environment variables before starting:
+
+```bash
+export OLLAMA_NUM_PARALLEL=1
+export OLLAMA_MAX_LOADED_MODELS=1
+ollama serve
+```
+
+---
+
+## 🌐 Cloud vs Local Comparison
+
+| Feature | Local LLM | Cloud LLM (OpenClaw) | Ollama Cloud Models |
+|---------|-----------|---------------------|---------------------|
+| **Speed** | Slow (CPU-only) | Fast (GPU-accelerated) | ⚡ Fastest (cloud GPU) |
+| **Privacy** | ✅ Full privacy | Depends on provider | Depends on provider |
+| **Cost** | Free (after hardware) | Pay-per-token | Free via Ollama |
+| **Model Size** | Limited by RAM (2-8GB) | Unlimited | Unlimited |
+| **Context Window** | 2k-8k tokens | 64k-200k tokens | 64k-128k tokens |
+| **Setup** | Manual download | One command | `ollama pull` |
+| **Internet** | Not needed | Required | Required |
+| **RAM Usage** | 2-8GB | None | None |
+| **Storage** | 4-70GB | None | Minimal |
+| **Best For** | Testing, offline | Production | Production + testing |
+
+---
+
+## 🛠️ Troubleshooting
+
+### "Cannot find module 'node-llama-cpp'"
+
+Make sure you installed with `--ignore-scripts`:
+```bash
+npm install -g node-llama-cpp --ignore-scripts
+```
+
+### "Out of memory" error
+
+Close other apps and reduce context size:
+```bash
+export NODE_OPTIONS="--max-old-space-size=1024"
+```
+
+### Ollama killed by Android
+
+Disable Phantom Process Killer:
+```bash
+adb shell settings put global development_settings_enabled 1
+adb shell settings put global max_phantom_processes 64
+```
+
+### Model download fails
+
+Use a different mirror or download on PC and transfer:
+```bash
+# On PC
+curl -L -o model.gguf "URL"
+# Transfer via USB or scp
+scp model.gguf phone:~/models/
+```
+
+---
+
+## 📚 Resources
+
+- [node-llama-cpp Docs](https://github.com/withcatai/node-llama-cpp)
+- [Ollama Docs](https://docs.ollama.com)
+- [GGUF Models on HuggingFace](https://huggingface.co/models?library=gguf)
+- [TheBloke's Quantized Models](https://huggingface.co/TheBloke)
+
+---
+
+## 💡 Best Practices
+
+1. **Start small**: Begin with TinyLlama 1.1B to test your device
+2. **Monitor RAM**: Use `htop` or Termux's `top` to watch memory usage
+3. **Use tmux**: Run long inference sessions in tmux to prevent disconnection
+4. **Cool your phone**: CPU inference generates heat; consider active cooling
+5. **Cloud for production**: Use local LLM for testing, cloud for real work
+
+<Info>
+  **Pro Tip**: Use OCA's hybrid mode — route simple queries to local LLM, complex tasks to cloud APIs. Best of both worlds!
+</Info>

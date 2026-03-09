@@ -1,0 +1,91 @@
+---
+title: "Configuration"
+description: "Customize your OCA installation — Node.js, OpenClaw config, and environment variables."
+---
+
+## OpenClaw Config
+
+Config lives at `~/.openclaw/openclaw.json`:
+
+```json
+{
+  "channels": {
+    "whatsapp": {
+      "allowFrom": ["+91XXXXXXXXXX"],
+      "groups": { "*": { "requireMention": true } }
+    }
+  },
+  "messages": {
+    "groupChat": {
+      "mentionPatterns": ["@openclaw"]
+    }
+  }
+}
+```
+
+Edit with:
+```bash
+nano ~/.openclaw/openclaw.json
+```
+
+---
+
+## Environment Variables
+
+| Variable | Default | Description |
+|---|---|---|
+| `OCA_DIR` | `~/.oca` | Root directory for OCA files |
+| `GLIBC_NODE_DIR` | `~/.oca/node` | Node.js installation path |
+| `PATH` | Prepends `~/.oca/node/bin` | Ensures glibc Node.js takes priority |
+| `TMPDIR` | `$PREFIX/tmp` | Required for glibc compatibility |
+| `OCA_GLIBC` | `1` | Signals that glibc Node is active |
+| `NODE_OPTIONS` | `-r ~/.oca/patches/glibc-compat.js` | Loads the Android polyfill |
+
+To reload:
+```bash
+source ~/.bashrc
+```
+
+---
+
+## Node.js Version
+
+The installer defaults to **Node.js v24.14.1**. To change:
+
+```bash
+# Edit install script
+nano ~/.oca/scripts/install-nodejs.sh
+# Change: NODE_VERSION="24.14.1"
+
+# Reinstall
+bash ~/.oca/scripts/install-nodejs.sh
+```
+
+---
+
+## npm Config
+
+```bash
+# Disable audit prompts
+npm config set audit false
+
+# Disable fund messages
+npm config set fund false
+
+# Increase network timeout (slow connections)
+npm config set fetch-timeout 120000
+```
+
+---
+
+## glibc DNS Config
+
+```bash
+nano $PREFIX/glibc/etc/resolv.conf
+```
+
+Default:
+```
+nameserver 8.8.8.8
+nameserver 1.1.1.1
+```

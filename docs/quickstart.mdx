@@ -1,0 +1,113 @@
+---
+title: "Quick Start"
+description: "From zero to a running OpenClaw gateway in under 5 minutes."
+---
+
+## Prerequisites
+
+<Warning>
+  Install Termux from **[F-Droid](https://f-droid.org/packages/com.termux/)** — NOT the Google Play Store. The Play version is severely outdated and will cause failures.
+</Warning>
+
+1. Install **Termux** from F-Droid
+2. Open Termux and run `termux-setup-storage` (required for storage permissions)
+3. Ensure you have a stable internet connection
+
+---
+
+## Step 1 — Run the bootstrap
+
+Open Termux and paste this single command:
+
+```bash
+curl -sL https://raw.githubusercontent.com/PsProsen-Dev/OpenClaw-On-Android/master/bootstrap.sh | bash && source ~/.bashrc
+```
+
+---
+
+## Step 2 — Answer the prompts
+
+The installer walks you through **8 steps** with yes/no prompts:
+
+| Prompt | Recommendation |
+|---|---|
+| Install tmux? | ✅ Yes — keeps sessions alive |
+| Install ttyd (web terminal)? | Optional |
+| Install dufs (file server)? | Optional |
+| Install android-tools (adb)? | ✅ Yes — useful for debugging |
+| Install code-server (browser IDE)? | Optional |
+| Install OpenCode (AI assistant)? | Optional |
+| Install Claude Code CLI? | Your choice |
+| Install Gemini CLI? | Your choice |
+| Install Codex CLI? | Your choice |
+| Install Qwen Code CLI? | ✅ Yes — works great on Android |
+| Setup Termux:Boot auto-start? | ✅ Yes — for 24/7 operation |
+| Install Termux:API tools? | Optional |
+
+---
+
+## Step 3 — Automatic glibc extras layer
+
+On the OpenClaw platform, OCA automatically installs **Homebrew (Linuxbrew)** and the **Go toolchain** after the glibc runtime is ready. You do not need to answer separate prompts for them.
+
+Why this is automatic:
+
+- `glibc-runner` provides the glibc dynamic linker required by standard Linux binaries on Android
+- OCA's Node.js/OpenClaw stack already depends on that glibc layer
+- Homebrew and many `go install` workflows naturally belong on the same layer
+
+Recommended post-install check:
+
+```bash
+source ~/.bashrc && brew --version
+```
+
+---
+
+## Step 4 — Verify installation
+
+```bash
+oca --status
+```
+
+Expected output:
+```
+[OK] OpenClaw gateway: running
+[OK] Node.js v24.x.x (glibc, grun wrapper)
+[OK] platform: linux
+```
+
+If you enabled Homebrew and Go during setup, reload your shell and verify them:
+
+```bash
+source ~/.bashrc && brew --version && go version
+```
+
+---
+
+## Step 5 — Start the gateway
+
+```bash
+openclaw start
+```
+
+Dashboard available at `http://127.0.0.1:18789/`
+
+---
+
+## What's next?
+
+<CardGroup cols={2}>
+  <Card title="SSH Remote Access" icon="terminal" href="/docs/ssh-guide">
+    Connect to your Android server from your PC
+  </Card>
+  <Card title="AI CLI Tools" icon="brain" href="/docs/ai-cli-tools">
+    Set up Claude Code, Qwen Code, Gemini CLI
+  </Card>
+  <Card title="Auto-start on Boot" icon="power-off" href="/docs/termux-boot">
+    Keep OpenClaw running 24/7
+  </Card>
+  <Card title="Troubleshooting" icon="bug" href="/docs/troubleshooting">
+    Fix common install errors
+  </Card>
+</CardGroup>

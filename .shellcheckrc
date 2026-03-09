@@ -1,0 +1,13 @@
+# ShellCheck configuration for OpenClaw on Android
+# Settings for shell scripts running in the Termux environment
+
+# Default shell dialect
+shell=bash
+
+# Enable following sourced files
+external-sources=true
+
+# SC2155: Declare and assign separately — frequently used pattern in Termux scripts
+# SC1091: Not following sourced file — target only exists at runtime (e.g., Termux $PREFIX)
+# SC2034: Variable appears unused — defined in lib.sh and used in other scripts
+disable=SC2155,SC1091,SC2034

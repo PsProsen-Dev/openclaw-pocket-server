@@ -1,0 +1,94 @@
+---
+title: "What is OCA?"
+description: "Turn any Android phone into a 24/7 AI server — one command, zero hassle."
+---
+
+<img
+  className="block dark:hidden"
+  src="/docs/images/banner.png"
+  alt="OCA Banner"
+/>
+<img
+  className="hidden dark:block"
+  src="/docs/images/banner.png"
+  alt="OCA Banner"
+/>
+
+## Overview
+
+**OCA (OpenClaw on Android)** is an open-source installer that deploys the full [OpenClaw](https://openclaw.ai) AI ecosystem directly onto your Android device via Termux — no proot, no VM, no sluggish Linux distro overhead.
+
+It runs natively using a **glibc-based Node.js runtime** (the same approach as the official OpenClaw v2.x architecture), completely bypassing Android's restrictive Bionic libc.
+
+<CardGroup cols={2}>
+  <Card title="Quick Start" icon="rocket" href="/docs/quickstart">
+    Go from zero to a running OpenClaw gateway in under 5 minutes.
+  </Card>
+  <Card title="Installation Guide" icon="wrench" href="/docs/installation">
+    Full step-by-step walkthrough for the `oca` installer.
+  </Card>
+  <Card title="AI CLI Tools" icon="brain" href="/docs/ai-cli-tools">
+    Claude Code, Gemini CLI, Qwen Code, Codex — all on your phone.
+  </Card>
+  <Card title="Local LLM" icon="microchip" href="/docs/local-llm">
+    Run LLM models locally via node-llama-cpp and Ollama.
+  </Card>
+  <Card title="Troubleshooting" icon="bug" href="/docs/troubleshooting">
+    Common errors and fixes for Termux + Android environments.
+  </Card>
+  <Card title="Configuration" icon="cog" href="/docs/configuration">
+    Manage your OCA settings and preferences.
+  </Card>
+</CardGroup>
+
+---
+
+## Why OCA?
+
+Your old Android phone is a powerful ARM64 server waiting to happen. OCA unlocks it:
+
+| Feature | Description |
+|---|---|
+| **RTX⚡1: Infra** | Optimized Termux environment (curl, git, wake-lock) |
+| **RTX⚡2: Engine** | Full Node.js linux-arm64 via glibc-bridge |
+| **RTX⚡3: Arsenal** | Chromium, Playwright, Go, Homebrew, & OpenCode |
+| **4 AI CLIs** | Qwen Code, Claude Code, Gemini CLI, Codex (All RTX⚡3) |
+| **SSH remote access** | Built-in SSH server on port 8022 |
+| **Auto-start** | Termux:Boot integration for persistent 24/7 operation |
+| **One command install** | `curl ... | bash` and answer only the truly optional prompts |
+
+---
+
+## How it works
+
+```
+Android Device (Termux)
+        │
+        ▼
+  RTX⚡1: INFRASTRUCTURE (Setup)
+        │
+        ▼
+  RTX⚡2: PLATFORM ENGINE (glibc + Node)
+        │
+        ▼
+  RTX⚡3: MASTER ARSENAL
+  ┌─────┴──────┐
+  │  AI CLIs   │  ◄── Claude, Qwen, Gemini, Codex
+  │  Gateway    │  ◄── OpenClaw core
+  │  Tools      │  ◄── Playwright, Homebrew, Go
+  └────────────┘
+```
+
+---
+
+## Requirements
+
+<Info>
+  OCA is designed for **aarch64 (ARM64)** Android devices running Android 10 or newer.
+</Info>
+
+- **Device**: Any Android phone with aarch64 CPU (virtually all phones since 2016)
+- **OS**: Android 10+ (Android 12+ requires [Phantom Process Killer fix](/docs/phantom-process-killer))
+- **App**: [Termux](https://f-droid.org/packages/com.termux/) from **F-Droid** (NOT Google Play — the Play version is outdated)
+- **Storage**: ~500MB free space
+- **Network**: Active internet connection during install

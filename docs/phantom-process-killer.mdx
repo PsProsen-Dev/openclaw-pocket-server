@@ -1,0 +1,74 @@
+---
+title: "Phantom Process Killer"
+description: "Fix Android 12+'s aggressive background process termination that kills Termux."
+---
+
+## What is it?
+
+Android 12 introduced the **Phantom Process Monitor** — it aggressively kills background processes. Your OpenClaw gateway and Termux sessions are at risk.
+
+**Symptom**:
+```
+[Process completed (signal 9) - press Enter]
+```
+
+---
+
+## Fix via ADB (Recommended)
+
+### Step 1 — Enable Developer Options
+Go to **Settings → About Phone** → tap **Build Number** 7 times.
+
+### Step 2 — Enable USB Debugging
+**Settings → Developer Options → USB Debugging**. Connect phone to PC.
+
+### Step 3 — Run ADB commands (on PC)
+```bash
+adb devices  # verify connection
+
+adb shell "/system/bin/device_config set_sync_disabled_for_tests persistent"
+adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"
+```
+
+### Step 4 — Verify
+```bash
+adb shell "/system/bin/device_config get activity_manager max_phantom_processes"
+# Output: 2147483647
+```
+
+<Check>
+  This setting persists across reboots. One-time setup.
+</Check>
+
+---
+
+## Fix via Wireless ADB (No USB cable, Android 11+)
+
+1. Go to **Settings → Developer Options → Wireless Debugging**
+2. Note the IP:Port shown
+3. In Termux:
+```bash
+pkg install android-tools
+adb connect 192.168.1.x:PORT
+adb shell "/system/bin/device_config set_sync_disabled_for_tests persistent"
+adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"
+```
+
+---
+
+## Fix via Shizuku
+
+[Shizuku](https://shizuku.rikka.app/) provides ADB-level access without a PC. Install from Play Store, activate, then run the commands via a Shizuku-compatible terminal.
+
+---
+
+## tmux as a failsafe
+
+Always run inside tmux — even if the terminal window dies, the tmux session survives:
+
+```bash
+tmux new -s openclaw
+openclaw start
+# Ctrl+B, D to detach
+# tmux attach -t openclaw to re-attach
+```

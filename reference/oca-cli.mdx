@@ -1,0 +1,113 @@
+---
+title: "oca CLI Reference"
+description: "Complete reference for the oca command-line interface."
+---
+
+## Overview
+
+The `oca` CLI is installed to `$PREFIX/bin/oca` during setup.
+
+```bash
+oca [command] [options]
+```
+
+---
+
+## Commands
+
+### `oca --status`
+
+Check the current status of all OCA components.
+
+```bash
+oca --status
+```
+
+**Example output**:
+```
+[OK] OpenClaw gateway: running
+[OK] Node.js v24.14.1 (glibc, grun wrapper)
+[OK] platform: linux
+[OK] npm: 10.9.2
+[OK] SSH server: running (port 8022)
+[OK] tmux session: openclaw
+```
+
+---
+
+### `oca --update`
+
+Update OCA scripts, Node.js, and the OpenClaw package.
+
+```bash
+oca --update
+```
+
+---
+
+### `oca --install`
+
+Reinstall a specific component:
+
+```bash
+oca --install [component]
+```
+
+| Component | Description |
+|---|---|
+| `nodejs` | Reinstall Node.js v24 linux-arm64 |
+| `glibc` | Reinstall glibc-runner |
+| `openclaw` | Reinstall OpenClaw npm package |
+| `ssh` | Reconfigure SSH server |
+| `boot` | Reconfigure Termux:Boot |
+
+---
+
+### `oca --uninstall`
+
+Remove OCA completely.
+
+```bash
+oca --uninstall
+```
+
+Removes `~/.oca/`, PATH entries from `~/.bashrc`, `oca` and `ocaupdate` from `$PREFIX/bin/`.
+
+<Warning>
+  Does **not** remove globally installed npm packages (Claude Code, Qwen Code, etc.).
+</Warning>
+
+---
+
+## `openclaw` Commands
+
+| Command | Description |
+|---|---|
+| `openclaw start` | Start the gateway server |
+| `openclaw start --verbose` | Start with verbose output |
+| `openclaw stop` | Stop the gateway |
+| `openclaw status` | Check gateway health |
+| `openclaw update` | Update to latest version |
+| `openclaw gateway token` | Get auth token for cluster nodes |
+
+---
+
+## Environment Variables
+
+| Variable | Description |
+|---|---|
+| `OCA_DIR` | OCA root directory (`~/.oca`) |
+| `OCA_GLIBC` | Set to `1` when glibc Node is active |
+| `GLIBC_NODE_DIR` | Path to glibc Node.js installation |
+| `NODE_OPTIONS` | Preloads `glibc-compat.js` polyfill |
+| `TMPDIR` | Set to `$PREFIX/tmp` |
+
+---
+
+## `ocaupdate`
+
+```bash
+ocaupdate
+```
+
+Convenience alias for `oca --update`. Pulls latest OCA from GitHub and re-runs install steps.

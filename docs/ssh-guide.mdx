@@ -1,0 +1,95 @@
+---
+title: "SSH Remote Access"
+description: "Connect to your Android OpenClaw server from your PC, laptop, or any device."
+---
+
+## Overview
+
+OCA sets up **OpenSSH** on port `8022` during installation. Start it with:
+
+```bash
+sshd
+```
+
+---
+
+## Connect from your PC
+
+Find your Android IP:
+```bash
+ip addr show | grep 'inet ' | grep -v 127
+```
+
+Connect:
+```bash
+ssh -p 8022 user@192.168.1.x
+```
+
+<Info>
+  Default password set by OCA is `1234` — **change this immediately** with `passwd`.
+</Info>
+
+---
+
+## SSH Key Authentication (Recommended)
+
+```bash
+# On your PC — generate key (skip if you have one)
+ssh-keygen -t ed25519 -C "android-openclaw"
+
+# Copy to Android
+ssh-copy-id -p 8022 user@192.168.1.x
+```
+
+SSH config shortcut (`~/.ssh/config` on PC):
+```
+Host android-openclaw
+  HostName 192.168.1.x
+  Port 8022
+  IdentityFile ~/.ssh/id_ed25519
+```
+
+Then: `ssh android-openclaw`
+
+---
+
+## Remote Access (Outside Home Network)
+
+### Option 1: ngrok
+```bash
+pkg install ngrok
+ngrok tcp 8022
+```
+
+### Option 2: Tailscale (Recommended)
+```bash
+pkg install tailscale
+tailscale up
+```
+
+---
+
+## Auto-start SSH on Boot
+
+```bash
+echo "sshd" >> ~/.termux/boot/start-openclaw.sh
+```
+
+---
+
+## Common Issues
+
+<AccordionGroup>
+  <Accordion title="Connection refused">
+    SSH not running: `sshd`
+  </Accordion>
+  <Accordion title="Connection timed out">
+    Check Android IP: `ip addr show`. Both devices must be on same WiFi.
+  </Accordion>
+  <Accordion title="Permission denied (publickey)">
+    Fix authorized_keys permissions: `chmod 600 ~/.ssh/authorized_keys`
+  </Accordion>
+  <Accordion title="Host key changed warning">
+    Remove old entry: `ssh-keygen -R "[old-ip]:8022"`
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,75 @@
+---
+title: "Auto-Start (Termux:Boot)"
+description: "Keep OpenClaw running 24/7 by auto-starting on device boot."
+---
+
+## Requirements
+
+1. Install **[Termux:Boot](https://f-droid.org/packages/com.termux.boot/)** from F-Droid
+2. Open Termux:Boot at least once to activate it
+
+<Warning>
+  Install Termux:Boot from **F-Droid** to match your Termux installation.
+</Warning>
+
+---
+
+## What OCA sets up
+
+OCA creates `~/.termux/boot/start-openclaw.sh`:
+
+```bash
+#!/data/data/com.termux/files/usr/bin/bash
+sleep 15
+source ~/.bashrc
+sshd
+tmux new-session -d -s openclaw "openclaw start"
+```
+
+---
+
+## Manual Setup
+
+```bash
+mkdir -p ~/.termux/boot
+
+cat > ~/.termux/boot/start-openclaw.sh << 'EOF'
+#!/data/data/com.termux/files/usr/bin/bash
+sleep 15
+source ~/.bashrc
+sshd
+tmux new-session -d -s openclaw "openclaw start"
+EOF
+
+chmod +x ~/.termux/boot/start-openclaw.sh
+```
+
+---
+
+## Verify after reboot
+
+```bash
+tmux list-sessions
+pgrep sshd && echo "SSH running"
+oca --status
+```
+
+---
+
+## Adjust boot delay
+
+```bash
+# Faster WiFi (5 sec)
+sed -i 's/sleep 15/sleep 5/' ~/.termux/boot/start-openclaw.sh
+
+# Slower connection (30 sec)
+sed -i 's/sleep 15/sleep 30/' ~/.termux/boot/start-openclaw.sh
+```
+
+---
+
+## For 24/7 reliability
+
+You need **both**:
+1. Termux:Boot for auto-start ✅
+2. [Phantom Process Killer disabled](/docs/phantom-process-killer) to prevent SIGKILL ✅

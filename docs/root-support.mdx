@@ -1,0 +1,55 @@
+---
+title: "Root Support"
+description: "Use OCA on rooted Android devices with the oca-root wrapper."
+---
+
+## Overview
+
+OCA works perfectly **without root**. For rooted devices (Magisk), OCA optionally sets up an `oca-root` wrapper for selective root-level commands.
+
+---
+
+## Root Detection
+
+The installer auto-detects root and runs `scripts/setup-root.sh` if found:
+
+```bash
+# Checks for:
+# 1. su binary in PATH
+# 2. Magisk presence
+# 3. /system/xbin/su
+```
+
+---
+
+## Recommended Root Setup
+
+<Info>
+  Use **Stock OneUI + Magisk** for Samsung devices (A23, A13, etc.). Avoid GSI ROMs for server use — stock kernel has better WiFi drivers and Magisk compatibility.
+</Info>
+
+---
+
+## Using oca-root
+
+```bash
+oca-root <command>
+
+# Examples:
+oca-root mount /data
+oca-root iptables -L
+oca-root svc power stayon true   # keep screen on via root
+```
+
+---
+
+## Security
+
+<Warning>
+  The `oca-root` wrapper is intentionally narrow — it doesn't grant blanket root to all OpenClaw processes.
+</Warning>
+
+Best practices:
+- Set Magisk root access to "Apps only"
+- Use SSH key auth when running as root
+- Keep Magisk updated

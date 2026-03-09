@@ -1,0 +1,87 @@
+---
+title: "Architecture"
+description: "How OCA bridges Android's Bionic libc and the glibc-based Node.js ecosystem."
+---
+
+## The Core Problem
+
+Android uses **Bionic libc** — a stripped-down libc optimized for mobile. Most Linux binaries (including the official Node.js release) are compiled against **GNU glibc**, which is incompatible with Bionic.
+
+Standard workarounds:
+- **Proot/chroot**: Runs a full Linux distro, heavy overhead
+- **Termux Node.js build**: Compiled against Bionic, but npm native modules often fail
+- **OCA's approach**: Use `glibc-runner` to inject the real glibc linker at exec-time — no VM, no overhead
+
+---
+
+## Layer Diagram
+
+```
+┌─────────────────────────────────────────────────────┐
+│                  Android (Bionic libc)               │
+├─────────────────────────────────────────────────────┤
+│  RTX⚡1: INFRASTRUCTURE (Termux $PREFIX)             │
+│  └─ Core Packages: curl, git, setup-paths           │
+├─────────────────────────────────────────────────────┤
+│  RTX⚡2: PLATFORM ENGINE (glibc-runner)              │
+│  └─ $PREFIX/glibc/lib/ld-linux-aarch64.so.1         │
+│     └─ Node.js v24 (official linux-arm64)           │
+├─────────────────────────────────────────────────────┤
+│  RTX⚡3: MASTER ARSENAL (AI & Tooling)               │
+│  ├─ OpenClaw Gateway (npm package)                  │
+│  ├─ AI CLIs (Qwen, Claude, Gemini, Codex)           │
+│  └─ Chromium / Playwright / Go / Homebrew           │
+└─────────────────────────────────────────────────────┘
+```
+
+---
+
+## Key Components
+
+### glibc-runner (`grun`)
+
+The `glibc-runner` Termux package provides a launcher that executes binaries with the real glibc dynamic linker. The OCA `node` wrapper calls:
+
+```bash
+exec "$PREFIX/bin/grun" "$(dirname "$0")/node.real" "$@"
+```
+
+### glibc-compat.js
+
+A Node.js preload script that polyfills Android-specific limitations:
+- `os.cpus()` — Android 12+ restricts CPU topology access
+- `os.networkInterfaces()` — may panic on restricted kernels
+
+### DNS Fix
+
+Android 12+ removed `/etc/resolv.conf`. OCA writes `$PREFIX/glibc/etc/resolv.conf`:
+```
+nameserver 8.8.8.8
+nameserver 1.1.1.1
+```
+
+---
+
+## File Structure
+
+```
+~/.oca/
+├── node/
+│   └── bin/
+│       ├── node          ← grun wrapper script
+│       ├── node.real     ← actual Node.js binary
+│       ├── npm
+│       └── npx
+├── patches/
+│   ├── glibc-compat.js   ← os.cpus / networkInterfaces polyfill
+│   └── argon2-stub.js    ← argon2 native module stub
+├── platforms/
+│   └── openclaw/
+└── .platform             ← "openclaw" marker
+```
+
+CLI tools:
+```
+$PREFIX/bin/oca          ← OCA management CLI
+$PREFIX/bin/ocaupdate    ← Update shortcut
+```
