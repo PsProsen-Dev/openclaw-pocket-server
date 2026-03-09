@@ -20,7 +20,7 @@ PACKAGES=(
   cmake         # Cross-platform builds (koffi, argon2)
   clang         # C/C++ compiler
   tmux          # Terminal multiplexer (persistent sessions)
-  openssh       # SSH server for remote access
+  binutils      # Essential build tools (ar, nm, etc)
   curl          # HTTP client
   wget          # File downloader
 )

@@ -41,7 +41,6 @@ INSTALL_CLAUDE_CODE=false
 INSTALL_GEMINI_CLI=false
 INSTALL_CODEX_CLI=false
 INSTALL_QWEN_CODE=false
-INSTALL_SSH=false
 INSTALL_BOOT=false
 INSTALL_TERMUX_API=false
 
@@ -59,7 +58,6 @@ if ask_yn_labeled "Install Claude Code CLI?" "optional"; then INSTALL_CLAUDE_COD
 if ask_yn_labeled "Install Gemini CLI?" "optional"; then INSTALL_GEMINI_CLI=true; fi
 if ask_yn_labeled "Install Codex CLI?" "optional"; then INSTALL_CODEX_CLI=true; fi
 if ask_yn_labeled "Install Qwen Code CLI?" "optional"; then INSTALL_QWEN_CODE=true; fi
-if ask_yn_labeled "Setup SSH server?" "optional but highly recommended"; then INSTALL_SSH=true; fi
 if ask_yn_labeled "Setup Termux:Boot auto-start?" "optional but highly recommended"; then INSTALL_BOOT=true; fi
 if ask_yn_labeled "Install Termux:API tools?" "optional"; then INSTALL_TERMUX_API=true; fi
 
@@ -154,9 +152,6 @@ exec "$HOME/.oca/node/bin/node" "$PREFIX/lib/node_modules/@qwen-code/qwen-code/d
 EOF
     chmod +x "$PREFIX/bin/qwen"
 fi
-
-# ── SSH server ──
-[ "$INSTALL_SSH" = true ] && bash "$SCRIPT_DIR/scripts/setup-ssh.sh" || true
 
 # ── Termux:Boot ──
 [ "$INSTALL_BOOT" = true ] && bash "$SCRIPT_DIR/scripts/setup-boot.sh" || true
