@@ -1,0 +1,79 @@
+name: OCA Shell Lint & Test
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  shellcheck:
+    name: ShellCheck Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install ShellCheck
+        run: sudo apt-get install -y shellcheck
+
+      - name: Run ShellCheck on all shell scripts
+        run: |
+          find . -name "*.sh" \
+            -not -path "./.git/*" \
+            -not -path "./node_modules/*" \
+            | xargs shellcheck --severity=warning
+
+  verify-structure:
+    name: Verify Project Structure
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check required files exist
+        run: |
+          echo "Checking required files..."
+          required_files=(
+            "install.sh"
+            "bootstrap.sh"
+            "oca.sh"
+            "uninstall.sh"
+            "update.sh"
+            "scripts/lib.sh"
+            "platforms/openclaw/install.sh"
+            "tests/verify-install.sh"
+          )
+          for f in "${required_files[@]}"; do
+            if [ ! -f "$f" ]; then
+              echo "❌ MISSING: $f"
+              exit 1
+            else
+              echo "✅ OK: $f"
+            fi
+          done
+
+      - name: Check scripts are executable
+        run: |
+          echo "Checking script permissions..."
+          find . -name "*.sh" -not -path "./.git/*" | while read -r script; do
+            if [ ! -x "$script" ]; then
+              echo "⚠️  Not executable: $script"
+            fi
+          done
+
+  markdown-check:
+    name: Markdown Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Lint Markdown files
+        uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: "**/*.md"
+        continue-on-error: true
