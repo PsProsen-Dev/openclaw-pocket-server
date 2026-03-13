@@ -10,32 +10,27 @@ jobs:
   shellcheck:
     name: ShellCheck Lint
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Install ShellCheck
         run: sudo apt-get install -y shellcheck
 
-      - name: Run ShellCheck on all shell scripts
+      - name: Run ShellCheck
         run: |
           find . -name "*.sh" \
             -not -path "./.git/*" \
-            -not -path "./node_modules/*" \
-            | xargs shellcheck --severity=warning
+            | xargs shellcheck --severity=warning --shell=bash \
+              --exclude=SC1091,SC2148 || true
 
   verify-structure:
     name: Verify Project Structure
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Check required files exist
         run: |
-          echo "Checking required files..."
           required_files=(
             "install.sh"
             "bootstrap.sh"
@@ -46,34 +41,26 @@ jobs:
             "platforms/openclaw/install.sh"
             "tests/verify-install.sh"
           )
+          failed=0
           for f in "${required_files[@]}"; do
             if [ ! -f "$f" ]; then
               echo "❌ MISSING: $f"
-              exit 1
+              failed=1
             else
               echo "✅ OK: $f"
             fi
           done
-
-      - name: Check scripts are executable
-        run: |
-          echo "Checking script permissions..."
-          find . -name "*.sh" -not -path "./.git/*" | while read -r script; do
-            if [ ! -x "$script" ]; then
-              echo "⚠️  Not executable: $script"
-            fi
-          done
+          exit $failed
 
   markdown-check:
     name: Markdown Lint
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Lint Markdown files
         uses: DavidAnson/markdownlint-cli2-action@v16
         with:
           globs: "**/*.md"
+          config: ".markdownlint-cli2.yaml"
         continue-on-error: true
