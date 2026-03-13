@@ -137,20 +137,20 @@ openclaw gateway
 
 ## 🔧 CLI Reference
 
-After installation, use the `oa` command for managing your installation:
+After installation, use the `oca` command for managing your installation:
 
 | Command | Description |
 |---------|-------------|
-| `oa --update` | Update OpenClaw and Android patches |
-| `oa --install` | Install optional tools (tmux, code-server, AI CLIs) |
-| `oa --uninstall` | Remove OpenClaw on Android |
-| `oa --status` | Show installation status |
-| `oa --version` | Show version |
-| `oa --help` | Show available options |
+| `oca --update` | Update OpenClaw and Android patches |
+| `oca --install` | Install optional tools (tmux, code-server, AI CLIs) |
+| `oca --uninstall` | Remove OpenClaw on Android |
+| `oca --status` | Show installation status |
+| `oca --version` | Show version |
+| `oca --help` | Show available options |
 
 **Update example:**
 ```bash
-oa --update && source ~/.bashrc
+oca --update && source ~/.bashrc
 ```
 
 This updates: OpenClaw core, code-server, OpenCode, AI CLI tools, Android patches
