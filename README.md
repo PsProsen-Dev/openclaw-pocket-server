@@ -53,7 +53,7 @@ OCA seamlessly installs the **OpenClaw** AI ecosystem directly onto your device 
 
 Configure Developer Options, Stay Awake, and battery optimization to prevent Android from killing Termux.
 
-👉 **[Read Phone Setup Guide](docs/phone-setup.mdx)** for step-by-step instructions.
+👉 **[Read Phone Setup Guide](https://openclawonandroid.mintlify.app/docs/introduction)** for step-by-step instructions.
 
 #### Step 2: Install Termux 📱
 
