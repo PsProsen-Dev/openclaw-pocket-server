@@ -91,7 +91,25 @@ Also writes the **DNS fix** (`$PREFIX/glibc/etc/resolv.conf`) to prevent `EAI_AG
 
 ## Step 7 — Optional Tools Install
 
-Installs selected tools: Termux packages via `pkg`, AI CLIs via `npm install -g`.
+Installs selected tools: Termux packages via `pkg`, AI CLIs via `npm install -g`, and optionally **Homebrew (Linuxbrew)** plus the **Go toolchain** for extra OpenClaw skill/helper workflows.
+
+### Homebrew (`scripts/install-homebrew.sh`)
+
+If selected, OCA runs the official Homebrew installer into `~/.linuxbrew` and appends:
+
+```bash
+eval "$($HOME/.linuxbrew/bin/brew shellenv)"
+```
+
+to `~/.bashrc`.
+
+<Warning>
+  Homebrew on Android is still **experimental**. The OCA glibc runtime makes many Linux tools usable, but some formulae may still need manual tweaks.
+</Warning>
+
+### Go (`scripts/install-go.sh`)
+
+If selected, OCA installs the Termux `golang` package so `go install ...` workflows are ready for OpenClaw skills, helper CLIs, and small utilities.
 
 ---
 

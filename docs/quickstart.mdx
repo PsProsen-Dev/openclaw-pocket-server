@@ -36,6 +36,8 @@ The installer walks you through **8 steps** with yes/no prompts:
 | Install dufs (file server)? | Optional |
 | Install android-tools (adb)? | ✅ Yes — useful for debugging |
 | Install code-server (browser IDE)? | Optional |
+| Install Homebrew (Linuxbrew)? | ✅ Recommended if you want extra glibc/Linux packages |
+| Install Go toolchain? | ✅ Recommended for `go install`-based skills and helpers |
 | Install OpenCode (AI assistant)? | Optional |
 | Install Claude Code CLI? | Your choice |
 | Install Gemini CLI? | Your choice |
@@ -58,6 +60,12 @@ Expected output:
 [OK] OpenClaw gateway: running
 [OK] Node.js v24.x.x (glibc, grun wrapper)
 [OK] platform: linux
+```
+
+If you enabled Homebrew and Go during setup, reload your shell and verify them:
+
+```bash
+source ~/.bashrc && brew --version && go version
 ```
 
 ---

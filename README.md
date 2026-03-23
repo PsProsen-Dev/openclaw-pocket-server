@@ -87,6 +87,8 @@ openclaw onboard
 
 Follow the on-screen instructions.
 
+> **Recommended**: Say **Yes** to the new **Homebrew (Linuxbrew)** and **Go toolchain** prompts if you plan to install extra OpenClaw skills, helper CLIs, or additional Linux userland tools.
+
 #### Step 6: Start Gateway
 
 ```bash

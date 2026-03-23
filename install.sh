@@ -36,6 +36,8 @@ INSTALL_TTYD=false
 INSTALL_DUFS=false
 INSTALL_ANDROID_TOOLS=false
 INSTALL_CODE_SERVER=false
+INSTALL_HOMEBREW=false
+INSTALL_GO=false
 INSTALL_OPENCODE=false
 INSTALL_CLAUDE_CODE=false
 INSTALL_GEMINI_CLI=false
@@ -53,6 +55,8 @@ if ask_yn_labeled "Install ttyd (web terminal)?" "optional"; then INSTALL_TTYD=t
 if ask_yn_labeled "Install dufs (file server)?" "optional"; then INSTALL_DUFS=true; fi
 if ask_yn_labeled "Install android-tools (adb)?" "optional but highly recommended"; then INSTALL_ANDROID_TOOLS=true; fi
 if ask_yn_labeled "Install code-server (browser IDE)?" "optional"; then INSTALL_CODE_SERVER=true; fi
+if ask_yn_labeled "Install Homebrew (Linuxbrew, experimental)?" "recommended if you need extra glibc packages"; then INSTALL_HOMEBREW=true; fi
+if ask_yn_labeled "Install Go toolchain?" "recommended for skills and go install workflows"; then INSTALL_GO=true; fi
 if ask_yn_labeled "Install OpenCode (AI coding assistant)?" "optional"; then INSTALL_OPENCODE=true; fi
 if ask_yn_labeled "Install Claude Code CLI?" "optional"; then INSTALL_CLAUDE_CODE=true; fi
 if ask_yn_labeled "Install Gemini CLI?" "optional"; then INSTALL_GEMINI_CLI=true; fi
@@ -120,6 +124,12 @@ step 7 "Install Optional Tools & Features (L3)"
 
 # ── code-server ──
 [ "$INSTALL_CODE_SERVER" = true ] && mkdir -p "$PROJECT_DIR/patches" && cp "$SCRIPT_DIR/patches/argon2-stub.js" "$PROJECT_DIR/patches/argon2-stub.js" && bash "$SCRIPT_DIR/scripts/install-code-server.sh" install || true
+
+# ── Homebrew (Linuxbrew) ──
+[ "$INSTALL_HOMEBREW" = true ] && bash "$SCRIPT_DIR/scripts/install-homebrew.sh" || true
+
+# ── Go toolchain ──
+[ "$INSTALL_GO" = true ] && bash "$SCRIPT_DIR/scripts/install-go.sh" || true
 
 # ── OpenCode ──
 [ "$INSTALL_OPENCODE" = true ] && bash "$SCRIPT_DIR/scripts/install-opencode.sh" install || true
