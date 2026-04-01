@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "💡 Support & Discussions"
+    url: "https://github.com/PsProsen-Dev/OpenClaw-On-Android/discussions"
+    about: "For support, questions, and general community talk."
+  - name: "⚡ GitHub Discussions (New Ideas)"
+    url: "https://github.com/PsProsen-Dev/OpenClaw-On-Android/discussions/new?category=ideas"
+    about: "Propose new Tier-level upgrades or Arsenal tools."
