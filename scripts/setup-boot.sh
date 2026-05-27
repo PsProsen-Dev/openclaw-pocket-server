@@ -14,7 +14,8 @@ mkdir -p "$BOOT_DIR"
 
 cat > "$BOOT_SCRIPT" << 'BOOTEOF'
 #!/data/data/com.termux/files/usr/bin/bash
-source ~/.bashrc 2>/dev/null ||# Start necessary services (add yours below)
+source ~/.bashrc 2>/dev/null || true
+# Start necessary services (add yours below)
 sleep 10
 if ! tmux has-session -t OpenClaw 2>/dev/null; then
   tmux new-session -d -s OpenClaw "source ~/.bashrc && openclaw gateway"

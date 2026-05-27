@@ -12,7 +12,7 @@ if [ -f "$SCRIPT_DIR/lib.sh" ]; then
         source "$SCRIPT_DIR/backup.sh"
     fi
 else
-    OCA_VERSION="1.0.14"
+    OCA_VERSION="010426"
     RED='\033[0;31m'
     GREEN='\033[0;32m'
     YELLOW='\033[1;33m'
@@ -52,7 +52,7 @@ fi
 
 show_help() {
     echo ""
-    echo -e "${BOLD}oca${NC} — OpenClaw on Android Master CLI v${OCA_VERSION:-1.0.14}"
+    echo -e "${BOLD}oca${NC} — OpenClaw on Android Master CLI v${OCA_VERSION:-010426}"
     echo ""
     echo "Usage: oca <command> [args]"
     echo ""
@@ -74,14 +74,14 @@ show_help() {
 }
 
 show_version() {
-    echo "oca v${OCA_VERSION:-1.0.14} (OpenClaw on Android)"
+    echo "oca v${OCA_VERSION:-010426} (OpenClaw on Android)"
 
     local latest
     latest=$(curl -sfL --max-time 3 "${REPO_BASE:-https://raw.githubusercontent.com/PsProsen-Dev/OpenClaw-On-Android/main}/scripts/lib.sh" 2>/dev/null \
         | grep -m1 '^OCA_VERSION=' | cut -d'"' -f2) || true
 
     if [ -n "${latest:-}" ]; then
-        if [ "$latest" = "${OCA_VERSION:-1.0.14}" ]; then
+        if [ "$latest" = "${OCA_VERSION:-010426}" ]; then
             echo -e "  ${GREEN}Up to date${NC}"
         else
             echo -e "  ${YELLOW}v${latest} available${NC} - run: oca update"
@@ -137,7 +137,7 @@ cmd_status() {
 
     echo ""
     echo -e "${BOLD}Version${NC}"
-    echo "  oca:         v${OCA_VERSION:-1.0.14}"
+    echo "  oca:         v${OCA_VERSION:-010426}"
 
     local PLATFORM
     if declare -f detect_platform > /dev/null; then

@@ -123,10 +123,18 @@ if [ -x "$BUN_BIN" ]; then
 else
     # Install bun via the official installer
     # Bun is needed to download the opencode package
-    if curl -fsSL https://bun.sh/install | bash 2>/dev/null; then
-        echo -e "${GREEN}[OK]${NC}   Bun installed"
-    else
-        fail_warn "Failed to install Bun — cannot install OpenCode"
+    BUN_INSTALLED=false
+    for _attempt in 1 2 3; do
+        if curl -fsSL --max-time 60 https://bun.sh/install | bash 2>/dev/null; then
+            echo -e "${GREEN}[OK]${NC}   Bun installed"
+            BUN_INSTALLED=true
+            break
+        fi
+        echo -e "${YELLOW}[WARN]${NC} Bun install attempt ${_attempt}/3 failed, retrying in 5s..."
+        sleep 5
+    done
+    if [ "$BUN_INSTALLED" = false ]; then
+        fail_warn "Failed to install Bun after 3 attempts — cannot install OpenCode"
     fi
     BUN_BIN="$HOME/.bun/bin/bun"
 fi
