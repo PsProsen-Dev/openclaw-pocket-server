@@ -8,7 +8,7 @@ YELLOW='\033[1;33m'
 CYAN='\033[0;36m'
 NC='\033[0m'
 
-GO_VERSION="1.23.4"
+GO_VERSION="1.24.3"
 OPENCLAW_DIR="$HOME/.oca"
 GO_DIR="$OPENCLAW_DIR/go"
 
@@ -99,7 +99,7 @@ for cmd in go gofmt; do
 #!/$PREFIX/bin/bash
 [ -n "\$LD_PRELOAD" ] && export _OA_ORIG_LD_PRELOAD="\$LD_PRELOAD"
 unset LD_PRELOAD
-exec "$GLIBC_LDSO" "\$(dirname "\$0")/${cmd}.real" "\$@"
+exec "$GLIBC_LDSO" --library-path "$PREFIX/glibc/lib" "\$(dirname "\$0")/${cmd}.real" "\$@"
 WRAPPER
     chmod +x "$GO_DIR/bin/$cmd"
     
@@ -118,5 +118,13 @@ if "$GO_DIR/bin/go" version >/dev/null 2>&1; then
     echo -e "${CYAN}[INFO]${NC} You can now use 'go install' natively for Linux skills!"
 else
     echo -e "${RED}[FAIL]${NC} Go verification failed — wrapper script or glibc linker setup may be broken."
+    echo "--- Wrapper script content ---"
+    cat "$GO_DIR/bin/go"
+    echo "--- go.real exists? ---"
+    if [ -f "$GO_DIR/bin/go.real" ]; then echo "go.real exists"; else echo "go.real missing"; fi
+    echo "--- ldd on go.real ---"
+    ldd "$GO_DIR/bin/go.real" || true
+    echo "--- direct ld run ---"
+    "$GLIBC_LDSO" --library-path "$PREFIX/glibc/lib" "$GO_DIR/bin/go.real" version || true
     exit 1
 fi
