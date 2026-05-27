@@ -50,4 +50,42 @@ oca --uninstall
 ```
 </Accordion>
 
+<Accordion title="How do I use free AI models with OCA?" icon="gift">
+
+**1. Start with Free Model Providers**
+- Open OCA (OpenClaw/Opencode) CLI or web UI.
+- Use the `/models` picker, or look in the "Available" tab.
+- **GitHub Copilot CLI / OpenCode app:** 
+    - Free models usually include: **GPT-4.1**, **GPT-5 mini**, MiniMax, Big Pickle, Kimi, GLM, etc. 
+    - Green tick = free to use! (see model picker screenshot in main README)
+
+**2. Get your Free API Key**
+- Free models (including Zen, GitHub, OpenCode) still require a free API key.
+- Register at [OpenCode Zen](https://zen.opencode.ai/) for instant free-tier access (no card needed).
+- Enter key at prompt or via `/config` (follow CLI instructions).
+
+**3. Know the Free Model Quotas & Limits**
+
+| Platform       | Free Models           | Limit                    |
+|----------------|----------------------|--------------------------|
+| GitHub Copilot | GPT-4.1, GPT-5 mini  | 200 req / 5 hr           |
+| OpenCode Zen   | MiniMax, Kimi, GLM   | 200 requests/5 hr        |
+| OpenCode       | Big Pickle, MiniMax  | Shared quota             |
+| Kilo Code      | GLM, Nemotron, Mistral| 200/hr/IP (anonymous)   |
+| Mistral AI     | Codestral, Devstral  | 1-2 RPM (Experiment API) |
+
+  - When you hit a cap: Wait for cooldown, or upgrade for unlimited/quicker access.
+
+**4. Security/Privacy Caveats**
+- Free API data may be collected for model improvements. Don't use highly sensitive/proprietary code on free plan.
+- Always check which models are "free" — line-up changes frequently based on community pool.
+
+> 🧑‍💻 **Did you know?** Jarvis (RTX⚡)—your AI assistant here—is powered by GPT-4.1, same as Copilot/Opencode’s free tier!
+
+**Useful Links**
+- [OpenCode Zen Docs](https://zen.opencode.ai/docs)
+- [Free Model Getting Started (Kilo)](https://kilo.ai/docs/getting-started/using-kilo-for-free)
+
+</Accordion>
+
 </AccordionGroup>

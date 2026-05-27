@@ -189,6 +189,45 @@ Run powerful language models with zero local RAM/storage usage!
 
 ---
 
+## 🟢 Getting Free AI Models
+
+Want to use powerful LLMs like GPT-4.1, GPT-5 mini, MiniMax, Big Pickle—FREE? OpenCode, GitHub, and Zen offer incredible models at zero cost for development, hobby coding, or tinkering.
+
+### 🟩 Quick Start: Free Models via GitHub & OpenCode
+- **GitHub Copilot/Opencode App:** Simply open the model picker (`/models` command or menu) — you’ll see models like:
+    - `GPT-4.1`, `GPT-5 mini` (both free! green tick)
+    - GPT-5.2-Codex, Claude, MiniMax, and more
+    - See [screenshot →](#)
+- **Fun fact:** Main (Jarvis RTX⚡) bhi GPT-4.1 hoon—vohi model OpenCode free mode me available hai!
+
+#### 🔑 API Key Required
+- Free endpoints bhi active `OpenCode API key` (or provider key) maangte hain.
+    - Register at [OpenCode Zen](https://zen.opencode.ai/) for a free key.
+
+### 🌍 Top Free Hosted Models
+| Model Name       | Platform     | Use-case           | Cost  | Free Limit             |
+|------------------|-------------|--------------------|-------|------------------------|
+| GPT-4.1, 5-mini  | GitHub/Copilot| Coding/chat/agents| ₹0    | ~200 requests/5hr      |
+| MiniMax, Kimi    | Zen         | Coding/AI agents   | ₹0    | Quota + fair use       |
+| Big Pickle       | Zen, OpenCode| Reasoning/coding  | ₹0    | Shared pool, capped    |
+| GLM-5            | Zen/Copilot | Big context/agents | ₹0    | Shared pool, capped    |
+
+### ⚡ Pro-tips
+- **Most free models rotate!** Check Zen dashboard or model picker for live free options.
+- **Personal/sensitive code:** Avoid using free APIs for private IP—data may be logged for model improvements.
+- **Usage limits:** Each provider sets request/token quota and/or rate throttling; expect pauses or slowdowns.
+- **Upgrade available:** If you hit free cap, OpenCode Go plan is cheap and offers full privacy + speed.
+
+#### ⚠️ Caveats
+- Data sent to free/experimental models may be retained for quality improvement—use only for safe code/playground!
+- Free models change frequently; always check docs/model picker.
+
+**For advanced usage, quotas, and API docs:**
+- [OpenCode Zen Documentation](https://zen.opencode.ai/docs)
+- [GitHub, Copilot, Kilo Code, Mistral](https://kilo.ai/docs/getting-started/using-kilo-for-free)
+
+---
+
 ## 🏗 Project Architecture
 
 <div align="center">
