@@ -15,7 +15,7 @@ pkg upgrade -y 2>/dev/null || true
 PACKAGES=(
   nodejs-lts    # Node.js LTS runtime (>= 22) + npm
   git           # Git (some npm packages need it)
-  python=3.13.12        # Python (node-gyp build scripts)
+  python                # Python (node-gyp build scripts)
   make          # Build automation (node-gyp)
   cmake         # Cross-platform builds (koffi, argon2)
   clang         # C/C++ compiler

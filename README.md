@@ -18,7 +18,7 @@
 
 <br/>
 
-[🚀 Quick Start](#-quick-start) • [⚡ Features](#-features) • [🦙 Local LLM](#-local-llm) • [📖 Docs](#-documentation) • [🏗 Architecture](#-project-architecture) • [🤝 Community](#-community)
+[🚀 Quick Start](#-quick-start) • [⚡ Features](#-features) • [📖 Docs](#-documentation) • [🏗 Architecture](#-project-architecture) • [🤝 Community](#-community)
 
 </div>
 
@@ -125,11 +125,11 @@ openclaw gateway
 | No Proot overhead | Official linux-arm64 binaries |
 | 100% ARM64 optimized | Bypasses Android linker restrictions |
 
-| <g-emoji class="g-emoji" alias="robot">🤖</g-emoji> AI CLI Tools | <g-emoji class="g-emoji" alias="llama">🦙</g-emoji> Local LLM |
-|:---:|:---:|
-| Qwen Code, Gemini CLI, OpenCode | node-llama-cpp + Ollama support |
-| Zero-prompt auto-setup | Run models locally (experimental) |
-| Cloud API routing | **☁️ NEW: Ollama Cloud Models** |
+| <g-emoji class="g-emoji" alias="robot">🤖</g-emoji> AI CLI Tools |
+|:---:|
+| Qwen Code, Gemini CLI, OpenCode |
+| Zero-prompt auto-setup |
+| **Cloud API routing only** |
 
 | <g-emoji class="g-emoji" alias="globe_with_meridians">🌐</g-emoji> Remote Access | <g-emoji class="g-emoji" alias="shield">🛡️</g-emoji> Safe Root |
 |:---:|:---:|
@@ -169,68 +169,23 @@ This updates: OpenClaw core, code-server, OpenCode, AI CLI tools, Android patche
 
 ---
 
-## 🦙 Local LLM
+## ☁️ Cloud LLM Only
 
-<div align="center">
+> ⚠️ **Local LLM/model inference is NOT supported on mobile/Android. Due to RAM, storage, and CPU limitations, only cloud-hosted LLMs (Gemini, GPT-OSS, etc) are available in OCA.**
 
-### Run AI models directly on your phone!
+### ☁️ Cloud Model Usage (Recommended)
 
-**☁️ NEW: Ollama Cloud Models** - No local resources needed!
-
-</div>
-
-OCA now supports **local LLM inference** via `node-llama-cpp` and **Ollama** (including cloud models!).
-
-### ☁️ Ollama Cloud Models (Recommended)
-
-Run powerful models in the cloud — zero local RAM/storage usage!
+Run powerful language models with zero local RAM/storage usage!
 
 ```bash
-# Pull and launch with cloud model
-ollama pull kimi-k2.5:cloud
-ollama launch openclaw --model kimi-k2.5:cloud
+# Example cloud model usage
+# (Follow CLI tool docs for details — only cloud endpoints are supported)
 ```
 
 **Recommended Cloud Models:**
-- `kimi-k2.5:cloud` - Multimodal reasoning (64k context)
-- `minimax-m2.5:cloud` - Fast coding (64k context)
-- `glm-5:cloud` - Reasoning & code generation
-- `gpt-oss:120b-cloud` - High-performance (128k context)
-
-### 🏠 Local Models (Experimental)
-
-<details>
-<summary><b>⚠️ Important Constraints (click to expand)</b></summary>
-
-| Constraint | Requirement | Reality Check |
-|------------|-------------|---------------|
-| **RAM** | 2-4GB free | Phone RAM is shared with Android |
-| **Storage** | 4-70GB+ | Model files are large |
-| **Speed** | CPU-only | No GPU offloading on Android |
-| **Use Case** | Testing/Experimentation | Cloud APIs for production |
-
-</details>
-
-### Quick Start
-
-```bash
-# Option 1: node-llama-cpp (Recommended)
-npm install -g node-llama-cpp --ignore-scripts
-
-# Option 2: Ollama (Full Server)
-curl -fsSL https://ollama.com/install.sh | sh
-```
-
-### Model Recommendations
-
-| Model | Size | RAM Needed | Speed | Best For |
-|-------|------|------------|-------|----------|
-| **TinyLlama 1.1B** | ~670MB | 2GB | ⚡⚡⚡ | Testing |
-| **Phi-3 Mini** | ~2.3GB | 4GB | ⚡⚡ | Light tasks |
-| **Llama 3.2 1B** | ~670MB | 2GB | ⚡⚡⚡ | Mobile-friendly |
-| **Mistral 7B** | ~4.1GB | 8GB | ⚡ | Advanced only |
-
-> 📖 **[Read Full Local LLM Guide](docs/local-llm.mdx)** for detailed setup, troubleshooting, and cloud comparison.
+- Gemini (Google Cloud)
+- Qwen (Alibaba Cloud)
+- GPT-OSS:120b-cloud (Open OSS; cloud-hosted)
 
 ---
 
@@ -295,7 +250,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 | [📱 Phone Setup](docs/phone-setup.mdx) | Developer Options, Stay Awake, Battery |
 | [🔧 Installation](docs/installation.mdx) | Full 8-step installer breakdown |
 | [🤖 AI CLI Tools](docs/ai-cli-tools.mdx) | Qwen, Claude, Gemini, Codex setup |
-| [🦙 Local LLM](docs/local-llm.mdx) | Run models locally (node-llama-cpp, Ollama) |
+
 | [🌐 Dashboard Connect](docs/dashboard-connect.mdx) | Multi-device management from PC |
 | [🔐 SSH Setup](docs/ssh-guide.mdx) | Remote access configuration |
 | [⚙️ Configuration](docs/configuration.mdx) | Manage settings and preferences |

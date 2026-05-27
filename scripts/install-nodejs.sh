@@ -160,7 +160,7 @@ if [ $_COUNT -gt 0 ] && [ $_COUNT -lt $# ]; then
     done
     export NODE_OPTIONS="${NODE_OPTIONS:+$NODE_OPTIONS }$_LEADING_OPTS"
 fi
-exec "$PREFIX/glibc/lib/ld-linux-aarch64.so.1" "$(dirname "$0")/node.real" "$@"
+exec "$PREFIX/glibc/lib/ld-linux-aarch64.so.1" --library-path "$PREFIX/glibc/lib" "$(dirname "$0")/node.real" "$@"
 WRAPPER
 chmod +x "$NODE_DIR/bin/node"
 echo -e "${GREEN}[OK]${NC}   node wrapper created"
