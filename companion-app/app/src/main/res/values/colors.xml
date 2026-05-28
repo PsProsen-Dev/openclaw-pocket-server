@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1A1A2E</color>
+    <color name="colorPrimaryDark">#16213E</color>
+    <color name="colorAccent">#0F3460</color>
+    <color name="terminalBackground">#000000</color>
+    <color name="terminalForeground">#FFFFFF</color>
+    <color name="extraKeysBackground">#1a1a1a</color>
+    <color name="extraKeyDefault">#333333</color>
+    <color name="extraKeyActive">#58a6ff</color>
+    <color name="extraKeyText">#e0e0e0</color>
+    <color name="extraKeyActiveText">#ffffff</color>
+
+    <!-- Session tab bar -->
+    <color name="tabBarBackground">#161b22</color>
+    <color name="tabInactiveBackground">#21262d</color>
+    <color name="tabActiveBackground">#0d1117</color>
+    <color name="tabTextPrimary">#f0f6fc</color>
+    <color name="tabTextSecondary">#8b949e</color>
+    <color name="tabTextFinished">#484f58</color>
+    <color name="tabAccent">#58a6ff</color>
+    <color name="tabBorder">#30363d</color>
+</resources>

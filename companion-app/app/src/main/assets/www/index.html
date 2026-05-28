@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>OpenClaw Native (OCA)</title>
+  <script type="module" crossorigin src="./assets/index-D_agBQQF.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BrlC3beh.css">
+</head>
+<body>
+  <div id="root"></div>
+  <!-- Native event bridge receiver (§2.8) — must load before React -->
+  <script>
+  window.__oc = {
+    emit(type, data) {
+      window.dispatchEvent(new CustomEvent('native:' + type, { detail: data }));
+    }
+  };
+  </script>
+</body>
+</html>

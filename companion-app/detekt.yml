@@ -1,0 +1,75 @@
+build:
+  maxIssues: 0
+  excludeCorrectable: false
+
+complexity:
+  LongMethod:
+    threshold: 60
+  LargeClass:
+    threshold: 600
+  CyclomaticComplexMethod:
+    threshold: 15
+  TooManyFunctions:
+    thresholdInFiles: 20
+    thresholdInClasses: 20
+    ignorePrivate: true
+
+style:
+  MagicNumber:
+    active: true
+    ignoreNumbers:
+      - '-1'
+      - '0'
+      - '1'
+      - '2'
+    ignoreHashCodeFunction: true
+    ignorePropertyDeclaration: true
+    ignoreAnnotation: true
+    ignoreEnums: true
+  MaxLineLength:
+    maxLineLength: 120
+  WildcardImport:
+    active: false
+  ReturnCount:
+    max: 4
+  ForbiddenMethodCall:
+    active: true
+    methods:
+      # Log.* 직접 사용 금지 — 로깅 추상화(AppLogger) 경유 필수
+      - 'android.util.Log.v'
+      - 'android.util.Log.d'
+      - 'android.util.Log.i'
+      - 'android.util.Log.w'
+      - 'android.util.Log.e'
+      - 'android.util.Log.wtf'
+      # GlobalScope 직접 사용 금지 — 구조화된 코루틴 스코프 사용
+      - 'kotlinx.coroutines.GlobalScope.launch'
+      - 'kotlinx.coroutines.GlobalScope.async'
+      # Dispatchers 직접 사용 금지 — DI를 통한 디스패처 주입 사용
+      - 'kotlinx.coroutines.Dispatchers.IO'
+      - 'kotlinx.coroutines.Dispatchers.Main'
+      - 'kotlinx.coroutines.Dispatchers.Default'
+      - 'kotlinx.coroutines.Dispatchers.Unconfined'
+
+naming:
+  FunctionNaming:
+    functionPattern: '[a-zA-Z][a-zA-Z0-9]*'
+  TopLevelPropertyNaming:
+    constantPattern: '[A-Z][A-Za-z0-9_]*'
+  VariableNaming:
+    variablePattern: '[a-z][A-Za-z0-9]*'
+
+coroutines:
+  GlobalCoroutineUsage:
+    active: true
+  RedundantSuspendModifier:
+    active: true
+
+exceptions:
+  TooGenericExceptionCaught:
+    active: true
+    exceptionNames:
+      - 'Error'
+      - 'Throwable'
+  SwallowedException:
+    active: true
