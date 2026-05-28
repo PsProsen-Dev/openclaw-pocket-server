@@ -71,9 +71,17 @@
       "group": "Features",
       "pages": [
         "docs/ai-cli-tools",
+        "docs/free-models",
+        "docs/local-llm",
         "docs/ssh-guide",
         "docs/termux-boot",
         "docs/root-support"
+      ]
+    },
+    {
+      "group": "Skills & Integrations",
+      "pages": [
+        "docs/ADB-BRIDGE"
       ]
     },
     {
