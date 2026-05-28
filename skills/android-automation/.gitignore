@@ -1,0 +1,142 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+.agents
+skills-lock.json
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# PyCharm
+#.idea/  # Uncomment this if you want to ignore the entire .idea folder
+.idea/*
+!.idea/fileTemplates # Except fileTemplates
+# Workspaces are modified often
+.idea/*-workspace.xml
+.idea/.name
+.idea/inspectionProfiles/Project_Default.xml
+# Comment this if you have projects in your project
+.idea/modules.xml
+# JARs are auto-downloaded
+.idea/libraries
+# Ignore codestyles and dictionaries
+.idea/codestyles
+.idea/dictionaries
+# Ignore dataSources
+.idea/dataSources/
+.idea/dataSources.ids
+.idea/sqlDataSources.xml
+# Ignore file-based fe templates
+.idea/fe/
+# Editor-based code styles
+.idea/codeStyles/
+# IDE Caches
+.idea/caches/
+.idea/shelf/
+
+# VSCode
+.vscode/
+!.vscode/settings.json  # if you need the settings.json to be shared
+
+# pyenv
+.python-version
+
+# pytest specific
+.pytest_cache/
+
+# MyPy
+.mypy_cache/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Kiel Project File
+/*.kiel
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Anaconda
+.conda/
+*.pkl
+
+# Miscellaneous
+*.swp
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Secrets
+*.env
+
+# Local .env files
+.env.local
+.env.*.local
+
+# Sentry environment files
+.sentrycli/ # Sentry CLI auth tokens
+.click3/
