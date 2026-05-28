@@ -1,0 +1,142 @@
+---
+title: "Free AI Models"
+description: "Use powerful AI models for free on Android — GitHub, Gemini, Groq, OpenRouter, Zen and more."
+---
+
+## Overview
+
+OCA works with any LLM provider. Many offer generous free tiers — enough for daily development, learning, and automation on Android with zero spend.
+
+<Info>
+  Free tiers usually allow data collection for model improvement. Avoid sending secrets, private keys, or proprietary code on free plans.
+</Info>
+
+---
+
+## Free Model Providers (2026)
+
+| Provider | Free Models | Free Limit | API Key | Data Privacy |
+|----------|-------------|------------|---------|--------------|
+| **GitHub Copilot** | GPT-4.1, GPT-4.1-mini, Claude Sonnet | 2,000 completions/mo · 50 chat/day | Free GitHub account | Data may be used for training |
+| **Google Gemini CLI** | Gemini 2.0 Flash, Flash-Lite, 2.5 Flash | 1,500 req/day · 1M tokens/min | Free Google account | Data used for improvement |
+| **Groq** | Llama 3.1 8B/70B, Gemma 2 9B, Qwen 2.5 72B | 14,400 req/day | Free signup at groq.com | Better privacy than most |
+| **OpenRouter** | 50+ models with `:free` suffix (Llama, Qwen, DeepSeek, etc.) | Varies by model | Free signup at openrouter.ai | Varies per model |
+| **OpenCode / Zen** | MiniMax, Kimi, GLM-5, Big Pickle | 200 req/5 hr | Free at zen.opencode.ai | Data may be used |
+| **Kilo Code** | GLM, Nemotron, Mistral, Codestral | 200 req/hr (anonymous) | Optional | Anonymous ok |
+| **Mistral (Le Chat)** | Codestral, Devstral (Experiment API) | 1–2 RPM | Free Mistral account | Limited logging |
+| **Amazon Q Developer** | Amazon Q | 50 interactions/month | Free AWS account | AWS privacy policy |
+
+---
+
+## Quick Setup by Provider
+
+### GitHub Copilot (Recommended for beginners)
+
+Free with any GitHub account — no credit card.
+
+```bash
+# Install GitHub Copilot CLI
+npm install -g @githubnext/github-copilot-cli
+
+# Authenticate
+github-copilot-cli auth
+
+# Use model picker
+github-copilot-cli /models
+```
+
+Free quota: **2,000 code completions/month · 50 chat messages/day**
+
+---
+
+### Google Gemini CLI (Best free quota)
+
+1,500 requests/day free — no card needed.
+
+```bash
+npm install -g @google/gemini-cli
+gemini  # prompts Google account login on first run
+```
+
+Or with API key from [aistudio.google.com](https://aistudio.google.com/apikey):
+```bash
+export GEMINI_API_KEY=your_key
+gemini
+```
+
+Free quota: **1,500 req/day · 1M tokens/min** on Gemini 2.0 Flash
+
+---
+
+### Groq (Fastest free inference)
+
+Fastest open-source model inference, free tier is generous.
+
+```bash
+# Get free API key at groq.com/keys
+export GROQ_API_KEY=your_key
+
+# Use via OpenRouter or direct API in any CLI that supports OpenAI-compatible endpoints
+```
+
+Free models: `llama-3.1-8b-instant`, `llama-3.1-70b-versatile`, `gemma2-9b-it`, `qwen-2.5-72b`
+Free quota: **14,400 requests/day**
+
+---
+
+### OpenRouter (Most model variety)
+
+Access 50+ free models from one API key.
+
+```bash
+# Get free key at openrouter.ai/keys
+export OPENROUTER_API_KEY=your_key
+```
+
+Look for models ending in `:free` — e.g. `meta-llama/llama-3.1-8b-instruct:free`, `qwen/qwen-2.5-72b-instruct:free`
+
+Free quota: varies per model — most allow 20–200 req/min
+
+---
+
+### OpenCode / Zen (Best for OpenCode CLI users)
+
+```bash
+# Register free at zen.opencode.ai — no card needed
+# Then in OpenCode CLI:
+/models  # pick any model with green tick or 0x label
+```
+
+Free models: **MiniMax, Kimi, GLM-5, Big Pickle, Nemotron**
+Free quota: **200 req / 5 hours**
+
+---
+
+## Which Provider Should I Use?
+
+| Goal | Best Provider |
+|------|--------------|
+| Just starting out | **GitHub Copilot** (free GitHub account, zero config) |
+| Maximum daily requests | **Groq** (14,400/day free) or **Gemini CLI** (1,500/day) |
+| Best model variety | **OpenRouter** (50+ free models) |
+| Using OpenCode/Zen CLI | **OpenCode Zen** |
+| Privacy-sensitive work | **Groq** (better privacy than cloud-training providers) |
+| Offline fallback | See [Cloud LLM on Android](/docs/local-llm) for Ollama cloud models |
+
+---
+
+## Usage Tips
+
+- **Check `/models`** in your CLI — green tick or `0x` label = free
+- **Rotate providers** when you hit quotas — keep 2–3 API keys ready
+- **Gemini CLI** on Termux: set `GEMINI_CLI_TRUST_WORKSPACE=true` for non-interactive use
+- **OpenRouter** accepts the same OpenAI SDK format — works with any CLI that supports custom base URL
+- Free tiers reset daily or per rolling window — check provider dashboard for exact timing
+
+---
+
+## Privacy Reminder
+
+<Warning>
+  Free tiers on most providers (GitHub, Google, OpenCode) use your prompts for model improvement. Do NOT send private keys, passwords, database credentials, or unreleased proprietary code. Use paid tiers or self-hosted models for sensitive work.
+</Warning>

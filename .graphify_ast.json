@@ -1,0 +1,3728 @@
+{
+  "nodes": [
+    {
+      "id": "graphify_detect_json",
+      "label": ".graphify_detect.json",
+      "file_type": "code",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_on_android_graphify_detect_files",
+      "label": "files",
+      "file_type": "code",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_on_android_graphify_detect_files_code",
+      "label": "code",
+      "file_type": "code",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_on_android_graphify_detect_files_document",
+      "label": "document",
+      "file_type": "code",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_on_android_graphify_detect_files_paper",
+      "label": "paper",
+      "file_type": "code",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_on_android_graphify_detect_files_image",
+      "label": "image",
+      "file_type": "code",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_on_android_graphify_detect_files_video",
+      "label": "video",
+      "file_type": "code",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_on_android_graphify_detect_total_files",
+      "label": "total_files",
+      "file_type": "code",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_on_android_graphify_detect_total_words",
+      "label": "total_words",
+      "file_type": "code",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_on_android_graphify_detect_needs_graph",
+      "label": "needs_graph",
+      "file_type": "code",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_on_android_graphify_detect_warning",
+      "label": "warning",
+      "file_type": "code",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_on_android_graphify_detect_skipped_sensitive",
+      "label": "skipped_sensitive",
+      "file_type": "code",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_on_android_graphify_detect_graphifyignore_patterns",
+      "label": "graphifyignore_patterns",
+      "file_type": "code",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "bootstrap_sh",
+      "label": "bootstrap.sh",
+      "file_type": "code",
+      "source_file": "bootstrap.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "install_tools_sh",
+      "label": "install-tools.sh",
+      "file_type": "code",
+      "source_file": "install-tools.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_on_android_install_tools_ask_yn",
+      "label": "ask_yn()",
+      "file_type": "code",
+      "source_file": "install-tools.sh",
+      "source_location": "L44"
+    },
+    {
+      "id": "openclaw_on_android_install_tools_check_tool",
+      "label": "check_tool()",
+      "file_type": "code",
+      "source_file": "install-tools.sh",
+      "source_location": "L64"
+    },
+    {
+      "id": "install_sh",
+      "label": "install.sh",
+      "file_type": "code",
+      "source_file": "install.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_on_android_install_step",
+      "label": "step()",
+      "file_type": "code",
+      "source_file": "install.sh",
+      "source_location": "L15"
+    },
+    {
+      "id": "openclaw_on_android_install_path",
+      "label": "PATH",
+      "file_type": "code",
+      "source_file": "install.sh",
+      "source_location": "L63"
+    },
+    {
+      "id": "openclaw_on_android_install_tmpdir",
+      "label": "TMPDIR",
+      "file_type": "code",
+      "source_file": "install.sh",
+      "source_location": "L64"
+    },
+    {
+      "id": "openclaw_on_android_install_tmp",
+      "label": "TMP",
+      "file_type": "code",
+      "source_file": "install.sh",
+      "source_location": "L65"
+    },
+    {
+      "id": "openclaw_on_android_install_temp",
+      "label": "TEMP",
+      "file_type": "code",
+      "source_file": "install.sh",
+      "source_location": "L66"
+    },
+    {
+      "id": "openclaw_on_android_install_oa_glibc",
+      "label": "OA_GLIBC",
+      "file_type": "code",
+      "source_file": "install.sh",
+      "source_location": "L67"
+    },
+    {
+      "id": "mint_json",
+      "label": "mint.json",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_on_android_mint_schema",
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "openclaw_on_android_mint_name",
+      "label": "name",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "openclaw_on_android_mint_colors",
+      "label": "colors",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "openclaw_on_android_mint_colors_primary",
+      "label": "primary",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "openclaw_on_android_mint_colors_light",
+      "label": "light",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "openclaw_on_android_mint_colors_dark",
+      "label": "dark",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "openclaw_on_android_mint_colors_background",
+      "label": "background",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "openclaw_on_android_mint_background_dark",
+      "label": "dark",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "openclaw_on_android_mint_colors_anchors",
+      "label": "anchors",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "openclaw_on_android_mint_anchors_from",
+      "label": "from",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L12"
+    },
+    {
+      "id": "openclaw_on_android_mint_anchors_to",
+      "label": "to",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "openclaw_on_android_mint_topbarlinks",
+      "label": "topbarLinks",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L16"
+    },
+    {
+      "id": "openclaw_on_android_mint_topbarctabutton",
+      "label": "topbarCtaButton",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "openclaw_on_android_mint_topbarctabutton_type",
+      "label": "type",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L23"
+    },
+    {
+      "id": "openclaw_on_android_mint_topbarctabutton_url",
+      "label": "url",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L24"
+    },
+    {
+      "id": "openclaw_on_android_mint_tabs",
+      "label": "tabs",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L26"
+    },
+    {
+      "id": "openclaw_on_android_mint_anchors",
+      "label": "anchors",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L36"
+    },
+    {
+      "id": "openclaw_on_android_mint_navigation",
+      "label": "navigation",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L53"
+    },
+    {
+      "id": "openclaw_on_android_mint_footersocials",
+      "label": "footerSocials",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L93"
+    },
+    {
+      "id": "openclaw_on_android_mint_footersocials_github",
+      "label": "github",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L94"
+    },
+    {
+      "id": "openclaw_on_android_mint_footersocials_discord",
+      "label": "discord",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L95"
+    },
+    {
+      "id": "openclaw_on_android_mint_footersocials_x",
+      "label": "x",
+      "file_type": "code",
+      "source_file": "mint.json",
+      "source_location": "L96"
+    },
+    {
+      "id": "oca_sh",
+      "label": "oca.sh",
+      "file_type": "code",
+      "source_file": "oca.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_on_android_oca_detect_platform",
+      "label": "detect_platform()",
+      "file_type": "code",
+      "source_file": "oca.sh",
+      "source_location": "L26"
+    },
+    {
+      "id": "openclaw_on_android_oca_resolve_repo_base",
+      "label": "resolve_repo_base()",
+      "file_type": "code",
+      "source_file": "oca.sh",
+      "source_location": "L34"
+    },
+    {
+      "id": "openclaw_on_android_oca_show_help",
+      "label": "show_help()",
+      "file_type": "code",
+      "source_file": "oca.sh",
+      "source_location": "L53"
+    },
+    {
+      "id": "openclaw_on_android_oca_show_version",
+      "label": "show_version()",
+      "file_type": "code",
+      "source_file": "oca.sh",
+      "source_location": "L76"
+    },
+    {
+      "id": "openclaw_on_android_oca_cmd_update",
+      "label": "cmd_update()",
+      "file_type": "code",
+      "source_file": "oca.sh",
+      "source_location": "L92"
+    },
+    {
+      "id": "openclaw_on_android_oca_cmd_uninstall",
+      "label": "cmd_uninstall()",
+      "file_type": "code",
+      "source_file": "oca.sh",
+      "source_location": "L118"
+    },
+    {
+      "id": "openclaw_on_android_oca_cmd_status",
+      "label": "cmd_status()",
+      "file_type": "code",
+      "source_file": "oca.sh",
+      "source_location": "L132"
+    },
+    {
+      "id": "openclaw_on_android_oca_cmd_clean",
+      "label": "cmd_clean()",
+      "file_type": "code",
+      "source_file": "oca.sh",
+      "source_location": "L201"
+    },
+    {
+      "id": "openclaw_on_android_oca_cmd_install",
+      "label": "cmd_install()",
+      "file_type": "code",
+      "source_file": "oca.sh",
+      "source_location": "L222"
+    },
+    {
+      "id": "openclaw_on_android_oca_cmd_shell",
+      "label": "cmd_shell()",
+      "file_type": "code",
+      "source_file": "oca.sh",
+      "source_location": "L258"
+    },
+    {
+      "id": "openclaw_on_android_oca_cmd_start",
+      "label": "cmd_start()",
+      "file_type": "code",
+      "source_file": "oca.sh",
+      "source_location": "L319"
+    },
+    {
+      "id": "post_setup_sh",
+      "label": "post-setup.sh",
+      "file_type": "code",
+      "source_file": "post-setup.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_on_android_post_setup_resolve_repo_base",
+      "label": "resolve_repo_base()",
+      "file_type": "code",
+      "source_file": "post-setup.sh",
+      "source_location": "L36"
+    },
+    {
+      "id": "openclaw_on_android_post_setup_curl_ca_bundle",
+      "label": "CURL_CA_BUNDLE",
+      "file_type": "code",
+      "source_file": "post-setup.sh",
+      "source_location": "L55"
+    },
+    {
+      "id": "openclaw_on_android_post_setup_ssl_cert_file",
+      "label": "SSL_CERT_FILE",
+      "file_type": "code",
+      "source_file": "post-setup.sh",
+      "source_location": "L56"
+    },
+    {
+      "id": "openclaw_on_android_post_setup_git_ssl_cainfo",
+      "label": "GIT_SSL_CAINFO",
+      "file_type": "code",
+      "source_file": "post-setup.sh",
+      "source_location": "L57"
+    },
+    {
+      "id": "openclaw_on_android_post_setup_git_config_nosystem",
+      "label": "GIT_CONFIG_NOSYSTEM",
+      "file_type": "code",
+      "source_file": "post-setup.sh",
+      "source_location": "L60"
+    },
+    {
+      "id": "openclaw_on_android_post_setup_git_exec_path",
+      "label": "GIT_EXEC_PATH",
+      "file_type": "code",
+      "source_file": "post-setup.sh",
+      "source_location": "L63"
+    },
+    {
+      "id": "openclaw_on_android_post_setup_git_template_dir",
+      "label": "GIT_TEMPLATE_DIR",
+      "file_type": "code",
+      "source_file": "post-setup.sh",
+      "source_location": "L66"
+    },
+    {
+      "id": "openclaw_on_android_post_setup_install_deb",
+      "label": "install_deb()",
+      "file_type": "code",
+      "source_file": "post-setup.sh",
+      "source_location": "L89"
+    },
+    {
+      "id": "openclaw_on_android_post_setup_install_pacman_pkg",
+      "label": "install_pacman_pkg()",
+      "file_type": "code",
+      "source_file": "post-setup.sh",
+      "source_location": "L114"
+    },
+    {
+      "id": "openclaw_on_android_post_setup_get_deb_filename",
+      "label": "get_deb_filename()",
+      "file_type": "code",
+      "source_file": "post-setup.sh",
+      "source_location": "L152"
+    },
+    {
+      "id": "openclaw_on_android_post_setup_path",
+      "label": "PATH",
+      "file_type": "code",
+      "source_file": "post-setup.sh",
+      "source_location": "L316"
+    },
+    {
+      "id": "openclaw_on_android_post_setup_install_with_deps",
+      "label": "install_with_deps()",
+      "file_type": "code",
+      "source_file": "post-setup.sh",
+      "source_location": "L480"
+    },
+    {
+      "id": "uninstall_sh",
+      "label": "uninstall.sh",
+      "file_type": "code",
+      "source_file": "uninstall.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_on_android_uninstall_ask_yn",
+      "label": "ask_yn()",
+      "file_type": "code",
+      "source_file": "uninstall.sh",
+      "source_location": "L18"
+    },
+    {
+      "id": "openclaw_on_android_uninstall_detect_platform",
+      "label": "detect_platform()",
+      "file_type": "code",
+      "source_file": "uninstall.sh",
+      "source_location": "L26"
+    },
+    {
+      "id": "openclaw_on_android_uninstall_step",
+      "label": "step()",
+      "file_type": "code",
+      "source_file": "uninstall.sh",
+      "source_location": "L48"
+    },
+    {
+      "id": "update_core_sh",
+      "label": "update-core.sh",
+      "file_type": "code",
+      "source_file": "update-core.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_on_android_update_core_step",
+      "label": "step()",
+      "file_type": "code",
+      "source_file": "update-core.sh",
+      "source_location": "L20"
+    },
+    {
+      "id": "openclaw_on_android_update_core_detect_platform",
+      "label": "detect_platform()",
+      "file_type": "code",
+      "source_file": "update-core.sh",
+      "source_location": "L60"
+    },
+    {
+      "id": "openclaw_on_android_update_core_update_ai_tool",
+      "label": "update_ai_tool()",
+      "file_type": "code",
+      "source_file": "update-core.sh",
+      "source_location": "L251"
+    },
+    {
+      "id": "update_sh",
+      "label": "update.sh",
+      "file_type": "code",
+      "source_file": "update.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_on_android_update_resolve_repo_base",
+      "label": "resolve_repo_base()",
+      "file_type": "code",
+      "source_file": "update.sh",
+      "source_location": "L22"
+    },
+    {
+      "id": "patches_argon2_stub_js",
+      "label": "argon2-stub.js",
+      "file_type": "code",
+      "source_file": "patches\\argon2-stub.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "patches_glibc_compat_js",
+      "label": "glibc-compat.js",
+      "file_type": "code",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "patches_glibc_compat_os",
+      "label": "os",
+      "file_type": "code",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L21"
+    },
+    {
+      "id": "patches_glibc_compat_fs",
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L22"
+    },
+    {
+      "id": "patches_glibc_compat_path",
+      "label": "path",
+      "file_type": "code",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L23"
+    },
+    {
+      "id": "patches_glibc_compat_wrapperpath",
+      "label": "_wrapperPath",
+      "file_type": "code",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L32"
+    },
+    {
+      "id": "patches_glibc_compat_result",
+      "label": "result",
+      "file_type": "code",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L75"
+    },
+    {
+      "id": "patches_glibc_compat_child_process",
+      "label": "child_process",
+      "file_type": "code",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L119"
+    },
+    {
+      "id": "patches_glibc_compat_dns",
+      "label": "dns",
+      "file_type": "code",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L160"
+    },
+    {
+      "id": "patches_glibc_compat_dnsservers",
+      "label": "dnsServers",
+      "file_type": "code",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L163"
+    },
+    {
+      "id": "patches_glibc_compat_resolvconf",
+      "label": "resolvConf",
+      "file_type": "code",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L165"
+    },
+    {
+      "id": "patches_glibc_compat_parsed",
+      "label": "parsed",
+      "file_type": "code",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L169"
+    },
+    {
+      "id": "patches_glibc_compat_resolve",
+      "label": "resolve()",
+      "file_type": "code",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L192"
+    },
+    {
+      "id": "patches_glibc_compat_tryresolve",
+      "label": "tryResolve()",
+      "file_type": "code",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L197"
+    },
+    {
+      "id": "patches_spawn_h",
+      "label": "spawn.h",
+      "file_type": "code",
+      "source_file": "patches\\spawn.h",
+      "source_location": "L1"
+    },
+    {
+      "id": "platforms_openclaw_env_sh",
+      "label": "env.sh",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\env.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "platforms_openclaw_install_sh",
+      "label": "install.sh",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\install.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_install_cpath",
+      "label": "CPATH",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\install.sh",
+      "source_location": "L10"
+    },
+    {
+      "id": "platforms_openclaw_status_sh",
+      "label": "status.sh",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\status.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "platforms_openclaw_uninstall_sh",
+      "label": "uninstall.sh",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\uninstall.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_uninstall_step",
+      "label": "step()",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\uninstall.sh",
+      "source_location": "L10"
+    },
+    {
+      "id": "platforms_openclaw_update_sh",
+      "label": "update.sh",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\update.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_update_cpath",
+      "label": "CPATH",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\update.sh",
+      "source_location": "L7"
+    },
+    {
+      "id": "platforms_openclaw_verify_sh",
+      "label": "verify.sh",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\verify.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "openclaw_verify_check_pass",
+      "label": "check_pass()",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\verify.sh",
+      "source_location": "L10"
+    },
+    {
+      "id": "openclaw_verify_check_fail",
+      "label": "check_fail()",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\verify.sh",
+      "source_location": "L15"
+    },
+    {
+      "id": "openclaw_verify_check_warn",
+      "label": "check_warn()",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\verify.sh",
+      "source_location": "L20"
+    },
+    {
+      "id": "platforms_openclaw_patches_openclaw_apply_patches_sh",
+      "label": "openclaw-apply-patches.sh",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\patches\\openclaw-apply-patches.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "platforms_openclaw_patches_openclaw_build_sharp_sh",
+      "label": "openclaw-build-sharp.sh",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\patches\\openclaw-build-sharp.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "patches_openclaw_build_sharp_tmpdir",
+      "label": "TMPDIR",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\patches\\openclaw-build-sharp.sh",
+      "source_location": "L14"
+    },
+    {
+      "id": "patches_openclaw_build_sharp_tmp",
+      "label": "TMP",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\patches\\openclaw-build-sharp.sh",
+      "source_location": "L15"
+    },
+    {
+      "id": "patches_openclaw_build_sharp_temp",
+      "label": "TEMP",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\patches\\openclaw-build-sharp.sh",
+      "source_location": "L16"
+    },
+    {
+      "id": "patches_openclaw_build_sharp_container",
+      "label": "CONTAINER",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\patches\\openclaw-build-sharp.sh",
+      "source_location": "L17"
+    },
+    {
+      "id": "patches_openclaw_build_sharp_cpath",
+      "label": "CPATH",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\patches\\openclaw-build-sharp.sh",
+      "source_location": "L67"
+    },
+    {
+      "id": "platforms_openclaw_patches_openclaw_patch_paths_sh",
+      "label": "openclaw-patch-paths.sh",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\patches\\openclaw-patch-paths.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "patches_openclaw_patch_paths_tmpdir",
+      "label": "TMPDIR",
+      "file_type": "code",
+      "source_file": "platforms\\openclaw\\patches\\openclaw-patch-paths.sh",
+      "source_location": "L14"
+    },
+    {
+      "id": "scripts_backup_sh",
+      "label": "backup.sh",
+      "file_type": "code",
+      "source_file": "scripts\\backup.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_backup_backup_timestamp",
+      "label": "_backup_timestamp()",
+      "file_type": "code",
+      "source_file": "scripts\\backup.sh",
+      "source_location": "L13"
+    },
+    {
+      "id": "scripts_backup_backup_archive_root",
+      "label": "_backup_archive_root()",
+      "file_type": "code",
+      "source_file": "scripts\\backup.sh",
+      "source_location": "L19"
+    },
+    {
+      "id": "scripts_backup_collect_assets",
+      "label": "_collect_assets()",
+      "file_type": "code",
+      "source_file": "scripts\\backup.sh",
+      "source_location": "L27"
+    },
+    {
+      "id": "scripts_backup_detect_backup_platform",
+      "label": "_detect_backup_platform()",
+      "file_type": "code",
+      "source_file": "scripts\\backup.sh",
+      "source_location": "L62"
+    },
+    {
+      "id": "scripts_backup_restore_root_for_platform",
+      "label": "_restore_root_for_platform()",
+      "file_type": "code",
+      "source_file": "scripts\\backup.sh",
+      "source_location": "L89"
+    },
+    {
+      "id": "scripts_backup_cmd_backup",
+      "label": "cmd_backup()",
+      "file_type": "code",
+      "source_file": "scripts\\backup.sh",
+      "source_location": "L104"
+    },
+    {
+      "id": "scripts_backup_cmd_restore",
+      "label": "cmd_restore()",
+      "file_type": "code",
+      "source_file": "scripts\\backup.sh",
+      "source_location": "L269"
+    },
+    {
+      "id": "scripts_build_sharp_sh",
+      "label": "build-sharp.sh",
+      "file_type": "code",
+      "source_file": "scripts\\build-sharp.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_build_sharp_tmpdir",
+      "label": "TMPDIR",
+      "file_type": "code",
+      "source_file": "scripts\\build-sharp.sh",
+      "source_location": "L23"
+    },
+    {
+      "id": "scripts_build_sharp_tmp",
+      "label": "TMP",
+      "file_type": "code",
+      "source_file": "scripts\\build-sharp.sh",
+      "source_location": "L24"
+    },
+    {
+      "id": "scripts_build_sharp_temp",
+      "label": "TEMP",
+      "file_type": "code",
+      "source_file": "scripts\\build-sharp.sh",
+      "source_location": "L25"
+    },
+    {
+      "id": "scripts_build_sharp_container",
+      "label": "CONTAINER",
+      "file_type": "code",
+      "source_file": "scripts\\build-sharp.sh",
+      "source_location": "L26"
+    },
+    {
+      "id": "scripts_build_sharp_cpath",
+      "label": "CPATH",
+      "file_type": "code",
+      "source_file": "scripts\\build-sharp.sh",
+      "source_location": "L92"
+    },
+    {
+      "id": "scripts_check_env_sh",
+      "label": "check-env.sh",
+      "file_type": "code",
+      "source_file": "scripts\\check-env.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_install_build_tools_sh",
+      "label": "install-build-tools.sh",
+      "file_type": "code",
+      "source_file": "scripts\\install-build-tools.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_install_chromium_sh",
+      "label": "install-chromium.sh",
+      "file_type": "code",
+      "source_file": "scripts\\install-chromium.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_install_chromium_fail_warn",
+      "label": "fail_warn()",
+      "file_type": "code",
+      "source_file": "scripts\\install-chromium.sh",
+      "source_location": "L28"
+    },
+    {
+      "id": "scripts_install_chromium_detect_chromium_bin",
+      "label": "detect_chromium_bin()",
+      "file_type": "code",
+      "source_file": "scripts\\install-chromium.sh",
+      "source_location": "L35"
+    },
+    {
+      "id": "scripts_install_code_server_sh",
+      "label": "install-code-server.sh",
+      "file_type": "code",
+      "source_file": "scripts\\install-code-server.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_install_code_server_fail_warn",
+      "label": "fail_warn()",
+      "file_type": "code",
+      "source_file": "scripts\\install-code-server.sh",
+      "source_location": "L17"
+    },
+    {
+      "id": "scripts_install_code_server_proot_no_seccomp",
+      "label": "PROOT_NO_SECCOMP",
+      "file_type": "code",
+      "source_file": "scripts\\install-code-server.sh",
+      "source_location": "L35"
+    },
+    {
+      "id": "scripts_install_deps_sh",
+      "label": "install-deps.sh",
+      "file_type": "code",
+      "source_file": "scripts\\install-deps.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_install_deps_log_ok",
+      "label": "log_ok()",
+      "file_type": "code",
+      "source_file": "scripts\\install-deps.sh",
+      "source_location": "L6"
+    },
+    {
+      "id": "scripts_install_deps_log_fail",
+      "label": "log_fail()",
+      "file_type": "code",
+      "source_file": "scripts\\install-deps.sh",
+      "source_location": "L7"
+    },
+    {
+      "id": "scripts_install_deps_log_warn",
+      "label": "log_warn()",
+      "file_type": "code",
+      "source_file": "scripts\\install-deps.sh",
+      "source_location": "L8"
+    },
+    {
+      "id": "scripts_install_deps_log_info",
+      "label": "log_info()",
+      "file_type": "code",
+      "source_file": "scripts\\install-deps.sh",
+      "source_location": "L9"
+    },
+    {
+      "id": "scripts_install_glibc_sh",
+      "label": "install-glibc.sh",
+      "file_type": "code",
+      "source_file": "scripts\\install-glibc.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_install_go_sh",
+      "label": "install-go.sh",
+      "file_type": "code",
+      "source_file": "scripts\\install-go.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_install_homebrew_sh",
+      "label": "install-homebrew.sh",
+      "file_type": "code",
+      "source_file": "scripts\\install-homebrew.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_install_infra_deps_sh",
+      "label": "install-infra-deps.sh",
+      "file_type": "code",
+      "source_file": "scripts\\install-infra-deps.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_install_nodejs_sh",
+      "label": "install-nodejs.sh",
+      "file_type": "code",
+      "source_file": "scripts\\install-nodejs.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_install_nodejs_path",
+      "label": "PATH",
+      "file_type": "code",
+      "source_file": "scripts\\install-nodejs.sh",
+      "source_location": "L215"
+    },
+    {
+      "id": "scripts_install_opencode_sh",
+      "label": "install-opencode.sh",
+      "file_type": "code",
+      "source_file": "scripts\\install-opencode.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_install_opencode_fail_warn",
+      "label": "fail_warn()",
+      "file_type": "code",
+      "source_file": "scripts\\install-opencode.sh",
+      "source_location": "L24"
+    },
+    {
+      "id": "scripts_install_opencode_create_ldso_concat",
+      "label": "create_ldso_concat()",
+      "file_type": "code",
+      "source_file": "scripts\\install-opencode.sh",
+      "source_location": "L56"
+    },
+    {
+      "id": "scripts_install_opencode_create_proot_wrapper",
+      "label": "create_proot_wrapper()",
+      "file_type": "code",
+      "source_file": "scripts\\install-opencode.sh",
+      "source_location": "L84"
+    },
+    {
+      "id": "scripts_install_playwright_sh",
+      "label": "install-playwright.sh",
+      "file_type": "code",
+      "source_file": "scripts\\install-playwright.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_install_playwright_proot_no_seccomp",
+      "label": "PROOT_NO_SECCOMP",
+      "file_type": "code",
+      "source_file": "scripts\\install-playwright.sh",
+      "source_location": "L28"
+    },
+    {
+      "id": "scripts_lib_sh",
+      "label": "lib.sh",
+      "file_type": "code",
+      "source_file": "scripts\\lib.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_lib_resolve_repo_base",
+      "label": "resolve_repo_base()",
+      "file_type": "code",
+      "source_file": "scripts\\lib.sh",
+      "source_location": "L25"
+    },
+    {
+      "id": "scripts_lib_detect_platform",
+      "label": "detect_platform()",
+      "file_type": "code",
+      "source_file": "scripts\\lib.sh",
+      "source_location": "L53"
+    },
+    {
+      "id": "scripts_lib_validate_platform_name",
+      "label": "validate_platform_name()",
+      "file_type": "code",
+      "source_file": "scripts\\lib.sh",
+      "source_location": "L69"
+    },
+    {
+      "id": "scripts_lib_ask_yn",
+      "label": "ask_yn()",
+      "file_type": "code",
+      "source_file": "scripts\\lib.sh",
+      "source_location": "L86"
+    },
+    {
+      "id": "scripts_lib_load_platform_config",
+      "label": "load_platform_config()",
+      "file_type": "code",
+      "source_file": "scripts\\lib.sh",
+      "source_location": "L96"
+    },
+    {
+      "id": "scripts_setup_boot_sh",
+      "label": "setup-boot.sh",
+      "file_type": "code",
+      "source_file": "scripts\\setup-boot.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_setup_boot_log_ok",
+      "label": "log_ok()",
+      "file_type": "code",
+      "source_file": "scripts\\setup-boot.sh",
+      "source_location": "L6"
+    },
+    {
+      "id": "scripts_setup_boot_log_warn",
+      "label": "log_warn()",
+      "file_type": "code",
+      "source_file": "scripts\\setup-boot.sh",
+      "source_location": "L7"
+    },
+    {
+      "id": "scripts_setup_boot_log_info",
+      "label": "log_info()",
+      "file_type": "code",
+      "source_file": "scripts\\setup-boot.sh",
+      "source_location": "L8"
+    },
+    {
+      "id": "scripts_setup_env_sh",
+      "label": "setup-env.sh",
+      "file_type": "code",
+      "source_file": "scripts\\setup-env.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_setup_paths_sh",
+      "label": "setup-paths.sh",
+      "file_type": "code",
+      "source_file": "scripts\\setup-paths.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_setup_root_sh",
+      "label": "setup-root.sh",
+      "file_type": "code",
+      "source_file": "scripts\\setup-root.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_setup_root_log_ok",
+      "label": "log_ok()",
+      "file_type": "code",
+      "source_file": "scripts\\setup-root.sh",
+      "source_location": "L8"
+    },
+    {
+      "id": "scripts_setup_root_log_warn",
+      "label": "log_warn()",
+      "file_type": "code",
+      "source_file": "scripts\\setup-root.sh",
+      "source_location": "L9"
+    },
+    {
+      "id": "scripts_setup_root_log_info",
+      "label": "log_info()",
+      "file_type": "code",
+      "source_file": "scripts\\setup-root.sh",
+      "source_location": "L10"
+    },
+    {
+      "id": "scripts_setup_root_log_fail",
+      "label": "log_fail()",
+      "file_type": "code",
+      "source_file": "scripts\\setup-root.sh",
+      "source_location": "L11"
+    },
+    {
+      "id": "scripts_setup_termux_api_sh",
+      "label": "setup-termux-api.sh",
+      "file_type": "code",
+      "source_file": "scripts\\setup-termux-api.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_setup_termux_api_log_ok",
+      "label": "log_ok()",
+      "file_type": "code",
+      "source_file": "scripts\\setup-termux-api.sh",
+      "source_location": "L6"
+    },
+    {
+      "id": "scripts_setup_termux_api_log_warn",
+      "label": "log_warn()",
+      "file_type": "code",
+      "source_file": "scripts\\setup-termux-api.sh",
+      "source_location": "L7"
+    },
+    {
+      "id": "scripts_setup_termux_api_log_info",
+      "label": "log_info()",
+      "file_type": "code",
+      "source_file": "scripts\\setup-termux-api.sh",
+      "source_location": "L8"
+    },
+    {
+      "id": "scripts_setup_termux_api_log_fail",
+      "label": "log_fail()",
+      "file_type": "code",
+      "source_file": "scripts\\setup-termux-api.sh",
+      "source_location": "L9"
+    },
+    {
+      "id": "scripts_setup_tmux_sh",
+      "label": "setup-tmux.sh",
+      "file_type": "code",
+      "source_file": "scripts\\setup-tmux.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_setup_tmux_log_ok",
+      "label": "log_ok()",
+      "file_type": "code",
+      "source_file": "scripts\\setup-tmux.sh",
+      "source_location": "L6"
+    },
+    {
+      "id": "scripts_setup_tmux_log_info",
+      "label": "log_info()",
+      "file_type": "code",
+      "source_file": "scripts\\setup-tmux.sh",
+      "source_location": "L7"
+    },
+    {
+      "id": "tests_verify_install_sh",
+      "label": "verify-install.sh",
+      "file_type": "code",
+      "source_file": "tests\\verify-install.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_verify_install_check_pass",
+      "label": "check_pass()",
+      "file_type": "code",
+      "source_file": "tests\\verify-install.sh",
+      "source_location": "L11"
+    },
+    {
+      "id": "tests_verify_install_check_fail",
+      "label": "check_fail()",
+      "file_type": "code",
+      "source_file": "tests\\verify-install.sh",
+      "source_location": "L16"
+    },
+    {
+      "id": "tests_verify_install_check_warn",
+      "label": "check_warn()",
+      "file_type": "code",
+      "source_file": "tests\\verify-install.sh",
+      "source_location": "L21"
+    }
+  ],
+  "edges": [
+    {
+      "source": "graphify_detect_json",
+      "target": "openclaw_on_android_graphify_detect_files",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files",
+      "target": "openclaw_on_android_graphify_detect_files_code",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_graphify_detect_json",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_graphify_step_2_detect_files_3_py",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_bootstrap_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_install_tools_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_install_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_mint_json",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_oca_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_post_setup_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_uninstall_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_update_core_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_update_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_githooks_pre_commit",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_patches_argon2_stub_js",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_patches_glibc_compat_js",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_patches_spawn_h",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_patches_systemctl",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_platforms_openclaw_env_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_platforms_openclaw_install_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_platforms_openclaw_status_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_platforms_openclaw_uninstall_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_platforms_openclaw_update_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_platforms_openclaw_verify_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_platforms_openclaw_patches_openclaw_apply_patches_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_platforms_openclaw_patches_openclaw_build_sharp_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_platforms_openclaw_patches_openclaw_patch_paths_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_backup_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_build_sharp_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_check_env_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_install_build_tools_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_install_chromium_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_install_code_server_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_install_deps_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_install_glibc_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_install_go_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_install_homebrew_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_install_infra_deps_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_install_nodejs_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_install_opencode_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_install_playwright_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_lib_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_setup_boot_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_setup_env_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_setup_paths_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_setup_root_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_setup_termux_api_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_scripts_setup_tmux_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_code",
+      "target": "ref_d_projects_openclaw_on_android_tests_verify_install_sh",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files",
+      "target": "openclaw_on_android_graphify_detect_files_document",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_markdownlint_cli2_yaml",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_changelog_md",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_code_of_conduct_md",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_contributing_md",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_readme_md",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_security_md",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_github_pull_request_template_md",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_github_issue_template_bug_report_md",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_github_issue_template_config_yml",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_github_issue_template_feature_request_md",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_docs_ai_cli_tools_mdx",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_docs_architecture_mdx",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_docs_configuration_mdx",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_docs_disable_phantom_process_killer_mdx",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_docs_faq_mdx",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_docs_installation_mdx",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_docs_introduction_mdx",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_docs_local_llm_mdx",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_docs_phantom_process_killer_mdx",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_docs_quickstart_mdx",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_docs_root_support_mdx",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_docs_ssh_guide_mdx",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_docs_technical_docs_md",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_docs_termux_boot_mdx",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_docs_troubleshooting_mdx",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_reference_oca_cli_mdx",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_releases_01_04_2026_md",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_document",
+      "target": "ref_d_projects_openclaw_on_android_releases_10_03_2026_md",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files",
+      "target": "openclaw_on_android_graphify_detect_files_paper",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files",
+      "target": "openclaw_on_android_graphify_detect_files_image",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_image",
+      "target": "ref_d_projects_openclaw_on_android_docs_images_architecture_png",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files_image",
+      "target": "ref_d_projects_openclaw_on_android_docs_images_banner_png",
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_graphify_detect_files",
+      "target": "openclaw_on_android_graphify_detect_files_video",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "graphify_detect_json",
+      "target": "openclaw_on_android_graphify_detect_total_files",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "graphify_detect_json",
+      "target": "openclaw_on_android_graphify_detect_total_words",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "graphify_detect_json",
+      "target": "openclaw_on_android_graphify_detect_needs_graph",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "graphify_detect_json",
+      "target": "openclaw_on_android_graphify_detect_warning",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "graphify_detect_json",
+      "target": "openclaw_on_android_graphify_detect_skipped_sensitive",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "graphify_detect_json",
+      "target": "openclaw_on_android_graphify_detect_graphifyignore_patterns",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".graphify_detect.json",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "install_tools_sh",
+      "target": "project_dir_scripts_lib_sh",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "install-tools.sh",
+      "source_location": "L40",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "install_tools_sh",
+      "target": "openclaw_on_android_install_tools_ask_yn",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "install-tools.sh",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "install_tools_sh",
+      "target": "openclaw_on_android_install_tools_check_tool",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "install-tools.sh",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "install_sh",
+      "target": "script_dir_scripts_lib_sh",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "install.sh",
+      "source_location": "L5",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "install_sh",
+      "target": "openclaw_on_android_install_step",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "install.sh",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "install_sh",
+      "target": "openclaw_on_android_install_path",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "install.sh",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "install_sh",
+      "target": "openclaw_on_android_install_tmpdir",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "install.sh",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "install_sh",
+      "target": "openclaw_on_android_install_tmp",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "install.sh",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "install_sh",
+      "target": "openclaw_on_android_install_temp",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "install.sh",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "install_sh",
+      "target": "openclaw_on_android_install_oa_glibc",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "install.sh",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "mint_json",
+      "target": "openclaw_on_android_mint_schema",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "mint_json",
+      "target": "openclaw_on_android_mint_name",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "mint_json",
+      "target": "openclaw_on_android_mint_colors",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "openclaw_on_android_mint_colors",
+      "target": "openclaw_on_android_mint_colors_primary",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "openclaw_on_android_mint_colors",
+      "target": "openclaw_on_android_mint_colors_light",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "openclaw_on_android_mint_colors",
+      "target": "openclaw_on_android_mint_colors_dark",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "openclaw_on_android_mint_colors",
+      "target": "openclaw_on_android_mint_colors_background",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "openclaw_on_android_mint_colors_background",
+      "target": "openclaw_on_android_mint_background_dark",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "openclaw_on_android_mint_colors",
+      "target": "openclaw_on_android_mint_colors_anchors",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "openclaw_on_android_mint_colors_anchors",
+      "target": "openclaw_on_android_mint_anchors_from",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "openclaw_on_android_mint_colors_anchors",
+      "target": "openclaw_on_android_mint_anchors_to",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "mint_json",
+      "target": "openclaw_on_android_mint_topbarlinks",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "mint_json",
+      "target": "openclaw_on_android_mint_topbarctabutton",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "openclaw_on_android_mint_topbarctabutton",
+      "target": "openclaw_on_android_mint_topbarctabutton_type",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "openclaw_on_android_mint_topbarctabutton",
+      "target": "openclaw_on_android_mint_topbarctabutton_url",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "mint_json",
+      "target": "openclaw_on_android_mint_tabs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "mint_json",
+      "target": "openclaw_on_android_mint_anchors",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "mint_json",
+      "target": "openclaw_on_android_mint_navigation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "mint_json",
+      "target": "openclaw_on_android_mint_footersocials",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
+      "source": "openclaw_on_android_mint_footersocials",
+      "target": "openclaw_on_android_mint_footersocials_github",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "openclaw_on_android_mint_footersocials",
+      "target": "openclaw_on_android_mint_footersocials_discord",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "openclaw_on_android_mint_footersocials",
+      "target": "openclaw_on_android_mint_footersocials_x",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "mint.json",
+      "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "oca_sh",
+      "target": "script_dir_lib_sh",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "oca.sh",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "oca_sh",
+      "target": "script_dir_backup_sh",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "oca.sh",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "oca_sh",
+      "target": "openclaw_on_android_oca_detect_platform",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "oca.sh",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "oca_sh",
+      "target": "openclaw_on_android_oca_resolve_repo_base",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "oca.sh",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "oca_sh",
+      "target": "openclaw_on_android_oca_show_help",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "oca.sh",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "oca_sh",
+      "target": "openclaw_on_android_oca_show_version",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "oca.sh",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "oca_sh",
+      "target": "openclaw_on_android_oca_cmd_update",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "oca.sh",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "oca_sh",
+      "target": "openclaw_on_android_oca_cmd_uninstall",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "oca.sh",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "oca_sh",
+      "target": "openclaw_on_android_oca_cmd_status",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "oca.sh",
+      "source_location": "L132",
+      "weight": 1.0
+    },
+    {
+      "source": "oca_sh",
+      "target": "openclaw_on_android_oca_cmd_clean",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "oca.sh",
+      "source_location": "L201",
+      "weight": 1.0
+    },
+    {
+      "source": "oca_sh",
+      "target": "openclaw_on_android_oca_cmd_install",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "oca.sh",
+      "source_location": "L222",
+      "weight": 1.0
+    },
+    {
+      "source": "oca_sh",
+      "target": "openclaw_on_android_oca_cmd_shell",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "oca.sh",
+      "source_location": "L258",
+      "weight": 1.0
+    },
+    {
+      "source": "oca_sh",
+      "target": "openclaw_on_android_oca_cmd_start",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "oca.sh",
+      "source_location": "L319",
+      "weight": 1.0
+    },
+    {
+      "source": "openclaw_on_android_oca_cmd_status",
+      "target": "openclaw_on_android_oca_detect_platform",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "oca.sh",
+      "source_location": "L144",
+      "weight": 1.0,
+      "context": "call"
+    },
+    {
+      "source": "post_setup_sh",
+      "target": "openclaw_on_android_post_setup_resolve_repo_base",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "post-setup.sh",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "post_setup_sh",
+      "target": "openclaw_on_android_post_setup_curl_ca_bundle",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "post-setup.sh",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "post_setup_sh",
+      "target": "openclaw_on_android_post_setup_ssl_cert_file",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "post-setup.sh",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "post_setup_sh",
+      "target": "openclaw_on_android_post_setup_git_ssl_cainfo",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "post-setup.sh",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "post_setup_sh",
+      "target": "openclaw_on_android_post_setup_git_config_nosystem",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "post-setup.sh",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "post_setup_sh",
+      "target": "openclaw_on_android_post_setup_git_exec_path",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "post-setup.sh",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "post_setup_sh",
+      "target": "openclaw_on_android_post_setup_git_template_dir",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "post-setup.sh",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "post_setup_sh",
+      "target": "openclaw_on_android_post_setup_install_deb",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "post-setup.sh",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "post_setup_sh",
+      "target": "openclaw_on_android_post_setup_install_pacman_pkg",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "post-setup.sh",
+      "source_location": "L114",
+      "weight": 1.0
+    },
+    {
+      "source": "post_setup_sh",
+      "target": "openclaw_on_android_post_setup_get_deb_filename",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "post-setup.sh",
+      "source_location": "L152",
+      "weight": 1.0
+    },
+    {
+      "source": "post_setup_sh",
+      "target": "openclaw_on_android_post_setup_path",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "post-setup.sh",
+      "source_location": "L316",
+      "weight": 1.0
+    },
+    {
+      "source": "post_setup_sh",
+      "target": "tool_conf",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "post-setup.sh",
+      "source_location": "L469",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "post_setup_sh",
+      "target": "openclaw_on_android_post_setup_install_with_deps",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "post-setup.sh",
+      "source_location": "L480",
+      "weight": 1.0
+    },
+    {
+      "source": "post_setup_sh",
+      "target": "home_bashrc",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "post-setup.sh",
+      "source_location": "L559",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "openclaw_on_android_post_setup_install_with_deps",
+      "target": "openclaw_on_android_post_setup_get_deb_filename",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "post-setup.sh",
+      "source_location": "L496",
+      "weight": 1.0,
+      "context": "call"
+    },
+    {
+      "source": "openclaw_on_android_post_setup_install_with_deps",
+      "target": "openclaw_on_android_post_setup_install_deb",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "post-setup.sh",
+      "source_location": "L497",
+      "weight": 1.0,
+      "context": "call"
+    },
+    {
+      "source": "uninstall_sh",
+      "target": "project_dir_scripts_lib_sh",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "uninstall.sh",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "uninstall_sh",
+      "target": "openclaw_on_android_uninstall_ask_yn",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "uninstall.sh",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "uninstall_sh",
+      "target": "openclaw_on_android_uninstall_detect_platform",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "uninstall.sh",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "uninstall_sh",
+      "target": "openclaw_on_android_uninstall_step",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "uninstall.sh",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "update_core_sh",
+      "target": "openclaw_on_android_update_core_step",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "update-core.sh",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "update_core_sh",
+      "target": "project_dir_scripts_lib_sh",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "update-core.sh",
+      "source_location": "L53",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "update_core_sh",
+      "target": "openclaw_on_android_update_core_detect_platform",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "update-core.sh",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "update_core_sh",
+      "target": "release_tmp_scripts_lib_sh",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "update-core.sh",
+      "source_location": "L133",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "update_core_sh",
+      "target": "openclaw_on_android_update_core_update_ai_tool",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "update-core.sh",
+      "source_location": "L251",
+      "weight": 1.0
+    },
+    {
+      "source": "update_sh",
+      "target": "openclaw_on_android_update_resolve_repo_base",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "update.sh",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_glibc_compat_js",
+      "target": "os",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_glibc_compat_js",
+      "target": "patches_glibc_compat_os",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_glibc_compat_js",
+      "target": "fs",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_glibc_compat_js",
+      "target": "patches_glibc_compat_fs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_glibc_compat_js",
+      "target": "path",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_glibc_compat_js",
+      "target": "patches_glibc_compat_path",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_glibc_compat_js",
+      "target": "patches_glibc_compat_wrapperpath",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_glibc_compat_js",
+      "target": "patches_glibc_compat_result",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_glibc_compat_js",
+      "target": "child_process",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_glibc_compat_js",
+      "target": "patches_glibc_compat_child_process",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_glibc_compat_js",
+      "target": "dns",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L160",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_glibc_compat_js",
+      "target": "patches_glibc_compat_dns",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L160",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_glibc_compat_js",
+      "target": "patches_glibc_compat_dnsservers",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L163",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_glibc_compat_js",
+      "target": "patches_glibc_compat_resolvconf",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L165",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_glibc_compat_js",
+      "target": "patches_glibc_compat_parsed",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L169",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_glibc_compat_js",
+      "target": "patches_glibc_compat_resolve",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L192",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_glibc_compat_js",
+      "target": "patches_glibc_compat_tryresolve",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L197",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_glibc_compat_tryresolve",
+      "target": "patches_glibc_compat_resolve",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\glibc-compat.js",
+      "source_location": "L198",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_spawn_h",
+      "target": "cdefs",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\spawn.h",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_spawn_h",
+      "target": "types",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\spawn.h",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_spawn_h",
+      "target": "sched",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\spawn.h",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "patches_spawn_h",
+      "target": "signal",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "patches\\spawn.h",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "platforms_openclaw_install_sh",
+      "target": "cd_dirname_bash_source_0_pwd_scripts_lib_sh",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "platforms\\openclaw\\install.sh",
+      "source_location": "L5",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "platforms_openclaw_install_sh",
+      "target": "openclaw_install_cpath",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "platforms\\openclaw\\install.sh",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "platforms_openclaw_status_sh",
+      "target": "script_dir_scripts_lib_sh",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "platforms\\openclaw\\status.sh",
+      "source_location": "L5",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "platforms_openclaw_uninstall_sh",
+      "target": "script_dir_scripts_lib_sh",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "platforms\\openclaw\\uninstall.sh",
+      "source_location": "L5",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "platforms_openclaw_uninstall_sh",
+      "target": "openclaw_uninstall_step",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "platforms\\openclaw\\uninstall.sh",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "platforms_openclaw_update_sh",
+      "target": "script_dir_scripts_lib_sh",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "platforms\\openclaw\\update.sh",
+      "source_location": "L5",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "platforms_openclaw_update_sh",
+      "target": "openclaw_update_cpath",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "platforms\\openclaw\\update.sh",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "platforms_openclaw_verify_sh",
+      "target": "cd_dirname_bash_source_0_pwd_scripts_lib_sh",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "platforms\\openclaw\\verify.sh",
+      "source_location": "L4",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "platforms_openclaw_verify_sh",
+      "target": "openclaw_verify_check_pass",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "platforms\\openclaw\\verify.sh",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "platforms_openclaw_verify_sh",
+      "target": "openclaw_verify_check_fail",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "platforms\\openclaw\\verify.sh",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "platforms_openclaw_verify_sh",
+      "target": "openclaw_verify_check_warn",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "platforms\\openclaw\\verify.sh",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "platforms_openclaw_patches_openclaw_build_sharp_sh",
+      "target": "patches_openclaw_build_sharp_tmpdir",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "platforms\\openclaw\\patches\\openclaw-build-sharp.sh",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "platforms_openclaw_patches_openclaw_build_sharp_sh",
+      "target": "patches_openclaw_build_sharp_tmp",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "platforms\\openclaw\\patches\\openclaw-build-sharp.sh",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "platforms_openclaw_patches_openclaw_build_sharp_sh",
+      "target": "patches_openclaw_build_sharp_temp",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "platforms\\openclaw\\patches\\openclaw-build-sharp.sh",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "platforms_openclaw_patches_openclaw_build_sharp_sh",
+      "target": "patches_openclaw_build_sharp_container",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "platforms\\openclaw\\patches\\openclaw-build-sharp.sh",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "platforms_openclaw_patches_openclaw_build_sharp_sh",
+      "target": "patches_openclaw_build_sharp_cpath",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "platforms\\openclaw\\patches\\openclaw-build-sharp.sh",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "platforms_openclaw_patches_openclaw_patch_paths_sh",
+      "target": "patches_openclaw_patch_paths_tmpdir",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "platforms\\openclaw\\patches\\openclaw-patch-paths.sh",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_backup_sh",
+      "target": "scripts_backup_backup_timestamp",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\backup.sh",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_backup_sh",
+      "target": "scripts_backup_backup_archive_root",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\backup.sh",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_backup_sh",
+      "target": "scripts_backup_collect_assets",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\backup.sh",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_backup_sh",
+      "target": "scripts_backup_detect_backup_platform",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\backup.sh",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_backup_sh",
+      "target": "scripts_backup_restore_root_for_platform",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\backup.sh",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_backup_sh",
+      "target": "scripts_backup_cmd_backup",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\backup.sh",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_backup_sh",
+      "target": "scripts_backup_cmd_restore",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\backup.sh",
+      "source_location": "L269",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_backup_cmd_backup",
+      "target": "scripts_backup_collect_assets",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\backup.sh",
+      "source_location": "L144",
+      "weight": 1.0,
+      "context": "call"
+    },
+    {
+      "source": "scripts_backup_cmd_backup",
+      "target": "scripts_backup_backup_timestamp",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\backup.sh",
+      "source_location": "L162",
+      "weight": 1.0,
+      "context": "call"
+    },
+    {
+      "source": "scripts_backup_cmd_backup",
+      "target": "scripts_backup_backup_archive_root",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\backup.sh",
+      "source_location": "L167",
+      "weight": 1.0,
+      "context": "call"
+    },
+    {
+      "source": "scripts_backup_cmd_restore",
+      "target": "scripts_backup_detect_backup_platform",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\backup.sh",
+      "source_location": "L326",
+      "weight": 1.0,
+      "context": "call"
+    },
+    {
+      "source": "scripts_backup_cmd_restore",
+      "target": "scripts_backup_restore_root_for_platform",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\backup.sh",
+      "source_location": "L334",
+      "weight": 1.0,
+      "context": "call"
+    },
+    {
+      "source": "scripts_build_sharp_sh",
+      "target": "scripts_build_sharp_tmpdir",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\build-sharp.sh",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_build_sharp_sh",
+      "target": "scripts_build_sharp_tmp",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\build-sharp.sh",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_build_sharp_sh",
+      "target": "scripts_build_sharp_temp",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\build-sharp.sh",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_build_sharp_sh",
+      "target": "scripts_build_sharp_container",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\build-sharp.sh",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_build_sharp_sh",
+      "target": "scripts_build_sharp_cpath",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\build-sharp.sh",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_check_env_sh",
+      "target": "script_dir_lib_sh",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\check-env.sh",
+      "source_location": "L5",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "scripts_install_chromium_sh",
+      "target": "scripts_install_chromium_fail_warn",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\install-chromium.sh",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_install_chromium_sh",
+      "target": "scripts_install_chromium_detect_chromium_bin",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\install-chromium.sh",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_install_code_server_sh",
+      "target": "scripts_install_code_server_fail_warn",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\install-code-server.sh",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_install_code_server_sh",
+      "target": "scripts_install_code_server_proot_no_seccomp",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\install-code-server.sh",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_install_deps_sh",
+      "target": "scripts_install_deps_log_ok",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\install-deps.sh",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_install_deps_sh",
+      "target": "scripts_install_deps_log_fail",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\install-deps.sh",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_install_deps_sh",
+      "target": "scripts_install_deps_log_warn",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\install-deps.sh",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_install_deps_sh",
+      "target": "scripts_install_deps_log_info",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\install-deps.sh",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_install_nodejs_sh",
+      "target": "scripts_install_nodejs_path",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\install-nodejs.sh",
+      "source_location": "L215",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_install_opencode_sh",
+      "target": "scripts_install_opencode_fail_warn",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\install-opencode.sh",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_install_opencode_sh",
+      "target": "scripts_install_opencode_create_ldso_concat",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\install-opencode.sh",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_install_opencode_sh",
+      "target": "scripts_install_opencode_create_proot_wrapper",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\install-opencode.sh",
+      "source_location": "L84",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_install_playwright_sh",
+      "target": "scripts_install_playwright_proot_no_seccomp",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\install-playwright.sh",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_lib_sh",
+      "target": "scripts_lib_resolve_repo_base",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\lib.sh",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_lib_sh",
+      "target": "scripts_lib_detect_platform",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\lib.sh",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_lib_sh",
+      "target": "scripts_lib_validate_platform_name",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\lib.sh",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_lib_sh",
+      "target": "scripts_lib_ask_yn",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\lib.sh",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_lib_sh",
+      "target": "scripts_lib_load_platform_config",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\lib.sh",
+      "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_lib_load_platform_config",
+      "target": "scripts_lib_validate_platform_name",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\lib.sh",
+      "source_location": "L101",
+      "weight": 1.0,
+      "context": "call"
+    },
+    {
+      "source": "scripts_setup_boot_sh",
+      "target": "scripts_setup_boot_log_ok",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\setup-boot.sh",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_setup_boot_sh",
+      "target": "scripts_setup_boot_log_warn",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\setup-boot.sh",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_setup_boot_sh",
+      "target": "scripts_setup_boot_log_info",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\setup-boot.sh",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_setup_env_sh",
+      "target": "dirname_0_lib_sh",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\setup-env.sh",
+      "source_location": "L3",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "scripts_setup_paths_sh",
+      "target": "dirname_0_lib_sh",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\setup-paths.sh",
+      "source_location": "L3",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "scripts_setup_root_sh",
+      "target": "scripts_setup_root_log_ok",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\setup-root.sh",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_setup_root_sh",
+      "target": "scripts_setup_root_log_warn",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\setup-root.sh",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_setup_root_sh",
+      "target": "scripts_setup_root_log_info",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\setup-root.sh",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_setup_root_sh",
+      "target": "scripts_setup_root_log_fail",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\setup-root.sh",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_setup_termux_api_sh",
+      "target": "scripts_setup_termux_api_log_ok",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\setup-termux-api.sh",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_setup_termux_api_sh",
+      "target": "scripts_setup_termux_api_log_warn",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\setup-termux-api.sh",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_setup_termux_api_sh",
+      "target": "scripts_setup_termux_api_log_info",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\setup-termux-api.sh",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_setup_termux_api_sh",
+      "target": "scripts_setup_termux_api_log_fail",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\setup-termux-api.sh",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_setup_tmux_sh",
+      "target": "scripts_setup_tmux_log_ok",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\setup-tmux.sh",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_setup_tmux_sh",
+      "target": "scripts_setup_tmux_log_info",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts\\setup-tmux.sh",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_verify_install_sh",
+      "target": "script_dir_scripts_lib_sh",
+      "relation": "imports",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\verify-install.sh",
+      "source_location": "L5",
+      "weight": 1.0,
+      "context": "import"
+    },
+    {
+      "source": "tests_verify_install_sh",
+      "target": "tests_verify_install_check_pass",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\verify-install.sh",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_verify_install_sh",
+      "target": "tests_verify_install_check_fail",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\verify-install.sh",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_verify_install_sh",
+      "target": "tests_verify_install_check_warn",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "tests\\verify-install.sh",
+      "source_location": "L21",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

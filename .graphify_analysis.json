@@ -1,0 +1,679 @@
+{
+  "communities": {
+    "0": [
+      "bootstrap_sh",
+      "concept_ai_cli_tools",
+      "concept_argon2_stub",
+      "concept_bionic_to_glibc",
+      "concept_clawdhub",
+      "concept_code_server",
+      "concept_dns_fix",
+      "concept_glibc",
+      "concept_node_wrapper",
+      "concept_openclaw_platform",
+      "concept_opencode",
+      "concept_rtx_protocol",
+      "concept_spawn_stub",
+      "concept_systemctl_stub",
+      "concept_termux",
+      "func_oca_cmd_install",
+      "func_oca_cmd_status",
+      "func_oca_cmd_update",
+      "func_updatecore_update_ai_tool",
+      "githooks_precommit",
+      "install_sh",
+      "install_tools_sh",
+      "openclaw_install_cpath",
+      "openclaw_on_android_install_oa_glibc",
+      "openclaw_on_android_install_path",
+      "openclaw_on_android_install_step",
+      "openclaw_on_android_install_temp",
+      "openclaw_on_android_install_tmp",
+      "openclaw_on_android_install_tmpdir",
+      "openclaw_on_android_install_tools_ask_yn",
+      "openclaw_on_android_install_tools_check_tool",
+      "openclaw_on_android_update_core_detect_platform",
+      "openclaw_on_android_update_core_step",
+      "openclaw_on_android_update_core_update_ai_tool",
+      "openclaw_uninstall_step",
+      "patches_argon2_stub_js",
+      "patches_glibc_compat_child_process",
+      "patches_glibc_compat_dns",
+      "patches_glibc_compat_dnsservers",
+      "patches_glibc_compat_fs",
+      "patches_glibc_compat_js",
+      "patches_glibc_compat_os",
+      "patches_glibc_compat_parsed",
+      "patches_glibc_compat_path",
+      "patches_glibc_compat_resolvconf",
+      "patches_glibc_compat_resolve",
+      "patches_glibc_compat_result",
+      "patches_glibc_compat_tryresolve",
+      "patches_glibc_compat_wrapperpath",
+      "patches_spawn_h",
+      "patches_systemctl",
+      "platforms_openclaw_env_sh",
+      "platforms_openclaw_install_sh",
+      "platforms_openclaw_status_sh",
+      "platforms_openclaw_uninstall_sh",
+      "update_core_sh",
+      "var_platform_marker"
+    ],
+    "1": [
+      "ai_cli_claude_code",
+      "ai_cli_codex",
+      "ai_cli_gemini",
+      "ai_cli_qwen_code",
+      "arch_bionic_libc",
+      "arch_dns_fix",
+      "arch_glibc_compat_js",
+      "arch_glibc_runner",
+      "arch_rtx1_infra",
+      "arch_rtx2_engine",
+      "arch_rtx3_arsenal",
+      "config_env_vars",
+      "config_openclaw_json",
+      "doc_ai_cli_tools",
+      "doc_architecture",
+      "doc_configuration",
+      "doc_introduction",
+      "doc_local_llm",
+      "doc_quickstart",
+      "doc_root_support",
+      "doc_ssh_guide",
+      "doc_termux_boot",
+      "doc_troubleshooting",
+      "glibc_node_v24",
+      "local_llm_node_llama_cpp",
+      "local_llm_ollama",
+      "local_llm_ollama_cloud",
+      "node_grun_wrapper",
+      "openclaw_gateway",
+      "ref_oca_cli",
+      "ref_oca_install",
+      "ref_oca_status",
+      "ref_oca_update",
+      "ref_ocaupdate",
+      "ref_openclaw_commands",
+      "rooted_marker_file",
+      "setup_boot_oca_boot",
+      "setup_boot_sh",
+      "setup_root_allowlist",
+      "setup_root_oca_root_wrapper",
+      "setup_root_sh",
+      "setup_termux_api_sh",
+      "setup_tmux_sh",
+      "ssh_openssh_port_8022",
+      "ssh_tailscale",
+      "termux_boot_script",
+      "trouble_dns_eai_again",
+      "trouble_glibc_linker",
+      "trouble_node_not_found",
+      "trouble_phantom_process",
+      "verify_install_sh",
+      "verify_rtx1_check",
+      "verify_rtx3_check"
+    ],
+    "2": [
+      "backup_schema_version",
+      "backup_sh",
+      "check_env_sh",
+      "clawdhub_npm_pkg",
+      "func_oca_cmd_uninstall",
+      "install_infra_deps_sh",
+      "lib_ask_yn",
+      "lib_bashrc_markers",
+      "lib_detect_platform",
+      "lib_load_platform_config",
+      "lib_project_dir",
+      "lib_resolve_repo_base",
+      "lib_sh",
+      "lib_validate_platform_name",
+      "libsh_ask_yn",
+      "libsh_detect_platform",
+      "libsh_load_platform_config",
+      "libsh_oca_version",
+      "libsh_project_dir",
+      "libsh_repo_base",
+      "libsh_resolve_repo_base",
+      "openclaw_dir_data",
+      "openclaw_on_android_uninstall_ask_yn",
+      "openclaw_on_android_uninstall_detect_platform",
+      "openclaw_on_android_uninstall_step",
+      "platform_marker_file",
+      "rtx1_tier",
+      "setup_env_sh",
+      "setup_paths_sh",
+      "uninstall_sh",
+      "var_project_dir",
+      "verify_sh"
+    ],
+    "3": [
+      "apply_patches_sh",
+      "build_sharp_patch_sh",
+      "build_sharp_sh",
+      "bun_runtime",
+      "concept_github_mirror",
+      "glibc_compat_js",
+      "glibc_ldso_aarch64",
+      "glibc_library_path_pattern",
+      "install_build_tools_sh",
+      "install_glibc_glibc_arch_marker",
+      "install_glibc_pacman_siglevel",
+      "install_glibc_sh",
+      "install_go_go_version",
+      "install_go_go_wrapper",
+      "install_go_sh",
+      "install_nodejs_node_version",
+      "install_nodejs_node_wrapper",
+      "install_nodejs_sh",
+      "install_opencode_ldso_concat",
+      "install_opencode_proot_wrapper",
+      "install_opencode_sh",
+      "openclaw_npm_pkg",
+      "openclaw_on_android_update_resolve_repo_base",
+      "patch_log_file",
+      "patch_paths_sh",
+      "rtx2_tier",
+      "sharp_wasm32_pkg",
+      "termux_compat_h",
+      "update_sh"
+    ],
+    "4": [
+      "arch_image",
+      "banner_image",
+      "concept_arch_diagram_components",
+      "concept_bootstrap_sh",
+      "concept_glibc_runner",
+      "concept_homebrew",
+      "concept_install_sh",
+      "concept_local_llm",
+      "concept_nodejs_v24",
+      "concept_openclaw_gateway",
+      "concept_playwright_fhs",
+      "concept_rtx1_infra",
+      "concept_rtx2_platform",
+      "concept_rtx3_arsenal",
+      "concept_rtx_protocol_arch",
+      "concept_shellcheck",
+      "concept_sigusr1_reload",
+      "concept_systemd_stub",
+      "editorconfig",
+      "github_bug_report",
+      "github_feature_request",
+      "github_pr_template",
+      "installation_doc",
+      "markdownlint_config",
+      "patch_systemctl",
+      "release_010426",
+      "release_100326",
+      "shellcheckrc"
+    ],
+    "5": [
+      "concept_aarch64",
+      "concept_adb_wireless",
+      "concept_fdroid_termux",
+      "concept_mintlify",
+      "concept_mintlify_docs",
+      "concept_phantom_process_killer",
+      "concept_qwen_code",
+      "concept_shizuku",
+      "concept_signal9",
+      "concept_tmux_failsafe",
+      "concept_wakelock",
+      "disable_ppk_doc",
+      "faq_doc",
+      "mint_json",
+      "openclaw_on_android_mint_anchors",
+      "openclaw_on_android_mint_footersocials",
+      "openclaw_on_android_mint_footersocials_discord",
+      "openclaw_on_android_mint_footersocials_github",
+      "openclaw_on_android_mint_footersocials_x",
+      "openclaw_on_android_mint_name",
+      "openclaw_on_android_mint_navigation",
+      "openclaw_on_android_mint_schema",
+      "openclaw_on_android_mint_tabs",
+      "openclaw_on_android_mint_topbarctabutton",
+      "openclaw_on_android_mint_topbarctabutton_type",
+      "openclaw_on_android_mint_topbarctabutton_url",
+      "openclaw_on_android_mint_topbarlinks",
+      "phantom_ppk_doc"
+    ],
+    "6": [
+      "concept_dual_engine",
+      "concept_proot_distro",
+      "func_oca_cmd_clean",
+      "func_oca_cmd_shell",
+      "func_oca_cmd_start",
+      "func_oca_resolve_repo_base",
+      "func_oca_show_version",
+      "oca_sh",
+      "openclaw_on_android_oca_cmd_clean",
+      "openclaw_on_android_oca_cmd_install",
+      "openclaw_on_android_oca_cmd_shell",
+      "openclaw_on_android_oca_cmd_start",
+      "openclaw_on_android_oca_cmd_status",
+      "openclaw_on_android_oca_cmd_uninstall",
+      "openclaw_on_android_oca_cmd_update",
+      "openclaw_on_android_oca_detect_platform",
+      "openclaw_on_android_oca_resolve_repo_base",
+      "openclaw_on_android_oca_show_help",
+      "openclaw_on_android_oca_show_version",
+      "var_oca_version"
+    ],
+    "7": [
+      "func_postsetup_install_deb",
+      "func_postsetup_install_pacman_pkg",
+      "openclaw_on_android_post_setup_curl_ca_bundle",
+      "openclaw_on_android_post_setup_get_deb_filename",
+      "openclaw_on_android_post_setup_git_config_nosystem",
+      "openclaw_on_android_post_setup_git_exec_path",
+      "openclaw_on_android_post_setup_git_ssl_cainfo",
+      "openclaw_on_android_post_setup_git_template_dir",
+      "openclaw_on_android_post_setup_install_deb",
+      "openclaw_on_android_post_setup_install_pacman_pkg",
+      "openclaw_on_android_post_setup_install_with_deps",
+      "openclaw_on_android_post_setup_path",
+      "openclaw_on_android_post_setup_resolve_repo_base",
+      "openclaw_on_android_post_setup_ssl_cert_file",
+      "post_setup_sh",
+      "var_glibc_ldso",
+      "var_node_version",
+      "var_openclaw_dir"
+    ],
+    "8": [
+      "graphify_detect_json",
+      "openclaw_on_android_graphify_detect_files",
+      "openclaw_on_android_graphify_detect_files_code",
+      "openclaw_on_android_graphify_detect_files_document",
+      "openclaw_on_android_graphify_detect_files_image",
+      "openclaw_on_android_graphify_detect_files_paper",
+      "openclaw_on_android_graphify_detect_files_video",
+      "openclaw_on_android_graphify_detect_graphifyignore_patterns",
+      "openclaw_on_android_graphify_detect_needs_graph",
+      "openclaw_on_android_graphify_detect_skipped_sensitive",
+      "openclaw_on_android_graphify_detect_total_files",
+      "openclaw_on_android_graphify_detect_total_words",
+      "openclaw_on_android_graphify_detect_warning"
+    ],
+    "9": [
+      "debian_proot_rootfs",
+      "install_chromium_sh",
+      "install_code_server_dual_engine",
+      "install_code_server_sh",
+      "install_homebrew_dual_engine",
+      "install_homebrew_sh",
+      "install_playwright_dual_engine",
+      "install_playwright_sh",
+      "openclaw_json_config",
+      "rtx3_tier"
+    ],
+    "10": [
+      "openclaw_on_android_mint_anchors_from",
+      "openclaw_on_android_mint_anchors_to",
+      "openclaw_on_android_mint_background_dark",
+      "openclaw_on_android_mint_colors",
+      "openclaw_on_android_mint_colors_anchors",
+      "openclaw_on_android_mint_colors_background",
+      "openclaw_on_android_mint_colors_dark",
+      "openclaw_on_android_mint_colors_light",
+      "openclaw_on_android_mint_colors_primary"
+    ],
+    "11": [
+      "scripts_backup_backup_archive_root",
+      "scripts_backup_backup_timestamp",
+      "scripts_backup_cmd_backup",
+      "scripts_backup_cmd_restore",
+      "scripts_backup_collect_assets",
+      "scripts_backup_detect_backup_platform",
+      "scripts_backup_restore_root_for_platform",
+      "scripts_backup_sh"
+    ],
+    "12": [
+      "patches_openclaw_build_sharp_container",
+      "patches_openclaw_build_sharp_cpath",
+      "patches_openclaw_build_sharp_temp",
+      "patches_openclaw_build_sharp_tmp",
+      "patches_openclaw_build_sharp_tmpdir",
+      "platforms_openclaw_patches_openclaw_build_sharp_sh"
+    ],
+    "13": [
+      "scripts_build_sharp_container",
+      "scripts_build_sharp_cpath",
+      "scripts_build_sharp_sh",
+      "scripts_build_sharp_temp",
+      "scripts_build_sharp_tmp",
+      "scripts_build_sharp_tmpdir"
+    ],
+    "14": [
+      "scripts_lib_ask_yn",
+      "scripts_lib_detect_platform",
+      "scripts_lib_load_platform_config",
+      "scripts_lib_resolve_repo_base",
+      "scripts_lib_sh",
+      "scripts_lib_validate_platform_name"
+    ],
+    "15": [
+      "scripts_install_deps_log_fail",
+      "scripts_install_deps_log_info",
+      "scripts_install_deps_log_ok",
+      "scripts_install_deps_log_warn",
+      "scripts_install_deps_sh"
+    ],
+    "16": [
+      "scripts_setup_root_log_fail",
+      "scripts_setup_root_log_info",
+      "scripts_setup_root_log_ok",
+      "scripts_setup_root_log_warn",
+      "scripts_setup_root_sh"
+    ],
+    "17": [
+      "scripts_setup_termux_api_log_fail",
+      "scripts_setup_termux_api_log_info",
+      "scripts_setup_termux_api_log_ok",
+      "scripts_setup_termux_api_log_warn",
+      "scripts_setup_termux_api_sh"
+    ],
+    "18": [
+      "openclaw_verify_check_fail",
+      "openclaw_verify_check_pass",
+      "openclaw_verify_check_warn",
+      "platforms_openclaw_verify_sh"
+    ],
+    "19": [
+      "scripts_install_opencode_create_ldso_concat",
+      "scripts_install_opencode_create_proot_wrapper",
+      "scripts_install_opencode_fail_warn",
+      "scripts_install_opencode_sh"
+    ],
+    "20": [
+      "scripts_setup_boot_log_info",
+      "scripts_setup_boot_log_ok",
+      "scripts_setup_boot_log_warn",
+      "scripts_setup_boot_sh"
+    ],
+    "21": [
+      "tests_verify_install_check_fail",
+      "tests_verify_install_check_pass",
+      "tests_verify_install_check_warn",
+      "tests_verify_install_sh"
+    ],
+    "22": [
+      "scripts_install_chromium_detect_chromium_bin",
+      "scripts_install_chromium_fail_warn",
+      "scripts_install_chromium_sh"
+    ],
+    "23": [
+      "scripts_install_code_server_fail_warn",
+      "scripts_install_code_server_proot_no_seccomp",
+      "scripts_install_code_server_sh"
+    ],
+    "24": [
+      "scripts_setup_tmux_log_info",
+      "scripts_setup_tmux_log_ok",
+      "scripts_setup_tmux_sh"
+    ],
+    "25": [
+      "install_deps_npm_version",
+      "install_deps_sh"
+    ],
+    "26": [
+      "openclaw_update_cpath",
+      "platforms_openclaw_update_sh"
+    ],
+    "27": [
+      "patches_openclaw_patch_paths_tmpdir",
+      "platforms_openclaw_patches_openclaw_patch_paths_sh"
+    ],
+    "28": [
+      "scripts_install_nodejs_path",
+      "scripts_install_nodejs_sh"
+    ],
+    "29": [
+      "scripts_install_playwright_proot_no_seccomp",
+      "scripts_install_playwright_sh"
+    ],
+    "30": [
+      "platforms_openclaw_patches_openclaw_apply_patches_sh"
+    ],
+    "31": [
+      "scripts_check_env_sh"
+    ],
+    "32": [
+      "scripts_install_build_tools_sh"
+    ],
+    "33": [
+      "scripts_install_glibc_sh"
+    ],
+    "34": [
+      "scripts_install_go_sh"
+    ],
+    "35": [
+      "scripts_install_homebrew_sh"
+    ],
+    "36": [
+      "scripts_install_infra_deps_sh"
+    ],
+    "37": [
+      "scripts_setup_env_sh"
+    ],
+    "38": [
+      "scripts_setup_paths_sh"
+    ],
+    "39": [
+      "var_prefix"
+    ],
+    "40": [
+      "backup_cmd_backup"
+    ],
+    "41": [
+      "backup_cmd_restore"
+    ],
+    "42": [
+      "backup_collect_assets"
+    ],
+    "43": [
+      "backup_detect_platform"
+    ],
+    "44": [
+      "check_env_rtx1_label"
+    ],
+    "45": [
+      "lib_oca_version"
+    ]
+  },
+  "cohesion": {
+    "0": 0.06,
+    "1": 0.06,
+    "2": 0.08,
+    "3": 0.11,
+    "4": 0.13,
+    "5": 0.1,
+    "6": 0.11,
+    "7": 0.12,
+    "8": 0.15,
+    "9": 0.36,
+    "10": 0.22,
+    "11": 0.43,
+    "12": 0.33,
+    "13": 0.33,
+    "14": 0.4,
+    "15": 0.4,
+    "16": 0.4,
+    "17": 0.4,
+    "18": 0.5,
+    "19": 0.5,
+    "20": 0.5,
+    "21": 0.5,
+    "22": 0.67,
+    "23": 0.67,
+    "24": 0.67,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 1.0,
+    "30": 1.0,
+    "31": 1.0,
+    "32": 1.0,
+    "33": 1.0,
+    "34": 1.0,
+    "35": 1.0,
+    "36": 1.0,
+    "37": 1.0,
+    "38": 1.0,
+    "39": 1.0,
+    "40": 1.0,
+    "41": 1.0,
+    "42": 1.0,
+    "43": 1.0,
+    "44": 1.0,
+    "45": 1.0
+  },
+  "gods": [
+    {
+      "id": "lib_sh",
+      "label": "lib.sh (Shared Function Library)",
+      "degree": 17
+    },
+    {
+      "id": "doc_introduction",
+      "label": "Introduction Doc — What is OCA?",
+      "degree": 11
+    },
+    {
+      "id": "installation_doc",
+      "label": "Installation Guide",
+      "degree": 10
+    },
+    {
+      "id": "concept_openclaw_platform",
+      "label": "OpenClaw Platform",
+      "degree": 9
+    },
+    {
+      "id": "arch_rtx3_arsenal",
+      "label": "RTX3: Master Arsenal (AI CLIs, Playwright, Homebrew)",
+      "degree": 9
+    },
+    {
+      "id": "install_nodejs_sh",
+      "label": "install-nodejs.sh (RTX2 glibc Node.js Installer)",
+      "degree": 8
+    },
+    {
+      "id": "glibc_ldso_aarch64",
+      "label": "GLIBC_LDSO ld-linux-aarch64.so.1 path",
+      "degree": 8
+    },
+    {
+      "id": "doc_quickstart",
+      "label": "Quickstart Doc — 5-Minute Setup Guide",
+      "degree": 8
+    },
+    {
+      "id": "concept_ai_cli_tools",
+      "label": "AI CLI Tools (Claude Code, Gemini, Codex, Qwen)",
+      "degree": 7
+    },
+    {
+      "id": "install_glibc_sh",
+      "label": "install-glibc.sh (RTX2 glibc Runtime Installer)",
+      "degree": 7
+    }
+  ],
+  "surprises": [
+    {
+      "source": "setup-termux-api.sh — Termux:API Installer & Verifier",
+      "target": "RTX1: Infrastructure Layer (Termux $PREFIX)",
+      "source_files": [
+        "scripts/setup-termux-api.sh",
+        "docs/architecture.mdx"
+      ],
+      "confidence": "INFERRED",
+      "relation": "conceptually_related_to",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (code ↔ doc); connects across different repos/directories; peripheral node `setup-termux-api.sh — Termux:API Installer & Verifier` unexpectedly reaches hub `RTX1: Infrastructure Layer (Termux $PREFIX)`"
+    },
+    {
+      "source": "setup-boot.sh — Termux:Boot Script Generator",
+      "target": "Termux:Boot Doc — Auto-Start Configuration",
+      "source_files": [
+        "scripts/setup-boot.sh",
+        "docs/termux-boot.mdx"
+      ],
+      "confidence": "INFERRED",
+      "relation": "conceptually_related_to",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (code ↔ doc); connects across different repos/directories"
+    },
+    {
+      "source": "oca-boot.sh Auto-Start Script",
+      "target": "OpenClaw Gateway Service",
+      "source_files": [
+        "scripts/setup-boot.sh",
+        "docs/quickstart.mdx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "crosses file types (code ↔ doc); connects across different repos/directories; peripheral node `oca-boot.sh Auto-Start Script` unexpectedly reaches hub `OpenClaw Gateway Service`"
+    },
+    {
+      "source": "setup-env.sh — .bashrc Environment Configurator",
+      "target": "OCA Environment Variables (OCA_DIR, OCA_GLIBC, TMPDIR, NODE_OPTIONS)",
+      "source_files": [
+        "scripts/setup-env.sh",
+        "docs/configuration.mdx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "implements",
+      "why": "crosses file types (code ↔ doc); connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "setup-tmux.sh — tmux Session Setup Info",
+      "target": "OpenClaw Gateway Service",
+      "source_files": [
+        "scripts/setup-tmux.sh",
+        "docs/quickstart.mdx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (code ↔ doc); connects across different repos/directories; peripheral node `setup-tmux.sh — tmux Session Setup Info` unexpectedly reaches hub `OpenClaw Gateway Service`"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `lib.sh (Shared Function Library)` connect `Community 2` to `Community 1`, `Community 3`?",
+      "why": "High betweenness centrality (0.215) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `OpenClaw Platform` connect `Community 0` to `Community 5`, `Community 7`?",
+      "why": "High betweenness centrality (0.191) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `verify-install.sh — Installation Verification Test Suite` connect `Community 1` to `Community 2`?",
+      "why": "High betweenness centrality (0.113) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 3 inferred relationships involving `Introduction Doc — What is OCA?` (e.g. with `Android Bionic libc Constraint` and `SSH Guide Doc — Remote Access Setup`) actually correct?",
+      "why": "`Introduction Doc — What is OCA?` has 3 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `code`, `document`, `paper` to the rest of the system?",
+      "why": "123 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.06 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.06 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@openclaw/assistant-sdk",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": ["agent-core", "plugin-sdk"],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "start": "node runtime/assistant-runner.mjs"
+  }
+}

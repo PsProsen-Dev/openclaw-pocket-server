@@ -31,6 +31,11 @@ class UrlResolver(
         return config?.bootstrap?.url ?: BuildConfig.BOOTSTRAP_URL
     }
 
+    suspend fun getBootstrapSha256(): String? {
+        val config = loadConfig()
+        return config?.bootstrap?.sha256
+    }
+
     suspend fun getWwwUrl(): String {
         val config = loadConfig()
         return config?.www?.url ?: BuildConfig.WWW_URL
