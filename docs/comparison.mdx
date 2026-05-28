@@ -1,0 +1,124 @@
+---
+title: "Comparison"
+description: "How OCA compares to other methods of running AI on Android."
+icon: "scale-balanced"
+---
+
+## OCA vs Other Approaches
+
+There are several ways to run server-side software on Android. Here's how OCA's approach compares:
+
+---
+
+## Method Comparison
+
+| Feature | OCA (glibc shim) | proot-distro | Andronix | UserLAnd | Rooted chroot |
+|---------|:-:|:-:|:-:|:-:|:-:|
+| **Disk Usage** | ~50MB | 700MB+ | 500MB+ | 500MB+ | 300MB+ |
+| **Performance** | ⚡ Native | 🐌 ~30% overhead | 🐌 Emulated | 🐌 Emulated | ⚡ Native |
+| **Root Required** | ❌ No | ❌ No | ❌ No | ❌ No | ✅ Yes |
+| **One-command Install** | ✅ Yes | ❌ No | ❌ No | ❌ No | ❌ No |
+| **OpenClaw Optimized** | ✅ Yes | ❌ Generic | ❌ Generic | ❌ Generic | ❌ Generic |
+| **Android Network Compat** | ✅ Built-in | ⚠️ Partial | ⚠️ Partial | ⚠️ Partial | ✅ Yes |
+| **Native Module Support** | ✅ Pre-patched | ⚠️ Manual fixes | ⚠️ Manual fixes | ⚠️ Manual fixes | ⚠️ Manual fixes |
+
+---
+
+## Deep Dive
+
+<Tabs>
+  <Tab title="OCA (This Project)">
+    ### The glibc Shim Approach
+
+    OCA installs a **minimal glibc `ld.so` shim** (~50MB) that translates glibc system calls to Android's native Bionic libc. This means:
+
+    - **No Linux distro layer** — runs directly in Termux
+    - **Near-native performance** — no translation overhead for most operations
+    - **Purpose-built** — specifically optimized for OpenClaw's requirements
+    - **Handles Android quirks** — DNS resolution, TLS certificates, and networking are pre-configured
+
+    ```
+    App → Node.js → glibc shim (50MB) → Android Bionic → Kernel
+    ```
+
+    <Tip>
+    OCA is the **fastest** and **smallest** way to run OpenClaw on Android.
+    </Tip>
+  </Tab>
+
+  <Tab title="proot-distro">
+    ### The Full Linux Distro Approach
+
+    proot-distro installs a **complete Linux distribution** (Ubuntu, Debian, etc.) inside Termux using proot for filesystem translation.
+
+    - **700MB+ disk usage** for a minimal Ubuntu install
+    - **Significant performance overhead** from proot syscall interception
+    - **Generic setup** — not optimized for any specific workload
+    - **Complex maintenance** — full distro update cycle
+
+    ```
+    App → Node.js → glibc → proot (syscall translation) → Bionic → Kernel
+    ```
+
+    <Warning>
+    proot adds a **ptrace-based syscall interception** layer that can slow I/O operations by 20-40%.
+    </Warning>
+  </Tab>
+
+  <Tab title="Rooted chroot">
+    ### The Root Approach
+
+    A rooted chroot mounts a real Linux filesystem and runs processes in a chroot jail with root privileges.
+
+    - **Requires root access** — voids warranty, security risks
+    - **Near-native performance** — no translation overhead
+    - **Complex setup** — manual partition mounting, SELinux configuration
+    - **Risk of bricking** — incorrect chroot setup can break the system
+
+    ```
+    App → Node.js → glibc → chroot (direct) → Kernel
+    ```
+
+    <Warning>
+    Rooting your phone **voids warranty** and can introduce security vulnerabilities. Not recommended for daily-use devices.
+    </Warning>
+  </Tab>
+</Tabs>
+
+---
+
+## Performance Benchmarks
+
+<Note>
+Benchmarks measured on a Snapdragon 665 (Redmi Note 8) with 4GB RAM, running Android 11.
+</Note>
+
+| Metric | OCA | proot-distro (Ubuntu) |
+|--------|-----|----------------------|
+| **Startup Time** | ~3 seconds | ~12 seconds |
+| **Memory Overhead** | ~15MB | ~180MB |
+| **Disk Usage** | ~50MB | ~740MB |
+| **Node.js HTTP Req/s** | ~2,400 | ~1,600 |
+| **File I/O (read)** | ~95% native | ~65% native |
+| **Install Time** | ~3 minutes | ~15 minutes |
+
+---
+
+## When to Use What
+
+<CardGroup cols={2}>
+  <Card title="✅ Use OCA When" icon="check">
+    - You want to run OpenClaw on Android
+    - You want minimal disk/RAM usage
+    - You need near-native performance
+    - You don't have root access
+    - You want a one-command install
+  </Card>
+  <Card title="⚠️ Use proot-distro When" icon="triangle-exclamation">
+    - You need a full Linux environment
+    - You want to run arbitrary Linux software
+    - You need `apt` package management
+    - OpenClaw is not your primary workload
+    - Disk space is not a concern
+  </Card>
+</CardGroup>

@@ -1,0 +1,58 @@
+---
+title: 'Battery Optimization'
+description: 'Prevent your OEM from killing the Termux process.'
+icon: 'battery-full'
+---
+
+# OEM-Specific Battery Fixes
+
+Android OEMs (Original Equipment Manufacturers) heavily modify the Android kernel to improve battery life. They do this by aggressively killing background apps. You must disable these optimizations for Termux.
+
+Find your phone brand below and apply the fixes.
+
+---
+
+## Xiaomi / POCO / Redmi (MIUI & HyperOS)
+
+Xiaomi is notoriously aggressive with background apps.
+
+1. Go to **Settings** > **Apps** > **Manage Apps** > **Termux**
+2. Enable **AutoStart**
+3. Go to **Battery saver** and set it to **No restrictions**
+4. Go back to Termux app info, tap **Permissions**, and ensure **Display pop-up windows while running in the background** is allowed
+5. Open the Recents (multitasking) menu, long press on Termux, and tap the **Lock** icon to lock it in RAM.
+
+## OPPO / OnePlus / Realme (ColorOS & OxygenOS)
+
+1. Go to **Settings** > **Battery** > **Advanced settings** > **Optimize battery use**
+2. Find Termux and set to **Don't optimize**
+3. Go to **Settings** > **Apps** > **App management** > **Termux**
+4. Tap **Battery usage** and enable:
+   - Allow foreground activity
+   - Allow background activity
+   - Allow auto-launch
+5. Lock the app in the Recents menu.
+
+## Vivo / iQOO (FuntouchOS & OriginOS)
+
+1. Go to **Settings** > **Battery** > **Background power consumption management**
+2. Find Termux and select **Don't restrict background power usage**
+3. Go to **Settings** > **Apps & permissions** > **Permission management** > **Autostart**
+4. Enable autostart for Termux
+5. Lock the app in the Recents menu.
+
+## Samsung (One UI)
+
+Samsung is generally better, but still requires tweaking.
+
+1. Go to **Settings** > **Apps** > **Termux** > **Battery**
+2. Select **Unrestricted**
+3. Go to **Settings** > **Device Care** > **Battery** > **Background usage limits**
+4. Ensure Termux is NOT in the "Sleeping apps" or "Deep sleeping apps" lists
+5. Tap **Never sleeping apps** and add Termux.
+
+---
+
+<Tip>
+For a constantly updated list of OEM task killers and how to defeat them, visit [Don't Kill My App!](https://dontkillmyapp.com/)
+</Tip>

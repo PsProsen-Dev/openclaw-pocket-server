@@ -55,16 +55,28 @@
       "group": "Overview",
       "pages": [
         "docs/introduction",
+        "docs/why-android",
         "docs/quickstart",
-        "docs/architecture"
+        "docs/architecture",
+        "docs/comparison"
       ]
     },
     {
       "group": "Installation",
       "pages": [
+        "docs/installation/prerequisites",
         "docs/installation",
+        "docs/installation/manual-setup",
         "docs/configuration",
         "docs/phantom-process-killer"
+      ]
+    },
+    {
+      "group": "Configuration",
+      "pages": [
+        "docs/configuration/onboarding",
+        "docs/configuration/gateway",
+        "docs/configuration/channels"
       ]
     },
     {
@@ -79,6 +91,20 @@
       ]
     },
     {
+      "group": "Keeping It Alive",
+      "pages": [
+        "docs/advanced/process-survival",
+        "docs/advanced/battery-optimization"
+      ]
+    },
+    {
+      "group": "Advanced",
+      "pages": [
+        "docs/advanced/remote-dashboard",
+        "docs/advanced/telegram-control"
+      ]
+    },
+    {
       "group": "Skills & Integrations",
       "pages": [
         "docs/ADB-BRIDGE"
@@ -87,6 +113,7 @@
     {
       "group": "Help",
       "pages": [
+        "docs/support/common-issues",
         "docs/troubleshooting",
         "docs/faq"
       ]

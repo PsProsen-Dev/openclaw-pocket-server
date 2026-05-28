@@ -1,0 +1,78 @@
+---
+title: 'Keeping Processes Alive'
+description: 'How to prevent Android from killing your AI server.'
+icon: 'heart-pulse'
+---
+
+# Surviving Android's Task Killer
+
+Running a 24/7 server on Android is challenging because the operating system is aggressively designed to kill background tasks to save battery. 
+
+If OpenClaw keeps shutting down when you turn off your screen, you need to implement these survival tactics.
+
+## 1. Termux Wake Lock
+
+The most basic and essential requirement is acquiring a wakelock. This tells the Android kernel not to suspend the CPU when the screen goes off.
+
+In Termux, run:
+
+```bash
+termux-wake-lock
+```
+
+You should see a permanent notification in your Android notification tray saying "Termux is holding a wake lock". **Do not dismiss this notification.**
+
+<Note>
+The `bootstrap.sh` script automatically configures Termux:Boot to acquire this wake lock on device restart.
+</Note>
+
+## 2. Use tmux for Session Persistence
+
+If Android does kill your foreground Termux interface, or if you accidentally swipe the app away, any process running inside it will die.
+
+**Always run the Gateway inside `tmux`.** 
+
+```bash
+# Create a new persistent session
+tmux new-session -s OpenClaw
+
+# Start the gateway
+openclaw gateway
+
+# Detach (leave it running in background): Press Ctrl+b, then d
+```
+
+If you ever need to return to the gateway console:
+```bash
+tmux attach -t OpenClaw
+```
+
+## 3. Defeating the Phantom Process Killer (Android 12+)
+
+Starting in Android 12, Google introduced the "Phantom Process Killer", which ruthlessly limits apps to 32 child processes. OpenClaw, Node.js, and the Chromium headless browser (if used) easily exceed this limit, causing sudden deaths.
+
+You must disable this feature using ADB (Android Debug Bridge).
+
+### Steps to disable:
+1. Connect your phone to a PC via USB.
+2. Enable **USB Debugging** in Developer Options.
+3. Open a terminal on your PC and run:
+
+```bash
+adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"
+adb shell "/system/bin/device_config set_sync_disabled_for_tests persistent"
+```
+
+To verify it worked:
+```bash
+adb shell dumpsys activity settings | grep max_phantom_processes
+```
+
+## 4. Charge Management
+
+Running heavy AI workloads while plugged in 24/7 will degrade your battery rapidly and generate excess heat. Heat causes thermal throttling, which slows down the AI agent.
+
+### Mitigation:
+If you are rooted, use **Advanced Charging Controller (ACC)** to limit max charge to 80% and allow it to drop to 40% before recharging.
+
+If you are not rooted, plug the phone into a **smart plug** and use a local automation routine (like Macrodroid or Home Assistant) to toggle the plug off when the battery hits 85%, and on when it hits 30%.

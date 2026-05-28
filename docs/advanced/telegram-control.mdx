@@ -1,0 +1,44 @@
+---
+title: 'Telegram Control'
+description: 'Manage your AI server remotely using Telegram.'
+icon: 'telegram'
+---
+
+# Telegram Remote Control
+
+Once your Android phone is tucked away in a drawer running OpenClaw, you don't want to SSH into it just to restart the process or check the logs. 
+
+You can set up Telegram as a secure "Control Channel" to manage the Gateway remotely.
+
+## Setting up the Control Channel
+
+1. Ensure you have connected Telegram following the [Channels](/docs/configuration/channels) guide.
+2. Edit your `openclaw.json` configuration to designate your Telegram account as an admin.
+
+```json5
+{
+  "channels": {
+    "telegram": {
+      "admins": ["YOUR_TELEGRAM_USER_ID"]
+    }
+  }
+}
+```
+
+<Info>
+You can find your Telegram User ID by messaging `@userinfobot` on Telegram. It is a string of numbers, not your @username.
+</Info>
+
+## Admin Commands
+
+Once you are designated as an admin, you can send the following commands to your bot on Telegram:
+
+- `/status` — Check Gateway uptime, memory usage, and active channels.
+- `/logs [lines]` — Fetch the last X lines of the gateway log.
+- `/restart` — Gracefully restarts the OpenClaw gateway process.
+- `/clear_memory` — Clears the working memory of the current agent context.
+- `/node_status` — Check the battery level and temperature of the Android device.
+
+## Why this is useful
+
+If the AI agent gets stuck in an execution loop, or if you apply a configuration update remotely via GitHub Actions, you can simply message `/restart` on Telegram while you're on the go. No need to pull out a laptop and SSH into the device.

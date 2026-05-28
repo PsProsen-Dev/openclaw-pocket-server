@@ -1,0 +1,67 @@
+---
+title: 'Manual Setup'
+description: 'Step-by-step manual installation guide for Termux.'
+icon: 'wrench'
+---
+
+# Manual Installation
+
+If you prefer to see exactly what is being installed, or if the automated script fails, you can install OpenClaw manually.
+
+## 1. System Update & Dependencies
+
+First, update Termux and install the required compiler tools:
+
+```bash
+pkg update && pkg upgrade -y
+pkg install nodejs npm tmux openssh make python clang -y
+```
+
+## 2. Install the glibc Shim
+
+Android's C library (Bionic) is incompatible with standard Linux binaries. We need to install a lightweight `ld.so` shim.
+
+```bash
+pkg install wget -y
+wget https://raw.githubusercontent.com/termux-pacman/glibc-packages/main/glibc.sh
+bash glibc.sh
+```
+
+## 3. Install OpenClaw
+
+Install the OpenClaw package globally via npm:
+
+```bash
+npm install -g openclaw@latest
+```
+
+## 4. Apply Bionic Patches
+
+You need to download the Android compatibility patches to your OpenClaw installation directory:
+
+```bash
+cd /data/data/com.termux/files/usr/lib/node_modules/openclaw/
+curl -O https://raw.githubusercontent.com/PsProsen-Dev/OpenClaw-On-Android/master/android/app/src/main/assets/bionic-compat.js
+curl -O https://raw.githubusercontent.com/PsProsen-Dev/OpenClaw-On-Android/master/android/app/src/main/assets/proxy.js
+```
+
+## 5. Rebuild Native Modules (Optional but Recommended)
+
+Some npm packages (like `sharp` used for image processing) have native C++ bindings that need to be recompiled for Android:
+
+```bash
+npm rebuild sharp
+```
+
+## 6. Configure SSH
+
+Start the SSH server so you can access the phone from your PC:
+
+```bash
+sshd
+```
+By default, Termux SSH runs on port `8022`.
+
+---
+
+Your manual installation is now complete. Proceed to [Onboarding](/docs/configuration/onboarding).

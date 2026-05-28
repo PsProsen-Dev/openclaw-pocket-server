@@ -1,0 +1,50 @@
+---
+title: 'Channels'
+description: 'Connect WhatsApp, Telegram, and Discord.'
+icon: 'message'
+---
+
+# Channel Configuration
+
+OpenClaw can connect to over 50 different messaging platforms. Here is how to configure the most popular ones.
+
+## 1. Telegram (Recommended)
+
+Telegram is the most robust channel for OpenClaw. It supports full markdown, buttons, edits, and fast media delivery.
+
+1. Open Telegram and search for **@BotFather**
+2. Send `/newbot` and follow the prompts to create a bot
+3. Copy the HTTP API Token
+4. Open the OpenClaw Control UI (`http://localhost:18789`)
+5. Go to **Channels** -> **Telegram**
+6. Paste your token and click **Connect**
+
+## 2. WhatsApp
+
+WhatsApp integration uses a Web interface bridge. It does not require a Meta Business account.
+
+1. Open the OpenClaw Control UI
+2. Go to **Channels** -> **WhatsApp**
+3. Click **Generate QR Code**
+4. Open WhatsApp on your primary phone
+5. Go to **Linked Devices** -> **Link a Device**
+6. Scan the QR code displayed on the OpenClaw dashboard
+
+<Warning>
+**Safety Warning:** Do not use your primary personal WhatsApp number for bot testing if you are doing aggressive automation. WhatsApp may ban numbers that exhibit bot-like behavior. Use a secondary number if possible.
+</Warning>
+
+## 3. Discord
+
+1. Go to the [Discord Developer Portal](https://discord.com/developers/applications)
+2. Create a New Application
+3. Go to the **Bot** tab and click **Reset Token** to get your token
+4. Scroll down and enable all three **Privileged Gateway Intents** (Presence, Server Members, Message Content)
+5. Go to **OAuth2** -> **URL Generator**
+6. Select the `bot` scope and give it Administrator permissions
+7. Use the generated URL to invite the bot to your server
+8. Paste the Bot Token into the OpenClaw Control UI
+
+## Testing Your Connection
+
+Once a channel is connected, send a simple message like `ping` to your bot on that platform. If everything is set up correctly, OpenClaw should respond within a few seconds.

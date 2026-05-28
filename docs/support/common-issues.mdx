@@ -1,0 +1,62 @@
+---
+title: 'Common Issues'
+description: 'Troubleshooting errors and crashes.'
+icon: 'triangle-exclamation'
+---
+
+# Troubleshooting
+
+If you run into issues installing or running OpenClaw on Android, check the solutions below.
+
+## 1. Node.js Build Failures / node-gyp Errors
+
+**Error:** Red text during `npm install` mentioning `node-gyp rebuild` or `make` failing.
+
+**Cause:** Termux is missing the required C++ build tools, or python is not installed.
+**Fix:**
+```bash
+pkg install make python clang -y
+npm clean-cache --force
+npm install -g openclaw@latest
+```
+
+## 2. Sharp Compilation Errors
+
+**Error:** `sharp: Installation error: Use with glibc ... is not supported`
+
+**Cause:** Sharp is an image processing library that relies heavily on native C bindings. Android's Bionic C library is incompatible with pre-built Sharp binaries.
+**Fix:** 
+Our `bootstrap.sh` script handles this, but if you are doing it manually, you must force Sharp to build from source using the NDK:
+```bash
+export SHARP_IGNORE_GLOBAL_LIBVIPS=1
+export npm_config_build_from_source=true
+npm rebuild sharp
+```
+
+## 3. "Cannot find module 'bionic-compat'"
+
+**Error:** When starting `openclaw gateway`, it crashes immediately complaining about `bionic-compat.js`.
+
+**Cause:** The Android compatibility shims were not copied to the correct directory.
+**Fix:**
+Ensure the shims are in the global npm package directory:
+```bash
+cd /data/data/com.termux/files/usr/lib/node_modules/openclaw/
+# Download the shims as per the manual setup guide
+```
+
+## 4. Network/DNS Errors (EAI_AGAIN)
+
+**Error:** The agent fails to connect to the LLM provider with `getaddrinfo EAI_AGAIN api.openai.com`.
+
+**Cause:** Android's DNS resolution differs from standard Linux. Node.js sometimes fails to resolve domain names in Termux.
+**Fix:**
+Ensure `proxy.js` is installed and correctly overriding the DNS resolution to use Google/Cloudflare DNS directly (8.8.8.8 / 1.1.1.1). Our bootstrap script applies this automatically.
+
+## 5. Gateway Keeps Shutting Down
+
+**Error:** You lock your phone, and a few minutes later, the bot stops responding.
+
+**Cause:** Android killed the Termux process to save battery, or the Phantom Process Killer intervened.
+**Fix:**
+Review the [Process Survival](/docs/advanced/process-survival) and [Battery Optimization](/docs/advanced/battery-optimization) guides thoroughly. You MUST acquire a wake lock and disable battery restrictions.

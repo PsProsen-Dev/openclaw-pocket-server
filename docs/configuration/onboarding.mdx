@@ -1,0 +1,40 @@
+---
+title: 'Onboarding'
+description: 'Set up your AI providers and keys.'
+icon: 'key'
+---
+
+# Onboarding
+
+Before OpenClaw can respond to messages, you need to configure an AI provider and supply an API key. 
+
+OpenClaw supports all major providers including OpenAI, Anthropic, OpenRouter, and Google Gemini.
+
+## Running the Onboarding Wizard
+
+In Termux, run:
+
+```bash
+openclaw onboard
+```
+
+This will launch an interactive CLI wizard.
+
+### Step 1: Select a Provider
+Use the arrow keys to select your preferred AI provider. 
+- **OpenRouter** is recommended for beginners as it gives you access to hundreds of models (including Claude and Llama) through a single API key.
+- **Anthropic** is recommended for the best coding agent performance (Claude 3.5 Sonnet).
+
+### Step 2: Enter your API Key
+Paste your API key when prompted.
+- On Android, you can usually long-press the Termux screen and select **Paste**.
+
+### Step 3: Select a Model
+Choose the default model you want the Gateway to use.
+
+## Updating Keys Later
+
+If you ever need to change your API key or switch providers, you can either:
+1. Run `openclaw onboard` again
+2. Open the Control UI dashboard in your browser and edit the configuration there
+3. Manually edit `~/.openclaw/openclaw.json`

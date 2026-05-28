@@ -1,0 +1,50 @@
+---
+title: 'Prerequisites'
+description: 'What you need before installing OpenClaw on Android.'
+icon: 'list-check'
+---
+
+# Prerequisites
+
+Before installing OpenClaw, you must prepare your Android device. Skipping these steps will cause the installation to fail or the background process to be killed by Android's memory management.
+
+## 1. Hardware Requirements
+
+- **OS:** Android 10 or higher
+- **RAM:** Minimum 4GB (8GB+ recommended)
+- **Storage:** ~2GB free space
+- **Architecture:** ARM64 (aarch64)
+
+## 2. Install Termux (F-Droid Version)
+
+You must use the F-Droid version of Termux. **DO NOT install Termux from the Google Play Store.** The Play Store version is deprecated and broken due to Google's API level requirements.
+
+1. Download and install [F-Droid](https://f-droid.org/)
+2. Open F-Droid, search for **Termux**, and install it
+3. Also search for and install **Termux:Boot** (required for auto-starting the server)
+4. Open Termux once to initialize the environment
+
+## 3. Battery Optimization (Crucial)
+
+Android aggressively kills background apps to save battery. If you don't disable this for Termux, your AI server will randomly shut down when you lock the screen.
+
+1. Go to Android **Settings** > **Apps** > **Termux**
+2. Find **Battery** or **App battery usage**
+3. Set it to **Unrestricted** (or "No Restrictions")
+
+<Tip>
+OEMs like Xiaomi, Huawei, and OPPO have even more aggressive task killers. Check our [Battery Optimization Guide](/docs/advanced/battery-optimization) for specific instructions for your phone brand.
+</Tip>
+
+## 4. Developer Options: Stay Awake (Optional but Recommended)
+
+If this is a dedicated spare phone that will be plugged in 24/7, enable the "Stay Awake" feature to prevent the device from entering deep sleep.
+
+1. Go to **Settings** > **About phone**
+2. Tap **Build number** 7 times to enable Developer Options
+3. Go back to Settings > **System** > **Developer options**
+4. Enable **Stay awake** (Screen will never sleep while charging)
+
+---
+
+Once you have completed these prerequisites, proceed to the [Automated Setup](/docs/installation/automated-setup).

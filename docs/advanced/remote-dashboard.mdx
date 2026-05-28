@@ -1,0 +1,59 @@
+---
+title: 'Remote Dashboard'
+description: 'Access the OpenClaw Control UI from your PC.'
+icon: 'desktop'
+---
+
+# Remote Dashboard Access
+
+The OpenClaw Control UI runs on `localhost:18789` inside Termux. Because it binds to localhost for security reasons, you cannot simply type your phone's IP address into your PC's browser to access it.
+
+Here are the ways to securely access the dashboard from your PC.
+
+## Method 1: SSH Port Forwarding (Recommended)
+
+This is the most secure method. It tunnels the web traffic through your secure SSH connection.
+
+1. Ensure you have followed the [SSH Access](/docs/advanced/ssh-access) guide and have SSH running.
+2. On your PC, open a terminal and run:
+
+```bash
+ssh -N -L 18789:127.0.0.1:18789 -p 8022 <phone_ip_address>
+```
+*(Replace `<phone_ip_address>` with your Android device's IP).*
+
+3. Open a browser on your PC and navigate to `http://localhost:18789`.
+4. You are now securely accessing the dashboard!
+
+## Method 2: Tailscale
+
+If you want access to the dashboard from anywhere in the world (not just your home Wi-Fi), use Tailscale.
+
+1. Install the [Tailscale app](https://play.google.com/store/apps/details?id=com.tailscale.ipn) on your Android device and log in.
+2. Install Tailscale on your PC and log in to the same network.
+3. In Termux, you need to configure the OpenClaw gateway to bind to `0.0.0.0` instead of `127.0.0.1` so Tailscale can route to it.
+4. Edit your `openclaw.json` config:
+   ```json
+   {
+     "web": {
+       "host": "0.0.0.0",
+       "port": 18789
+     }
+   }
+   ```
+5. Restart the Gateway.
+6. On your PC, open a browser and navigate to `http://<phone_tailscale_ip>:18789`.
+
+<Warning>
+If you bind OpenClaw to `0.0.0.0`, anyone on your local Wi-Fi network can access the dashboard. Ensure your home network is secure, or set up authentication in the OpenClaw config.
+</Warning>
+
+## Method 3: Cloudflare Tunnels
+
+For advanced users, you can run `cloudflared` inside Termux to expose the local port 18789 to a public URL (e.g., `https://ai.yourdomain.com`). 
+
+```bash
+pkg install cloudflared
+cloudflared tunnel --url http://localhost:18789
+```
+*Note: You should configure Cloudflare Access (Zero Trust) to protect the URL with authentication.*

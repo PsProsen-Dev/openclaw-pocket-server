@@ -1,0 +1,66 @@
+/* OpenClaw-On-Android (OCA) Custom Cyberpunk Theme */
+:root {
+  --oca-primary: #00E676;
+  --oca-light: #69F0AE;
+  --oca-dark: #00C853;
+  --oca-bg: #0A0A0A;
+  --glow-shadow: 0 0 10px rgba(0, 230, 118, 0.4), 0 0 20px rgba(0, 230, 118, 0.15);
+}
+
+/* Headings with Hacker Green accent */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  color: var(--oca-primary) !important;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 5px rgba(0, 230, 118, 0.2);
+}
+
+/* Custom Cyberpunk Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  background: var(--oca-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--oca-dark);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 230, 118, 0.35);
+}
+
+/* Interactive Cards with Glow Effect */
+.not-prose .group {
+  border: 1px solid rgba(0, 230, 118, 0.2) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(10, 10, 10, 0.8) !important;
+}
+
+.not-prose .group:hover {
+  border-color: var(--oca-primary) !important;
+  box-shadow: var(--glow-shadow);
+  transform: translateY(-2px) scale(1.01);
+}
+
+/* Code blocks border matching */
+pre {
+  border: 1px solid rgba(0, 230, 118, 0.15) !important;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(0, 230, 118, 0.3);
+  color: #ffffff;
+}
+
+/* Keep the Mintlify theme toggle icon visible in dark mode */
+[data-theme='dark'] button[aria-label*='theme' i] svg,
+[data-theme='dark'] button[title*='theme' i] svg,
+[data-theme='dark'] button svg.lucide-moon,
+[data-theme='dark'] button svg.lucide-sun {
+  color: #e5e7eb !important;
+  fill: transparent !important;
+  stroke: currentColor !important;
+  opacity: 1 !important;
+  filter: drop-shadow(0 0 2px rgba(229, 231, 235, 0.35));
+}

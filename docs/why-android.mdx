@@ -1,0 +1,38 @@
+---
+title: 'Why Android?'
+description: 'Why your old phone is the perfect AI server.'
+icon: 'mobile'
+---
+
+# Why Run AI on Android?
+
+The conventional approach to hosting an AI agent is renting a VPS (Virtual Private Server) or running it on a desktop PC. 
+
+**OpenClaw on Android (OCA) flips this model.**
+
+## 1. Zero Hosting Costs
+
+A basic Linux VPS costs $5–$10/month. Over a year, that's $60–$120 just for hosting, plus the cost of your AI API keys.
+Running OCA on a phone you already own is **free**.
+
+## 2. Built-in UPS (Uninterruptible Power Supply)
+
+If your power goes out at home, your desktop PC or Raspberry Pi dies instantly. 
+An Android phone has a built-in battery. If the power drops, your AI agent stays online for another 12–24 hours via Wi-Fi or cellular data.
+
+## 3. Power Efficiency
+
+A desktop PC running 24/7 draws 50W–100W of power. 
+An Android phone draws 2W–5W when idle with the screen off. Over a year, this is a massive saving on your electricity bill.
+
+## 4. Hardware Repurposing
+
+We all have an old Android phone sitting in a drawer. Instead of generating e-waste, you can turn it into a dedicated, always-on AI assistant node.
+
+## Cloud API vs Local Inference
+
+<Note>
+OpenClaw on Android currently uses **Cloud LLMs** (OpenAI, Anthropic, OpenRouter) via API keys. It runs the *agent logic* and *tool execution* on the phone, but sends the reasoning requests to the cloud.
+
+Running heavy 7B+ local models directly on mobile hardware is currently battery-intensive and slow, but we are closely watching the local mobile inference space for future updates.
+</Note>

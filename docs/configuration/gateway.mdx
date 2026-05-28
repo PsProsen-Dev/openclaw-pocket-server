@@ -1,0 +1,61 @@
+---
+title: 'Gateway Setup'
+description: 'Starting and managing the OpenClaw Gateway.'
+icon: 'server'
+---
+
+# Gateway Configuration
+
+The Gateway is the core engine of OpenClaw. It connects to your channels (WhatsApp, Telegram, etc.), manages the LLM context, and handles tool execution.
+
+## Starting the Gateway
+
+As mentioned in the [Process Survival](/docs/advanced/process-survival) guide, you should always run the Gateway inside a `tmux` session.
+
+```bash
+tmux new-session -s OpenClaw
+openclaw gateway
+```
+
+You will see logs indicating that the Gateway has started and the Control UI is available on port `18789`.
+
+## The Control UI Dashboard
+
+The Control UI is your graphical dashboard for managing OpenClaw. 
+
+- **If you are on the Android device:** Open a browser and navigate to `http://localhost:18789`
+- **If you are on another device (PC/Mac):** You need to set up [SSH Access](/docs/advanced/ssh-access) to tunnel the dashboard securely.
+
+### What you can do in the Dashboard:
+1. View active chat sessions
+2. Connect and authenticate new Channels (e.g., scan WhatsApp QR code)
+3. Modify Gateway configuration (allowlists, mention rules)
+4. View real-time logs and LLM reasoning traces
+5. Pair mobile nodes
+
+## Configuration File (`openclaw.json`)
+
+All configuration is saved to `~/.openclaw/openclaw.json`. While you can edit this file manually in Termux using `nano` or `vim`, it is highly recommended to use the Control UI dashboard instead.
+
+### Example: Securing a Channel
+
+If you want to restrict who can talk to your AI agent on WhatsApp, you can configure an allowlist:
+
+```json5
+{
+  "channels": {
+    "whatsapp": {
+      "allowFrom": ["+15555550123"],
+      "groups": { 
+        "*": { "requireMention": true } 
+      }
+    }
+  }
+}
+```
+
+This ensures that only your phone number can trigger the AI in DMs, and it will only respond in group chats if explicitly `@mentioned`.
+
+## Stopping the Gateway
+
+To stop the Gateway gracefully, press `Ctrl+C` in the Termux window where it is running. Do not just kill the Termux app, as this can corrupt the local SQLite database.
