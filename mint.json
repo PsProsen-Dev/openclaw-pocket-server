@@ -65,6 +65,7 @@
       "group": "Installation",
       "pages": [
         "docs/installation/prerequisites",
+        "docs/installation/automated-setup",
         "docs/installation",
         "docs/installation/manual-setup",
         "docs/configuration",

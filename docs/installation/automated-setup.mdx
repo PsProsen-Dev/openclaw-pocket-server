@@ -1,0 +1,116 @@
+---
+title: 'Automated Setup'
+description: 'Install OpenClaw on Android in one command.'
+icon: 'rocket'
+---
+
+# Automated Setup
+
+The OCA installer handles everything — Termux packages, the glibc bridge, Node.js runtime, OpenClaw core, AI CLIs, and SSH. One command gets you from a fresh Termux install to a running AI server.
+
+## The Install Command
+
+Open **Termux** and run:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/PsProsen-Dev/OpenClaw-On-Android/master/install.sh | bash
+```
+
+<Warning>
+  Make sure you've completed the [Prerequisites](/docs/installation/prerequisites) first — especially disabling battery optimization for Termux. Otherwise, the installer may be killed mid-run.
+</Warning>
+
+## What the Installer Does
+
+The installer runs in three sequential phases:
+
+### RTX⚡1 — Infrastructure
+
+Sets up the foundational Termux environment:
+
+- Updates all packages (`pkg update && pkg upgrade`)
+- Installs core tools: `curl`, `git`, `wget`, `openssh`, `tmux`
+- Configures a **wake lock** to prevent Android from killing the process during install
+- Sets correct `$PATH` and shell environment for subsequent steps
+
+### RTX⚡2 — Platform Engine
+
+Bridges Android's Bionic C library with standard Linux binaries:
+
+- Downloads the **glibc dynamic linker shim** (~50MB) — a lightweight `ld.so` that intercepts syscalls and makes standard Linux Node.js work on Android
+- Installs **Node.js linux-arm64** (the real one, not Termux's patched build)
+- Applies `bionic-compat.js` patches to make OpenClaw's native modules resolve correctly
+- Verifies the bridge: runs `node --version` through the shim layer
+
+### RTX⚡3 — Master Arsenal
+
+Installs the full OpenClaw ecosystem:
+
+- **OpenClaw Gateway** (`npm install -g openclaw@latest`) — the core AI agent
+- **AI CLIs** (interactive prompts — see below):
+  - Qwen Code (recommended — most Android-friendly)
+  - Claude Code CLI
+  - Gemini CLI
+  - OpenAI Codex CLI
+- **Playwright/Chromium** — web automation tools (optional, large download)
+- **SSH server** — starts `sshd` and saves your port/key info
+- **Termux:Boot hook** — creates the autostart script so OCA launches on device boot
+
+---
+
+## Interactive Prompts
+
+The installer will pause and ask you a few questions. Here's what to expect:
+
+| Prompt | Recommended Answer | Notes |
+|--------|-------------------|-------|
+| Install Qwen Code? | `y` | Free tier, most Android-compatible |
+| Install Claude Code CLI? | `y` | Requires Anthropic account |
+| Install Gemini CLI? | `y` | Free tier via Google account |
+| Install Codex CLI? | `y` | Requires OpenAI account |
+| Install Playwright/Chromium? | `n` (first run) | 500MB download — install later if needed |
+| Configure SSH now? | `y` | Allows PC access to your phone |
+
+---
+
+## Installation Progress
+
+The installer prints phase headers. A successful run looks like this:
+
+```
+[RTX⚡1] Infrastructure ........ ✅
+[RTX⚡2] Platform Engine ........ ✅
+[RTX⚡3] Master Arsenal ......... ✅
+
+OCA install complete!
+Gateway : openclaw start
+SSH     : ssh -p 8022 <your-phone-ip>
+UI      : http://<your-phone-ip>:18789
+```
+
+---
+
+## After Installation
+
+Once the installer finishes:
+
+1. **Configure your AI provider** → run `openclaw onboard` (see [Onboarding](/docs/configuration/onboarding))
+2. **Start the gateway** → run `openclaw start`
+3. **Connect from your PC** → `ssh -p 8022 <phone-ip>` (see [SSH Guide](/docs/ssh-guide))
+4. **Enable auto-start** → install Termux:Boot and grant permissions (see [Termux Boot](/docs/termux-boot))
+
+---
+
+## Troubleshooting
+
+**Installer killed mid-way?**
+Battery optimization was not disabled. Re-disable it, then rerun the installer — it is safe to run multiple times.
+
+**`glibc shim download failed`?**
+Check your internet connection. The shim is hosted on GitHub — if GitHub is rate-limiting, wait a few minutes and retry.
+
+**`node: not found` after install?**
+Run `source ~/.bashrc` to reload your PATH. If that doesn't work, see [Manual Setup](/docs/installation/manual-setup).
+
+**Something else broke?**
+Check [Common Issues](/docs/support/common-issues) or open an issue on [GitHub](https://github.com/PsProsen-Dev/OpenClaw-On-Android/issues).
