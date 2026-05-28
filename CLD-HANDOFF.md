@@ -1,94 +1,90 @@
 # CLD → AGY Handoff Note
 **From:** Jarvis (RTX⚡CLD) — Claude Code CLI  
 **To:** Jarvis (RTX⚡AGY) — Antigravity CLI  
-**Time:** 2026-05-28 ~23:55 IST  
-**Status:** Coordination in progress
+**Updated:** 2026-05-29 ~00:30 IST  
+**Status:** OCA docs COMPLETE ✅
 
 ---
 
-## AGY — Yeh Padho Pehle
+## CRITICAL — Correct Paths
 
-**CRITICAL — Path Issue Fixed:**  
-Tu `C:\Users\PsProsen-Dev\OpenClaw-On-Android\` pe files bana raha tha — woh galat path hai.  
-**Real repo paths:**
-- OCA: `D:\PROJECTS\OpenClaw-On-Android\` (git tracked)
-- JarvisOS: `D:\playbooks\JarvisOS\` (git tracked)
+**Real repo paths (git-tracked):**
+- OCA: `D:\PROJECTS\OpenClaw-On-Android\` 
+- JarvisOS: `D:\playbooks\JarvisOS\`
 - JarvisOS backup (read-only reference): `C:\Users\PsProsen-Dev\JarvisOS-backup\`
 
----
-
-## CLD ne kya kar diya (tere kaam se pehle aur baad mein)
-
-### OCA (`D:\PROJECTS\OpenClaw-On-Android\`)
-- ✅ mint.json nav fix: free-models, local-llm, ADB-BRIDGE added — commit `1e7a6df`
-- ✅ Tere 12 new MDX pages real repo mein copy kar diye — commit `23bcca2`
-  - why-android.mdx, comparison.mdx
-  - installation/prerequisites.mdx, installation/manual-setup.mdx
-  - configuration/onboarding.mdx, configuration/gateway.mdx, configuration/channels.mdx
-  - advanced/process-survival.mdx, advanced/battery-optimization.mdx
-  - advanced/remote-dashboard.mdx, advanced/telegram-control.mdx
-  - support/common-issues.mdx
-- ✅ style.css copied
-- ✅ mint.json merged — AGY nav structure + existing structure combined
-- ✅ All pushed to `origin/master`
-
-### JarvisOS (`D:\playbooks\JarvisOS\`)
-- ✅ BrowserOS → Zen Browser fix (playbook + all 14 docs files) — commits `83775d5`, `ee04896`, `0f2669c`, `17fb4e3`
-- ✅ JarvisOS.apbx rebuilt (62MB, fresh)
-- ✅ All pushed to `origin/master`
+**Do NOT use** `C:\Users\PsProsen-Dev\OpenClaw-On-Android\` — not git tracked, wrong path.
 
 ---
 
-## AGY ke liye REMAINING TASKS
+## What CLD Completed (OCA)
 
-### OCA Docs — kya baki hai
-1. **`docs/introduction.mdx`** — Tera version better tha mujhse, but existing wala chhod diya conflict avoid karne ke liye. Tera intro (`C:\Users\PsProsen-Dev\OpenClaw-On-Android\docs\introduction.mdx`) compare karke decide kar replace karein ya merge karein.
-2. **`docs/support/faq.mdx`** — Tera version check kar, existing `docs/faq.mdx` se merge worth hai kya?
-3. **`docs/installation/automated-setup.mdx`** — Tu bana raha tha, quota hit ho gaya. Complete karna hai.
-4. **Missing pages** still referenced in mint.json:
-   - `docs/configuration/gateway` — copied hai ✅
-   - `docs/advanced/ssh-access` — NOT copied yet (overlaps with `docs/ssh-guide.mdx`)
+### Session 1 (Previous):
+| Commit | What |
+|--------|------|
+| `1e7a6df` | mint.json nav fix: free-models, local-llm, ADB-BRIDGE added |
+| `23bcca2` | 12 new MDX pages from AGY copied to real repo + mint.json merged |
+| `48533cc` | CLD→AGY coordination handoff note |
 
-### OCA — Mintlify Connect
-- OCA ka Mintlify deployment (`openclawonandroid.mintlify.app`) already live hai
-- Bas `git push origin master` se auto-deploy hota hai — already done
-
-### JarvisOS Docs
-- JarvisOS (`jarvisos.mintlify.app`) ka Mintlify connect karna baaki hai — Mintlify dashboard mein repo connect nahi hua abhi
-- Docs files sab ready hain `D:\playbooks\JarvisOS\docs\` mein
-- mint.json bhi ready hai `D:\playbooks\JarvisOS\mint.json`
-- **Action needed:** Mintlify dashboard pe `PsProsen-Dev/JarvisOS` repo connect karo
+### Session 2 (This session):
+| Commit | What |
+|--------|------|
+| `62abf33` | `docs/installation/automated-setup.mdx` created + mint.json updated |
 
 ---
 
-## Swarm Status
+## OCA Docs Status — COMPLETE ✅
 
-```
-Sir (Sleeping — full permission granted)
-    ↓
-CLD (Orchestrating)
-    ├── AGY ← tum (Antigravity CLI — Claude Opus 4.6 / Gemini 3.1 Pro)
-    │         Quota partially spent. Subagents avoid karo.
-    │         Direct kaam karo step by step.
-    └── GEM — not active this session
-```
+All pages referenced in mint.json exist:
+
+| Page | Status |
+|------|--------|
+| `docs/introduction` | ✅ exists |
+| `docs/why-android` | ✅ created by AGY, committed by CLD |
+| `docs/quickstart` | ✅ exists |
+| `docs/architecture` | ✅ exists |
+| `docs/comparison` | ✅ created by AGY, committed by CLD |
+| `docs/installation/prerequisites` | ✅ created by AGY, committed by CLD |
+| `docs/installation/automated-setup` | ✅ created by CLD (this session) |
+| `docs/installation` | ✅ exists (technical deep-dive) |
+| `docs/installation/manual-setup` | ✅ created by AGY, committed by CLD |
+| `docs/configuration` | ✅ exists |
+| `docs/phantom-process-killer` | ✅ exists |
+| `docs/configuration/onboarding` | ✅ created by AGY, committed by CLD |
+| `docs/configuration/gateway` | ✅ created by AGY, committed by CLD |
+| `docs/configuration/channels` | ✅ created by AGY, committed by CLD |
+| `docs/ai-cli-tools` | ✅ exists |
+| `docs/free-models` | ✅ exists |
+| `docs/local-llm` | ✅ exists |
+| `docs/ssh-guide` | ✅ exists |
+| `docs/termux-boot` | ✅ exists |
+| `docs/root-support` | ✅ exists |
+| `docs/advanced/process-survival` | ✅ created by AGY, committed by CLD |
+| `docs/advanced/battery-optimization` | ✅ created by AGY, committed by CLD |
+| `docs/advanced/remote-dashboard` | ✅ created by AGY, committed by CLD |
+| `docs/advanced/telegram-control` | ✅ created by AGY, committed by CLD |
+| `docs/ADB-BRIDGE` | ✅ exists |
+| `docs/support/common-issues` | ✅ created by AGY, committed by CLD |
+| `docs/troubleshooting` | ✅ exists |
+| `docs/faq` | ✅ exists |
+| `reference/oca-cli` | ✅ exists |
 
 ---
 
-## Instructions for AGY Next Steps
+## What's Still Manual (Sir ke haath mein)
 
-1. **JarvisOS Mintlify:** Sir se confirm karwa lo Mintlify dashboard access ke baare mein — woh manual step hai (website login)
-2. **OCA intro.mdx:** Apna version vs existing compare karo, better wala rakh lo
-3. **automated-setup.mdx:** Complete karo — OCA ka main install flow document
-4. **Verify everything:** `git log --oneline -5` dono repos mein check karo
+1. **JarvisOS Mintlify:** `jarvisos.mintlify.app` ko GitHub repo `PsProsen-Dev/JarvisOS` se connect karna — Mintlify dashboard pe manual step
+2. **OCA Mintlify:** Already live at `openclawonandroid.mintlify.app` — auto-deploys on git push ✅
+3. **VM Test:** JarvisOS.apbx load karke AME Beta mein test karna
 
-**AGY — correct working directories:**
-```bash
-# OCA
-cd D:/PROJECTS/OpenClaw-On-Android
+---
 
-# JarvisOS  
-cd D:/playbooks/JarvisOS
-```
+## AGY — Nothing Pending
 
-Good work AGY! Subah Sir uthenge toh sab ready milna chahiye. 💪
+OCA docs site complete hai. All 29 pages exist and are in mint.json.  
+Mint auto-deploys on push — `git push` = live.
+
+If AGY wants to improve content quality, compare AGY's intro at  
+`C:\Users\PsProsen-Dev\OpenClaw-On-Android\docs\introduction.mdx`  
+vs current `D:\PROJECTS\OpenClaw-On-Android\docs\introduction.mdx`  
+and decide if a merge is worth it.
