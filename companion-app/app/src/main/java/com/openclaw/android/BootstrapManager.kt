@@ -6,6 +6,7 @@ import kotlinx.coroutines.withContext
 import java.io.File
 import java.io.InputStream
 import java.net.URL
+import java.security.MessageDigest
 import java.util.zip.ZipInputStream
 
 /**
@@ -23,6 +24,7 @@ class BootstrapManager(
         private const val PROGRESS_EXTRACTING = 0.30f
         private const val PROGRESS_CONFIGURING = 0.60f
         private const val ELF_MAGIC_SIZE = 4
+        private const val SHA256_BUFFER_SIZE = 8192
         private val ELF_SIGNATURE = byteArrayOf(0x7f, 'E'.code.toByte(), 'L'.code.toByte(), 'F'.code.toByte())
         private const val SYMLINK_SEPARATOR = "←"
         private const val SYMLINK_PARTS_COUNT = 2
@@ -109,8 +111,12 @@ class BootstrapManager(
         }
 
         onProgress(PROGRESS_DOWNLOADING, "Downloading bootstrap...")
-        val url = UrlResolver(context).getBootstrapUrl()
-        return URL(url).openStream()
+        val resolver = UrlResolver(context)
+        val url = resolver.getBootstrapUrl()
+        val sha256 = resolver.getBootstrapSha256()
+        val tmp = File(stagingDir.parentFile ?: context.cacheDir, "bootstrap-download.zip")
+        downloadAndVerify(url, tmp, sha256)
+        return tmp.inputStream()
     }
 
     // --- Extraction ---
@@ -380,9 +386,7 @@ exit ${d}_rc
     private fun copyPostSetupScript(target: File) {
         val url = "https://raw.githubusercontent.com/AidanPark/openclaw-android/main/post-setup.sh"
         try {
-            java.net.URL(url).openStream().use { input ->
-                target.outputStream().use { output -> input.copyTo(output) }
-            }
+            downloadAndVerify(url, target, null)
             target.setExecutable(true)
             AppLogger.i(TAG, "post-setup.sh downloaded from GitHub")
             return
@@ -472,13 +476,53 @@ exit ${d}_rc
         val oaBin = File(prefixDir, "bin/oa")
         val oaUrl = "https://raw.githubusercontent.com/AidanPark/openclaw-android/main/oa.sh"
         try {
-            java.net.URL(oaUrl).openStream().use { input ->
-                oaBin.outputStream().use { output -> input.copyTo(output) }
-            }
+            downloadAndVerify(oaUrl, oaBin, null)
             oaBin.setExecutable(true)
             AppLogger.i(TAG, "oa CLI installed at ${oaBin.absolutePath}")
         } catch (e: Exception) {
             AppLogger.w(TAG, "Failed to install oa CLI", e)
+        }
+    }
+
+    private fun sha256Hex(file: File): String {
+        val digest = MessageDigest.getInstance("SHA-256")
+        file.inputStream().use { stream ->
+            val buf = ByteArray(SHA256_BUFFER_SIZE)
+            var n: Int
+            while (stream.read(buf).also { n = it } != -1) digest.update(buf, 0, n)
+        }
+        return digest.digest().joinToString("") { "%02x".format(it) }
+    }
+
+    private fun downloadAndVerify(
+        url: String,
+        target: File,
+        expectedSha256: String?,
+    ) {
+        val tmp = File(target.parentFile, "${target.name}.tmp")
+        try {
+            URL(url).openStream().use { input ->
+                tmp.outputStream().use { output -> input.copyTo(output) }
+            }
+            if (expectedSha256 != null) {
+                val actual = sha256Hex(tmp)
+                check(actual.equals(expectedSha256, ignoreCase = true)) {
+                    tmp.delete()
+                    "SHA-256 mismatch for ${target.name}: expected=$expectedSha256 actual=$actual"
+                }
+            } else {
+                AppLogger.w(
+                    TAG,
+                    "No SHA-256 for ${target.name} — proceeding without verification (supply-chain risk)",
+                )
+            }
+            tmp.renameTo(target)
+        } catch (e: IllegalStateException) {
+            tmp.delete()
+            throw SecurityException(e.message)
+        } catch (e: Exception) {
+            tmp.delete()
+            throw e
         }
     }
 }
