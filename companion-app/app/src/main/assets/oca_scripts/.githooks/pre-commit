@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# Pre-commit hook — basic quality checks before every commit
+
+set -e
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
+
+echo "Running pre-commit checks..."
+
+# 1. ShellCheck on staged .sh files
+STAGED_SH=$(git diff --cached --name-only --diff-filter=ACM | grep '\.sh$' || true)
+
+if [ -n "$STAGED_SH" ] && command -v shellcheck &>/dev/null; then
+    echo "$STAGED_SH" | while IFS= read -r file; do
+        if shellcheck --severity=warning "$file"; then
+            echo -e "${GREEN}[OK]${NC}   shellcheck: $file"
+        else
+            echo -e "${RED}[FAIL]${NC} shellcheck failed: $file"
+            exit 1
+        fi
+    done
+fi
+
+# 2. No trailing whitespace in staged shell scripts
+if [ -n "$STAGED_SH" ]; then
+    while IFS= read -r file; do
+        if grep -qP '\s+$' "$file" 2>/dev/null; then
+            echo -e "${YELLOW}[WARN]${NC} Trailing whitespace in: $file"
+        fi
+    done <<< "$STAGED_SH"
+fi
+
+echo -e "${GREEN}[OK]${NC}   Pre-commit checks passed"

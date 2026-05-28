@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/terminalBackground">
+
+    <!-- WebView — setup, dashboard, settings, platform selector -->
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+    <!-- Terminal container (TerminalView + Extra Keys bar) -->
+    <LinearLayout
+        android:id="@+id/terminalContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <!-- Session tab bar -->
+        <HorizontalScrollView
+            android:id="@+id/sessionTabBar"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:scrollbars="none"
+            android:background="@color/tabBarBackground"
+            android:focusable="false"
+            android:focusableInTouchMode="false">
+
+            <LinearLayout
+                android:id="@+id/tabsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp" />
+        </HorizontalScrollView>
+
+        <!-- Tab bar / terminal separator -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/tabBorder" />
+
+        <!-- TerminalView — native PTY terminal -->
+        <com.termux.view.TerminalView
+            android:id="@+id/terminalView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <!-- Extra Keys — two rows, no scrolling -->
+        <LinearLayout
+            android:id="@+id/extraKeysBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/extraKeysBackground">
+
+            <!-- Row 1: modifier & function keys -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp">
+
+                <Button android:id="@+id/btnEsc"  style="@style/ExtraKeyButton" android:layout_weight="1" android:text="ESC" />
+                <Button android:id="@+id/btnCtrl" style="@style/ExtraKeyButton" android:layout_weight="1" android:text="CTRL" />
+                <Button android:id="@+id/btnAlt"  style="@style/ExtraKeyButton" android:layout_weight="1" android:text="ALT" />
+                <Button android:id="@+id/btnTab"  style="@style/ExtraKeyButton" android:layout_weight="1" android:text="TAB" />
+                <Button android:id="@+id/btnHome" style="@style/ExtraKeyButton" android:layout_weight="1" android:text="HOME" />
+                <Button android:id="@+id/btnEnd"  style="@style/ExtraKeyButton" android:layout_weight="1" android:text="END" />
+            </LinearLayout>
+
+            <!-- Row 2: arrow keys & common chars -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp">
+
+                <Button android:id="@+id/btnLeft"  style="@style/ExtraKeyButton" android:layout_weight="1" android:text="◀" />
+                <Button android:id="@+id/btnUp"    style="@style/ExtraKeyButton" android:layout_weight="1" android:text="▲" />
+                <Button android:id="@+id/btnDown"  style="@style/ExtraKeyButton" android:layout_weight="1" android:text="▼" />
+                <Button android:id="@+id/btnRight" style="@style/ExtraKeyButton" android:layout_weight="1" android:text="▶" />
+                <Button android:id="@+id/btnDash"  style="@style/ExtraKeyButton" android:layout_weight="1" android:text="-" />
+                <Button android:id="@+id/btnPipe"  style="@style/ExtraKeyButton" android:layout_weight="1" android:text="|" />
+                <Button android:id="@+id/btnPaste" style="@style/ExtraKeyButton" android:layout_weight="1" android:text="PST" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

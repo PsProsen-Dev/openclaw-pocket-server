@@ -17,6 +17,38 @@ OCA installs AI CLI tools via `npm install -g` during Step 7. All run through th
 
 ---
 
+## 🟢 Using Free AI Models (Quick Reference)
+
+You can run advanced LLMs—like GPT-4.1, GPT-5 mini, MiniMax, Kimi, GLM—absolutely free via Copilot CLI, OpenCode app, or Zen! Here’s how:
+
+**Step 1: Pick a Free Model**
+- Run `/models` or open model picker; look for:
+    - `GPT-4.1`, `GPT-5 mini` (FREE via GitHub integration)
+    - MiniMax, Kimi, Big Pickle, GLM, Nemotron (Free via Zen/OpenCode!)
+    - **Green tick/0x = no cost!**
+
+**Step 2: Provide Your API Key**
+- Even free models need an API key (from Zen, OpenCode, etc).
+- Register [here](https://zen.opencode.ai/) and paste key at prompt.
+
+**Step 3: Respect Free Quota**
+| Model/Platform   | Cost  | Free Limit         | Notes               |
+|------------------|-------|--------------------|---------------------|
+| GPT-4.1, 5-mini  | ₹0    | 200 req / 5 hr     | GitHub, Copilot     |
+| MiniMax, Kimi    | ₹0    | 200 req / 5 hr     | Zen, OpenCode       |
+| Big Pickle       | ₹0    | Shared pool, capped| OpenCode            |
+| GLM/Nemotron     | ₹0    | Shared pool, capped| Zen, Kilo Code      |
+
+**Pro Tip:** Main (Jarvis RTX⚡) bhi GPT-4.1 hoon—bilkul free tier ki tarah!
+
+**Caveats**
+- Free plan pe data provider ko model training ke liye jaa sakta hai—so avoid super private code.
+- Models rotate/expire; `/models` or Zen dashboard for latest free list!
+
+For in-depth details and advanced tips, see full [README “Getting Free AI Models”](https://github.com/PsProsen-Dev/OpenClaw-On-Android#-getting-free-ai-models) or [OpenCode Zen Docs](https://zen.opencode.ai/docs).
+
+---
+
 ## Qwen Code
 
 Best choice for Android — lightweight and uses `--ignore-scripts` which skips native builds that fail on Android.

@@ -1,0 +1,27 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+**/build/
+/captures
+.externalNativeBuild
+.cxx
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Eclipse/Buildship IDE files
+.classpath
+.project
+.settings/
+
+# WebView UI build output
+www/node_modules/
+www/dist/
+
+
+# Release keystore
+*.jks
+*.keystore

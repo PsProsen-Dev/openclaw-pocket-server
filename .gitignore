@@ -48,3 +48,15 @@ Thumbs.db
 *.env
 *.keystore
 *.jks
+
+# companion-app build outputs
+companion-app/.gradle/
+companion-app/build/
+companion-app/app/build/
+companion-app/terminal-emulator/build/
+companion-app/terminal-view/build/
+companion-app/local.properties
+
+# assistant-sdk
+assistant-sdk/node_modules/
+assistant-sdk/dist/
